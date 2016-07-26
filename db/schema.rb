@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726222735) do
+ActiveRecord::Schema.define(version: 20160726230439) do
 
   create_table "bars", force: :cascade do |t|
     t.string   "name"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20160726222735) do
     t.string   "brand"
     t.integer  "quality"
     t.float    "price"
-    t.integer  "max_price"
-    t.integer  "min_price"
+    t.float    "max_price"
+    t.float    "min_price"
     t.integer  "bar_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

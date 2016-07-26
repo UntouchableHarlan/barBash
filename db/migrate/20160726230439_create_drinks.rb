@@ -5,9 +5,9 @@ class CreateDrinks < ActiveRecord::Migration[5.0]
       t.string :brand
       t.integer :quality
       t.float :price
-      t.integer :max_price
-      t.integer :min_price
-      t.belongs_to :bar, foreign_key: true
+      t.float :max_price
+      t.float :min_price
+      t.references :bar, foreign_key: true
 
       t.timestamps
     end
