@@ -1,0 +1,142 @@
+
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: auto;
+}
+
+.skewed_box {
+    margin-top: 5px;
+    display: inline-block;
+  transform: skew(20deg);
+  
+  background: orange;
+  padding: 15px;
+    }
+    .skewed_box:first-child {
+        margin-left: 20px;
+    border-radius: 5px 0 0 5px;
+        }
+    .skewed_box:last-of-type {
+        border-radius: 0 5px 5px 0;
+        }
+
+  .skewed_box:hover {
+    background: lightgrey;
+        }
+    /*.skewed_box+.skewed_box {
+        margin-left: 5px;
+        }*/
+  .unskewed_content {
+    transform: skew(-30deg);  
+    cursor: default;
+    }
+    .title {
+  border: 1px solid #b67930;
+  border-radius: 25px;
+  padding-right: 70px;
+  padding-bottom: 15px;
+  margin-top: 220px;
+  display: inline-block;
+  color: orange;
+
+  font-family: 'Lusitana', serif;
+  font-weight: 700;
+  font-size: 60px;
+  text-shadow: 2px 5px #b67930;
+}
+
+
+
+h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span.star {
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;  
+  position: relative;
+}
+
+h3:before, h3:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  border-top: 2px solid #121212;
+  border-bottom: 2px solid #121212;
+}
+
+h3:before {
+  margin: 5px 0 0 -110px;
+}
+
+h3:after {
+  margin: 5px 0 0 10px;
+}
+h1 {
+  font-family: "Oswald", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 70px;
+  text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
+}
+
+h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span.star {
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;  
+  position: relative;
+}
+
+h3:before, h3:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  border-top: 2px solid #121212;
+  border-bottom: 2px solid #121212;
+}
+
+h3:before {
+  margin: 5px 0 0 -110px;
+}
+
+h3:after {
+  margin: 5px 0 0 10px;
+}
+            
