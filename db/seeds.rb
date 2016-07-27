@@ -9,9 +9,9 @@ Bar.destroy_all
 Owner.destroy_all
 
 Drink.destroy_all
-owner = Owner.create(name: "admin", password: "asdf")
+owner = Owner.create(name: "admin", email: "admin@admin.com", password: "asdf")
 
-bar = Bar.create(name: "bar", owner: owner)
+bar = Bar.create(name: "Wood", owner: owner)
 
 
   bar.drinks.create(name: "tequila", brand: "conquistador", price: 3, quality: 1, max_price: 5, min_price:  1)
