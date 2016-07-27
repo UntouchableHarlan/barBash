@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <nav>
+      <% if current_owner %>
+      <p>
+        <%= current_owner.name %> | <%= link_to 'Log Out', logout_path %>
+      </p>
+        <% else %>
+        <p>
+          <%= link_to 'Sign up as Bar Owner', signup_path %> | <%= link_to 'Log In', login_path%>
+        </p>
+        <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>

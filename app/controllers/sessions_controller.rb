@@ -1,18 +1,20 @@
 class SessionsController < ApplicationController
   def new
+
   end
 
   def create
-    @owner = Owner.find([:session][:email])
-    if @owner && @owner.authenticate([:session][:password])
+    @owner = Owner.find_by_email(params[:session][:email])
+    if @owner && @owner.authenticate(params[:session][:password])
       session[:owner_id] = @owner.id
-      redirect_to root_path
+      redirect_to drinks_path
     else
-      redirect_to login_path
+      render 'new'
+    end
   end
 
   def destroy
-    seession[:owner_id] = nil
+    session[:owner_id] = nil
     redirect_to root_path
   end
 end

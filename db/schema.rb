@@ -10,14 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726222735) do
+ActiveRecord::Schema.define(version: 20160726230439) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "bars", force: :cascade do |t|
     t.string   "name"
     t.integer  "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_bars_on_owner_id"
+    t.index ["owner_id"], name: "index_bars_on_owner_id", using: :btree
   end
 
   create_table "drinks", force: :cascade do |t|
@@ -25,12 +28,12 @@ ActiveRecord::Schema.define(version: 20160726222735) do
     t.string   "brand"
     t.integer  "quality"
     t.float    "price"
-    t.integer  "max_price"
-    t.integer  "min_price"
+    t.float    "max_price"
+    t.float    "min_price"
     t.integer  "bar_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["bar_id"], name: "index_drinks_on_bar_id"
+    t.index ["bar_id"], name: "index_drinks_on_bar_id", using: :btree
   end
 
   create_table "owners", force: :cascade do |t|
@@ -41,4 +44,6 @@ ActiveRecord::Schema.define(version: 20160726222735) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "bars", "owners"
+  add_foreign_key "drinks", "bars"
 end

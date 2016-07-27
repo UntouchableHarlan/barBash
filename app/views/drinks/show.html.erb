@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @drink.name %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @drink.brand %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @drink.quality %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @drink.price %>
+</p>
+
+<p>
+  <strong>Max price:</strong>
+  <%= @drink.max_price %>
+</p>
+
+<p>
+  <strong>Min price:</strong>
+  <%= @drink.min_price %>
+</p>
+
+<p>
+  <strong>Bar:</strong>
+  <%= @drink.bar %>
+</p>
+
+<%= link_to 'Edit', edit_drink_path(@drink) %> |
+<%= link_to 'Back', drinks_path %>
