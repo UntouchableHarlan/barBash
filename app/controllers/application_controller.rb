@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   def current_owner
     @current_owner ||= Owner.find(session[:owner_id]) if session[:owner_id]
   end
-
   def require_owner
     redirect_to login_path flash.now[:error] = "Could not save client" unless current_owner
   end
