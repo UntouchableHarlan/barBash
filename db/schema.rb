@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726230439) do
+ActiveRecord::Schema.define(version: 20160727210758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,25 @@ ActiveRecord::Schema.define(version: 20160726230439) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "prices", force: :cascade do |t|
+    t.float    "amount"
+    t.integer  "drink_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["drink_id"], name: "index_prices_on_drink_id", using: :btree
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.float    "price"
+    t.integer  "drink_id"
+    t.integer  "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["drink_id"], name: "index_sales_on_drink_id", using: :btree
+  end
+
   add_foreign_key "bars", "owners"
   add_foreign_key "drinks", "bars"
+  add_foreign_key "prices", "drinks"
+  add_foreign_key "sales", "drinks"
 end
