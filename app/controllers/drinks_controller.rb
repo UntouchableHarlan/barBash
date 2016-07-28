@@ -7,7 +7,7 @@ class DrinksController < ApplicationController
   def index
     @drinks = Drink.all
     new_price
-    
+
   end
 
   # GET /drinks/1

@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+setInterval(function() {
+   var day = new Date();
+   var time = day.toLocaleTimeString();
+   document.getElementById("hour").innerHTML = time;
+ }, 1000);

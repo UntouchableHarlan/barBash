@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 
 
   root 'welcome#home'
+=======
+  root 'welcome#home'
+
+  root 'owners#new'
+>>>>>>> 73099c4f0805b39a4f55040b3d3808775d52f2e3
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
