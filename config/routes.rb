@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   get '/signup' => 'owners#new'
-
+  get '/bars/edit' => 'bars#edit'
 
   resources :drinks
   resources :owners

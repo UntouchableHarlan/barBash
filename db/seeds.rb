@@ -5,13 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Bar.destroy_all
-Owner.destroy_all
+
+
 
 Drink.destroy_all
+Bar.destroy_all
+Owner.destroy_all
 owner = Owner.create(name: "admin", email: "admin@admin.com", password: "asdf")
 
-bar = Bar.create(name: "Wood", owner: owner)
+bar = Bar.create(name: "Wood", owner: owner, capacity: 300, people_inside: 150)
 
 
   bar.drinks.create(name: "tequila", brand: "conquistador", price: 3, quality: 1, max_price: 5, min_price:  1)

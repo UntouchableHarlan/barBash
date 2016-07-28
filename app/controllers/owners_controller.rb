@@ -1,5 +1,5 @@
 class OwnersController < ApplicationController
-
+before_action :set_bar, only: [:create, :edit]
   def new
     @owner = Owner.new
   end
@@ -12,9 +12,6 @@ class OwnersController < ApplicationController
     else
       render 'new'
     end
-  end
-  def edit_page
-    
   end
 
   private

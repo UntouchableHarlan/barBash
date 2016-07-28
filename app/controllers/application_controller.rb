@@ -11,7 +11,7 @@ private
     session[:start_time] = Time.now.min
 
   end
-
+  
   def new_price
     # get_time
     percent_of_capacity_full = 0.5

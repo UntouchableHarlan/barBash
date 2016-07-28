@@ -1,0 +1,29 @@
+<%= form_for(bar, :url => bars_edit_path) do |f| %>
+  <% if bar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+
+      <ul>
+      <% bar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :capacity %>
+    <%= f.text_field :capacity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :people_inside %>
+    <%= f.text_field :people_inside %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

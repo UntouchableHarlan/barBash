@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727210758) do
+ActiveRecord::Schema.define(version: 20160728005017) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 20160727210758) do
   create_table "bars", force: :cascade do |t|
     t.string   "name"
     t.integer  "owner_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "capacity"
+    t.string   "people_inside"
     t.index ["owner_id"], name: "index_bars_on_owner_id", using: :btree
   end
 
