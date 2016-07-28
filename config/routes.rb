@@ -3,16 +3,12 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
 
-  root 'welcome#home'
-
-  root 'owners#new'
-
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   get '/signup' => 'owners#new'
-  get '/bars/edit' => 'bars#edit'
-
+  get '/bars/edit' => 'bars#editpage'
+  patch '/bars/edit' => 'bars#edit'
   resources :drinks
   resources :owners
   resources :sessions
