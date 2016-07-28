@@ -11,15 +11,26 @@ private
     session[:start_time] = Time.now.min
 
   end
-  
+
   def new_price
-    # get_time
-    percent_of_capacity_full = 0.5
+    get_time
+    bar = Bar.find(3)
+    # p  "*" * 50
+    # p bar.capacity
+    percent_of_capacity_full = (bar.people_inside.to_f / bar.capacity).round(2)
+    # p  "*" * 50
     drink_bought_in_last_5mins = 5
-    if (Time.now.min - session[:start_time]) % 5 == 0
+    # if (Time.now.min - session[:start_time]) % 5 == 0
       Drink.all.each do |drink|
-        drink.update(price: 0.077852 + (0.72179 * drink.price) + (1.8922 * percent_of_capacity_full) + (-0.126937 * drink_bought_in_last_5mins) + rand(-0.5..0.5))
-      end
+        drink.price = (0.077852 + (0.72179 * drink.price) + (1.8922 * percent_of_capacity_full) + (-0.126937 * drink_bought_in_last_5mins) + rand(-0.5..0.5))
+        drink.price = drink.price.round(2)
+        if drink.price > drink.max_price
+          drink.price = drink.max_price
+        elsif drink.price < drink.min_price
+          drink.price = drink.min_price
+        end
+        drink.save
+      # end
     end
   end
 

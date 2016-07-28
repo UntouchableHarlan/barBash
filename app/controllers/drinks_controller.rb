@@ -6,6 +6,7 @@ class DrinksController < ApplicationController
   # GET /drinks.json
   def index
     @drinks = Drink.all
+    new_price
     
   end
 
