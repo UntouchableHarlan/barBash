@@ -13,6 +13,9 @@ class OwnersController < ApplicationController
       render 'new'
     end
   end
+  def edit_page
+    
+  end
 
   private
 
