@@ -1,5 +1,5 @@
 class OwnersController < ApplicationController
-
+before_action :set_bar, only: [:create, :edit]
   def new
     @owner = Owner.new
   end
