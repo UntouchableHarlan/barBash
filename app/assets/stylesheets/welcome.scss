@@ -24,6 +24,78 @@ video {
 
 #hour {
   text-align: center;
-  font-size: 59px;
+  font-size: 79px;
+  margin-bottom: 90px;
+  color: green;
+  background:gray;
+  margin-right: 450px;
+  margin-left: 450px;
+  margin-top: 420px;
+}
+
+#up   {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin-top: -265px;
+  color: orange;
+  font-size: 10em;
+  
+}
+body {
+  background:#fff;
+  height:1000px;
+}
+
+/* sets positioning */
+.arrow {
+  width: 80px;
+  height: 122px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 70px;
+}
+
+/* sets arrow style */
+.arrow path {
+  stroke: #119a12;
+  fill: transparent;
+  stroke-width: 3px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+
+
+
+@-webkit-keyframes arrow{
+0% {opacity:0}
+25% {opacity:1}
+75% {opacity:0}
+100% {opacity:0}
+}
+
+.arrow path.a1{
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; 
+}
+
+.arrow path.a2{
+  animation-delay:-.5s;
+  -webkit-animation-delay:-.5s;
+}
+
+.arrow path.a3{ 
+  animation-delay:0s;
+  -webkit-animation-delay:0s;
+}
+.fav{
+  text-align: center;
+  font-size: 2em;
   color: white;
+}
+#na{
+  text-align:center;
 }

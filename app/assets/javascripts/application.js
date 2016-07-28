@@ -14,8 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var seconds = 300;
 setInterval(function() {
-   var day = new Date();
-   var time = day.toLocaleTimeString();
-   document.getElementById("hour").innerHTML = time;
+	
+   
+  var min = parseInt(seconds/60);
+  sec = (seconds % 60)
+ 
+  seconds -= 1
+  
+ 
+   document.getElementById("hour").innerHTML = min + ":" + sec;
  }, 1000);
+
+
+// var dt = new Date();
+// var time = dt.getMinutes() + ":" +
+//  dt.getSeconds
