@@ -1,0 +1,23 @@
+/* line 1, /Users/untouchableharlan/Desktop/wyncode/wynprojects/barBash/app/assets/stylesheets/welcome.scss */
+.header {
+  width: 100%;
+  height: 100%;
+  display: table;
+  background: url("http://trinitycommon.com/wp-content/uploads/2014/05/beer_background.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+/* line 12, /Users/untouchableharlan/Desktop/wyncode/wynprojects/barBash/app/assets/stylesheets/welcome.scss */
+body {
+  margin-top: 50px;
+}
+
+/* line 16, /Users/untouchableharlan/Desktop/wyncode/wynprojects/barBash/app/assets/stylesheets/welcome.scss */
+#hour {
+  text-align: center;
+  font-size: 59px;
+  color: black;
+}

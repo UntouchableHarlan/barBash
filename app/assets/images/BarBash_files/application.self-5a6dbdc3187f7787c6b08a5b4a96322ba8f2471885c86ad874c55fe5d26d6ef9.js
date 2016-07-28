@@ -10,21 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
-// setInterval(function() {
-//    var day = new Date();
-//    var time = day.toLocaleTimeString();
-//    document.getElementById("hour").innerHTML = time;
-//  }, 1000);
 
 
 
-$(document).ready(function(){
-  $("button").on("click", function() {
-    $('.table').fadeOut(100).load("/ .table").fadeIn(1000)
-    // $(".table")
-  })
-});
+
+setInterval(function() {
+   var day = new Date();
+   var time = day.toLocaleTimeString();
+   document.getElementById("hour").innerHTML = time;
+ }, 1000);
