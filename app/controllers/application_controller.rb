@@ -8,7 +8,8 @@ private
     redirect_to login_path flash.now[:error] = "Could not save client" unless current_owner
   end
   def get_time
-    session[:start_time] = Time.now.min
+    session[:start_time_min] = Time.now.min
+    session[:start_time_hour] = Time.now.hour
 
   end
 
@@ -20,7 +21,7 @@ private
     percent_of_capacity_full = (bar.people_inside.to_f / bar.capacity).round(2)
     # p  "*" * 50
     drink_bought_in_last_5mins = 5
-    # if (Time.now.min - session[:start_time]) % 5 == 0
+    # if (Time.now.min - session[:start_time_min]) % 5 == 0
       Drink.all.each do |drink|
         drink.price = (0.077852 + (0.72179 * drink.price) + (1.8922 * percent_of_capacity_full) + (-0.126937 * drink_bought_in_last_5mins) + rand(-0.5..0.5))
         drink.price = drink.price.round(2)
