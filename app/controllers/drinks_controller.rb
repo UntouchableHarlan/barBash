@@ -6,11 +6,14 @@ class DrinksController < ApplicationController
   # GET /drinks.json
   def index
     @drinks = Drink.all
+    new_price
+
   end
 
   # GET /drinks/1
   # GET /drinks/1.json
   def show
+
   end
 
   # GET /drinks/new
@@ -67,6 +70,11 @@ class DrinksController < ApplicationController
     def set_drink
       @drink = Drink.find(params[:id])
     end
+    # def make_prices_dynamic(percent_of_capacity_full, inverse_price_change, drink_bought_in_last_20mins)
+    #   Drink.all.each do |drink|
+    #     drink.price = -1.175 + (0.95638 * drink.price) + (1.5 * percent_of_capacity_full) + (0.40631 * inverse_price_change) + (0.12 * drink_bought_in_last_20mins)
+    #   end
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def drink_params

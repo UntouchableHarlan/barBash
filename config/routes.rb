@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
+
+
   root 'welcome#home'
 
-  root 'owners#new'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   get '/signup' => 'owners#new'
-  post '/' => 'welcome#reload'
+
+
+
+
+  get '/bars/edit' => 'bars#editpage'
+  patch '/bars/edit' => 'bars#edit'
 
   resources :drinks
   resources :owners

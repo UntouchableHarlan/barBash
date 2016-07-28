@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -20,8 +21,9 @@
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
-</nav>
+</nav><!-- /.container -->
+
+
 <!-- Image Background -->
 <div class="intro-header">
   <div class="container">
@@ -36,11 +38,8 @@
 
   </div>
 </div>
-
-
-
 <!-- Timer -->
-<!-- <div id="hour" style="text-align:center"></div> -->
+<div id="hour" style="text-align:center"></div>
 
 
 
@@ -49,17 +48,16 @@
 <%#= render 'beer_table', drink: @drink %>
 <div class="beers">
 <section id="beer" class="container content-section text-center">
-  <button type="button" name="button">reload thing</button>
+  <!-- <button type="button" name="button">reload thing</button> -->
     <table class="table">
       <thead>
+
         <tr class="top">
           <th style="text-align: center">Name</th>
           <th style="text-align: center">Brand</th>
           <th style="text-align: center">Price</th>
-          <th colspan="3"></th>
         </tr>
       </thead>
-
       <tbody>
         <%# @drinks.each do |drink| %>
           <tr id="hi">

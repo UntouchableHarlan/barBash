@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
 // setInterval(function() {
 //    var day = new Date();
 //    var time = day.toLocaleTimeString();
@@ -28,3 +29,16 @@ $(document).ready(function(){
     // $(".table")
   })
 });
+
+var seconds= 5;
+var interval = setInterval(function() {
+  var min = parseInt(seconds/60);
+  sec = (seconds % 60)
+  min = parseInt(sec /60)
+  seconds -= 1
+   document.getElementById("hour").innerHTML = min + ":" + sec;
+   if (seconds === 0){
+     $('.table').fadeOut(100).load("/ .table").fadeIn(1000);
+     clearInterval(interval)
+ }
+ }, 1000);
