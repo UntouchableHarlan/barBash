@@ -44,7 +44,20 @@ body{
   font-size: 10em;
 
 }
-
+#up_arrow{
+  color: green;
+  margin-left: 5px;
+}
+#down_arrow{
+  color: red;
+  margin-left: 5px;
+}
+div.down_arrow{
+  color: red;
+}
+div.up_arrow{
+  color: green;
+}
 /* sets positioning */
 // .arrow {
 //   width: 80px;
