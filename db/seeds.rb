@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
+Price.destroy_all
 Drink.destroy_all
 Bar.destroy_all
 Owner.destroy_all
@@ -35,3 +35,9 @@ bar = Bar.create(name: "Wood", owner: owner, capacity: 300, people_inside: 150)
   bar.drinks.create(name: "wine", brand: "chardonnay", price: 4, quality: 3, max_price: 6, min_price: 2)
   bar.drinks.create(name: "wine", brand: "sauvignon_blanc", price: 5, quality: 2, max_price: 7, min_price: 3)
   bar.drinks.create(name: "wine", brand: "merlot", price: 5, quality: 3, max_price: 7, min_price: 3)
+
+  Drink.all.each do |drink|
+    drink.update(current_price: drink.price, price_difference: 0)
+
+  end
+  

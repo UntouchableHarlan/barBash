@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   def new_price
     get_time
     # Price.destroy_all
-    bar = Bar.find(3)
+    bar = Bar.all[0]
     # Drink.all.each do |drink|
     #   Price.create(amount: drink.price, drink: drink)
     # end

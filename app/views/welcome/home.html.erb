@@ -57,6 +57,7 @@
           <th style="text-align: center">Name</th>
           <th style="text-align: center">Brand</th>
           <th style="text-align: center">Price</th>
+          <th style="text-align: center">Price Difference</th>
         </tr>
       </thead>
       <tbody>
@@ -64,7 +65,8 @@
           <tr id="hi">
             <td><%= drink.name %></td>
             <td><%= drink.brand %></td>
-            <td>$<%= drink.price %></td>
+            <td>$<%= drink.current_price %></td>
+            <td><%= drink.price_difference %></td>
             <td><%= link_to 'Buy', '#' %></td>
           </tr>
         <% end %>

@@ -33,18 +33,21 @@ $(document).ready(function(){
 
 
 
-
-    var seconds= 60;
+		//
+    var seconds= 3;
     var interval = setInterval(function() {
       var min = parseInt(seconds/60);
       sec = (seconds % 60)
       min = parseInt(sec /60)
       seconds -= 1
        document.getElementById("hour").innerHTML = min + ":" + sec;
-       if (seconds === 0){
-         $('.reload').fadeOut(100).load("/ .reload").fadeIn(1000);
-         seconds = 60;
-         setInterval(interval)
+       if (seconds === -1){
+				  seconds = 3;
+				// $('.reload').fadeOut(100).load("/ .reload").fadeIn(1000);
+				 setInterval(interval).fadeOut(100).fadeIn(1000)
+
+
+
 
 
 
