@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
     # Drink.all.each do |drink|
     #   Price.create(amount: drink.price, drink: drink)
     # end
-    @price_minute = Price.all.last.created_at.min
+    # @price_minute = Price.all.last.created_at.min
     @price_hour = Time.now.hour
     percent_of_capacity_full = (bar.people_inside.to_f / bar.capacity).round(2)
     drink_bought_in_last_5mins = 5
