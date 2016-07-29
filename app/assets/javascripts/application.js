@@ -43,7 +43,7 @@ $(document).ready(function(){
        document.getElementById("hour").innerHTML = min + ":" + sec;
        if (seconds === -1){
 				  seconds = 3;
-				// $('.reload').fadeOut(100).load("/ .reload").fadeIn(1000);
+				// $('.table').fadeOut(100).load("/ .reload").fadeIn(1000);
 				 setInterval(interval).fadeOut(100).fadeIn(1000)
 
 

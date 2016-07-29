@@ -60,7 +60,6 @@
           <th style="text-align: center">Price Difference</th>
         </tr>
       </thead>
-      
       <tbody>
         <% @drinks.each do |drink| %>
           <tr id="hi">
@@ -72,6 +71,8 @@
             <td style= "color: green"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
             <% elsif drink.price_difference < 0%>
             <td style= "color: red"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+            <% else %>
+            <td><%= drink.price_difference %></td>
             <% end %>
             <td><%= link_to 'Buy', '#', class: "btn btn-primary" %></td>
           </tr>
