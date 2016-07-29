@@ -39,6 +39,7 @@
   </div>
 </div>
 <!-- Timer -->
+<div class= "reload">
 <div id="hour" style="text-align:center"></div>
 
 
@@ -59,15 +60,16 @@
         </tr>
       </thead>
       <tbody>
-        <%# @drinks.each do |drink| %>
+        <% @drinks.each do |drink| %>
           <tr id="hi">
-            <td><%= @drink.name %></td>
-            <td><%= @drink.brand %></td>
-            <td>$<%= @drink.price %></td>
+            <td><%= drink.name %></td>
+            <td><%= drink.brand %></td>
+            <td>$<%= drink.price %></td>
             <td><%= link_to 'Buy', '#' %></td>
           </tr>
-        <%# end %>
+        <% end %>
       </tbody>
     </table>
 </section>
+</div>
 </div>

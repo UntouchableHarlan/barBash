@@ -30,15 +30,23 @@ $(document).ready(function(){
   })
 });
 
-var seconds= 5;
-var interval = setInterval(function() {
-  var min = parseInt(seconds/60);
-  sec = (seconds % 60)
-  min = parseInt(sec /60)
-  seconds -= 1
-   document.getElementById("hour").innerHTML = min + ":" + sec;
-   if (seconds === 0){
-     $('.table').fadeOut(100).load("/ .table").fadeIn(1000);
-     clearInterval(interval)
- }
- }, 1000);
+
+
+
+
+    var seconds= 60;
+    var interval = setInterval(function() {
+      var min = parseInt(seconds/60);
+      sec = (seconds % 60)
+      min = parseInt(sec /60)
+      seconds -= 1
+       document.getElementById("hour").innerHTML = min + ":" + sec;
+       if (seconds === 0){
+         $('.reload').fadeOut(100).load("/ .reload").fadeIn(1000);
+         seconds = 60;
+         setInterval(interval)
+
+
+
+     }
+     }, 1000);
