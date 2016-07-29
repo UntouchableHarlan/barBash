@@ -23,33 +23,37 @@
 
 
 
-$(document).ready(function(){
-  $("button").on("click", function() {
-    $('.table').fadeOut(100).load("/ .table").fadeIn(1000)
-    // $(".table")
-  })
-});
+// $(document).ready(function(){
+//   $("button").on("click", function() {
+//     $('.table').fadeOut(100).load("/ .table").fadeIn(1000)
+//     // $(".table")
+//   })
+// });
 
 
+var seconds= 10;
+var interval = setInterval(function() {
+  min = parseInt(seconds/60);
+  sec = (seconds % 60)
+	 format = function(min, sec){
+		if (sec === 0){
+			return min + ":" + "00"
+
+		} else if(sec < 10){
+				return min + ":0" + sec
+		}
+			else {
+				return min + ":" + sec
+			}
 
 
-		//
-    var seconds= 3;
-    var interval = setInterval(function() {
-      var min = parseInt(seconds/60);
-      sec = (seconds % 60)
-      min = parseInt(sec /60)
-      seconds -= 1
-       document.getElementById("hour").innerHTML = min + ":" + sec;
-       if (seconds === -1){
-				  seconds = 3;
-				// $('.table').fadeOut(100).load("/ .reload").fadeIn(1000);
-				 setInterval(interval).fadeOut(100).fadeIn(1000)
-
-
-
-
-
-
-     }
-     }, 1000);
+	}
+  // min = parseInt(sec /60)
+  seconds -= 1
+   document.getElementById("hour").innerHTML = format(min, sec);
+   if (seconds === -1){
+      seconds = 10;
+    // $('.table').fadeOut(100).load("/ .reload").fadeIn(1000);
+     setInterval(interval).fadeOut(100).fadeIn(1000)
+ }
+ }, 1000);
