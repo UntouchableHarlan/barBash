@@ -31,7 +31,8 @@
 // });
 
 
-var seconds= 10;
+
+var seconds= 60;
 var interval = setInterval(function() {
   min = parseInt(seconds/60);
   sec = (seconds % 60)
@@ -40,20 +41,18 @@ var interval = setInterval(function() {
 			return min + ":" + "00"
 
 		} else if(sec < 10){
-				return min + ":0" + sec
+				return (min + ":0" + sec).fontcolor("red")
 		}
 			else {
 				return min + ":" + sec
 			}
-
-
 	}
   // min = parseInt(sec /60)
   seconds -= 1
    document.getElementById("hour").innerHTML = format(min, sec);
    if (seconds === -1){
-      seconds = 10;
-    // $('.table').fadeOut(100).load("/ .reload").fadeIn(1000);
+      seconds = 60;
+    $('.table').fadeOut(100).load("/ .reload").fadeIn(1000);
      setInterval(interval).fadeOut(100).fadeIn(1000)
  }
  }, 1000);
