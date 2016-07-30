@@ -61,24 +61,53 @@
         </tr>
       </thead>
       <tbody>
-        <% @drinks.each do |drink| %>
-          <tr id="hi">
-            <td><%= drink.name %></td>
-            <td><%= drink.brand %></td>
-            <td>$<%= drink.current_price %></td>
+        <% @drinks.each_with_index do |drink,i| %>
+          <tr>
+            <td class="drink"><%= drink.name %></td>
+            <td class="drinks"><%= drink.brand %></td>
+            <td class="drinkss">$<%= drink.current_price %></td>
 
             <% if drink.price_difference > 0 %>
-            <td style= "color: green"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+                <td style= "color: green"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
             <% elsif drink.price_difference < 0%>
-            <td style= "color: red"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+                <td style= "color: red"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
             <% else %>
-            <td><%= drink.price_difference %></td>
+                <td><%= drink.price_difference %></td>
             <% end %>
-            <td><%= link_to 'Buy', '#', class: "btn btn-primary" %></td>
+            <td><%= link_to 'Buy', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myModal#{i}" %></td>
           </tr>
+
+          <div id="myModal<%=i%>" class="modal" role="dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                  Buy A <%= drink.name %> for <%= drink.current_price %>
+                </div>
+            </div>
+          </div>
         <% end %>
       </tbody>
     </table>
 </section>
+
 </div>
+
 </div>
+
+<!-- <div id="myModal" class="modal" role="dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sign Up</h4>
+      </div>
+
+
+      <div class="modal-body">
+        Buy A Beer
+      </div>
+
+  </div>
+</div> -->

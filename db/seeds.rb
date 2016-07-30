@@ -40,4 +40,3 @@ bar = Bar.create(name: "Wood", owner: owner, capacity: 300, people_inside: 150)
     drink.update(current_price: drink.price, price_difference: 0)
 
   end
-  
