@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160729154823) do
+ActiveRecord::Schema.define(version: 20160730191307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20160729154823) do
 
   create_table "drinks", force: :cascade do |t|
     t.string   "name"
-    t.string   "brand"
     t.integer  "quality"
     t.float    "price"
     t.float    "max_price"
@@ -38,6 +37,9 @@ ActiveRecord::Schema.define(version: 20160729154823) do
     t.datetime "updated_at",       null: false
     t.float    "current_price"
     t.float    "price_difference"
+    t.text     "bio"
+    t.string   "category"
+    t.string   "table_name"
     t.index ["bar_id"], name: "index_drinks_on_bar_id", using: :btree
   end
 
