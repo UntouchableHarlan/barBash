@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/bars/edit' => 'bars#editpage'
   patch '/bars/edit' => 'bars#edit'
 
+  get '/beers' => 'welcome#beers'
+
   resources :drinks
   resources :owners
   resources :sessions

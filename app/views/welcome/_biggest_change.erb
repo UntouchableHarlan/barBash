@@ -1,0 +1,41 @@
+<div class = "beers">
+<section id="beer" class="container content-section text-center">
+    <table class="table">
+      <thead>
+
+        <tr class="top">
+          <% arr = [] %>
+          <% drinks.each{|drink| arr << drink.name} %>
+          <% if arr.uniq.length != 1 %>
+          <th style="text-align: center">Name</th>
+          <% end  %>
+
+          <th style="text-align: center">Brand</th>
+          <th style="text-align: center">Price</th>
+          <th style="text-align: center">Price Difference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% drinks.each do |drink| %>
+          <tr id="hi">
+            <% if arr.uniq.length != 1 %>
+            <td><%= drink.name %></td>
+              <% end %>
+            <td><%= drink.brand %></td>
+            <td>$<%= drink.current_price %></td>
+
+            <% if drink.price_difference > 0 %>
+            <td style= "color: green"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+            <% elsif drink.price_difference < 0%>
+            <td style= "color: red"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+            <% else %>
+            <td><%= drink.price_difference %></td>
+            <% end %>
+            <td><%= link_to 'Buy', '#', class: "btn btn-primary" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</section>
+</div>
+</div>

@@ -1,4 +1,7 @@
 
+
+
+
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -38,6 +41,27 @@
 
   </div>
 </div>
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Sort
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li id="wines"><a href="#">wine</a></li>
+    <li id="vodkas"><a href="#">vodka</a></li>
+    <li id="beers"><a href="#">Beers</a></li>
+  </ul>
+</div>
+
+<!-- <ul class="nav navbar-nav">
+  <li id="wines"><a href="#">wine</a></li>
+  <li id="vodkas"><a href="#">vodka</a></li>
+  <li id="beers"><a href="#">Beers</a></li>
+</ul> -->
+
+
+
 <!-- Timer -->
 <div class= "reload">
 <div id="hour" style="text-align:center"></div>
@@ -45,40 +69,8 @@
 
 
 <!--- Buy Section -->
-
-<%#= render 'beer_table', drink: @drink %>
-<div class="beers">
-<section id="beer" class="container content-section text-center">
-  <!-- <button type="button" name="button">reload thing</button> -->
-    <table class="table">
-      <thead>
-
-        <tr class="top">
-          <th style="text-align: center">Name</th>
-          <th style="text-align: center">Brand</th>
-          <th style="text-align: center">Price</th>
-          <th style="text-align: center">Price Difference</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @drinks.each do |drink| %>
-          <tr id="hi">
-            <td><%= drink.name %></td>
-            <td><%= drink.brand %></td>
-            <td>$<%= drink.current_price %></td>
-
-            <% if drink.price_difference > 0 %>
-            <td style= "color: green"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
-            <% elsif drink.price_difference < 0%>
-            <td style= "color: red"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
-            <% else %>
-            <td><%= drink.price_difference %></td>
-            <% end %>
-            <td><%= link_to 'Buy', '#', class: "btn btn-primary" %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<section class="win">
+  <div class="wi">
+    <%= render 'biggest_change', drinks: @drinks %>
+  </div>
 </section>
-</div>
-</div>
