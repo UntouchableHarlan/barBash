@@ -25,3 +25,10 @@ $('#wines a').on('click', function(event){
 	type = 'vodka';
 	refreshDrinks();
 });
+$('#biggestchange a').on('click', function(event){
+	event.preventDefault();
+	console.log('Clicked');
+	console.dir(this);
+	type = 'biggestchange';
+	refreshDrinks();
+});

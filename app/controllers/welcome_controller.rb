@@ -7,12 +7,14 @@ class WelcomeController < ApplicationController
     end
     new_price
     @drinks = Drink.all
-
+    @biggest_change = Drink.all.sort{|a,b| a.price_difference <=> b.price_difference}.first(10)
     type = params[:type]
-    if type and not type.blank?
+    if type == "biggestchange"
+      @drinks = @biggest_change
+  elsif type and not type.blank?
       @drinks = Drink.where(name: type)
     end
-    @biggest_change = Drink.all.sort{|a,b| a.price_difference <=> b.price_difference}.first(10)
+
     # @wines = Drink.where(name: "wine")
     # @vodkas = Drink.where(name: "vokda")
     # @whiskeys = Drink.where(name: "whiskey")
