@@ -5,17 +5,15 @@ class WelcomeController < ApplicationController
     if session[:start_time_min].nil?
       get_time
     end
-
-
     new_price
-
-    @biggest_change = Drink.all.sort{|a,b| a.price_difference <=> b.price_difference}.first(10)
-    @drinks = @biggest_change
     type = params[:type]
-    if type == "biggestchange"
-      @drinks = @biggest_change
-  elsif type and not type.blank?
+    if type && type == "biggestchange"
+      @drinks = Drink.all.sort{|a,b| (a.current_price - a.price) <=> (b.current_price - b.price)}.first(10)
+
+  elsif type && !type.blank?
       @drinks = Drink.where(category: type)
+    else
+      @drinks = Drink.all
     end
 
     # @wines = Drink.where(name: "wine")

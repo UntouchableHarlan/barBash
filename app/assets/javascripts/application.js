@@ -96,7 +96,7 @@ var interval = setInterval(function() {
   $("#hour").html(format(min, sec));
   if (seconds === -1){
     seconds = 60;
-    // refreshDrinks();
+    refreshDrinks();
     setInterval(interval).fadeOut(100).fadeIn(1000)
   }
 }, 1000);
