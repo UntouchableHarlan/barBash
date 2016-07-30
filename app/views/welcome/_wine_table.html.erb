@@ -24,7 +24,7 @@
         <% @wines.each_with_index do |drink,i| %>
           <tr>
             <td class="drink"><%= drink.name %></td>
-            <td class="drinks"><%= drink.brand %></td>
+            <td class="drinks"><%= drink.table_name %></td>
             <td class="drinkss">$<%= drink.current_price %></td>
 
             <% if drink.price_difference > 0 %>

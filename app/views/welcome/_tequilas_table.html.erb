@@ -24,7 +24,7 @@
         <% @tequilas.each_with_index do |drink,i| %>
           <tr>
             <td class="drink"><%= drink.name %></td>
-            <td class="drinks"><%= drink.brand %></td>
+            <td class="drinks"><%= drink.table_name %></td>
             <td class="drinkss">$<%= drink.current_price %></td>
 
             <% if drink.price_difference > 0 %>
@@ -44,7 +44,7 @@
                   <h4 class="modal-title">Sign Up</h4>
                 </div>
                 <div class="modal-body">
-                  Buy A <%= drink.name %> for <%= drink.current_price %>
+                  Buy A <%= drink.table_name %> for <%= drink.current_price %>
                 </div>
             </div>
           </div>
