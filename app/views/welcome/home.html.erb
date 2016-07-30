@@ -49,11 +49,13 @@
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
     <li id="biggestchange"><a href="#">Main Page</a></li>
-    <li id="wines"><a href="#">wine</a></li>
-    <li id="vodkas"><a href="#">vodka</a></li>
-    <li id="beers"><a href="#">Beers</a></li>
-    <li id="tequilas"><a href="#">Tequila</a></li>
-    <li id="whiskeys"><a href="#">Whiskey</a></li>
+    <li id="beer"><a href="#">Beers</a></li>
+    <li id="wine"><a href="#">Wines</a></li>
+    <li id="shot"><a href="#">Shots</a></li>
+    <li id="cocktail"><a href="#">Signature Cocktails</a></li>
+    <!-- <li id="whiskeys"><a href="#">whiskey</a></li>
+    <li id="cocktails"><a href="#">cocktails</a></li> -->
+
   </ul>
 </div>
 
@@ -66,7 +68,8 @@
 
 
 <!-- Timer -->
-
+<div class= "reload">
+<div id="hour" style="text-align:center"></div>
 
 <!-- <div id="myModal" class="modal" role="dialog">
   <div class="modal-content">
@@ -84,6 +87,6 @@
 </div> -->
 <div class="row">
   <div class=".col-md-6">
-      <%= render 'biggest_change', drinks: @drinks %>
+      <%= render 'partial', drinks: @drinks %>
   </div>
 </div>

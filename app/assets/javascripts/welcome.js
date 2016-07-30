@@ -20,70 +20,77 @@
 
 // console.log('attaching click');
 // console.log($('#beers a'));
-$('#tequilas a').on('click', function(event){
+$('#biggestchange a').on('click', function(event){
 	event.preventDefault();
 	// console.log('Clicked');
 	// console.dir(this);
-	type = 'Tequila';
+	type = 'biggestchange';
 	refreshDrinks();
 });
-$('#rums a').on('click', function(event){
+$('#shot a').on('click', function(event){
 	event.preventDefault();
 	// console.log('Clicked');
 	// console.dir(this);
-	type = 'Rum';
+	type = 'shot';
 	refreshDrinks();
 });
-$('#vodkas a').on('click', function(event){
+$('#beer a').on('click', function(event){
 	event.preventDefault();
 	// console.log('Clicked');
 	// console.dir(this);
-	type = 'Vodka';
+	type = 'beer';
+	refreshDrinks();
+});
+$('#wine a').on('click', function(event){
+	event.preventDefault();
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'wine';
 	refreshDrinks();
 });
 
-$('#whiskeys a').on('click', function(event){
+$('#cocktail a').on('click', function(event){
 	event.preventDefault();
 	// console.log('Clicked');
 	// console.dir(this);
-	type = 'Whiskey';
+	type = 'cocktail';
 	refreshDrinks();
 
 });
-
-$('#craft_beers a').on('click', function(event){
-
-	event.preventDefault();
-	// console.log('Clicked');
-	// console.dir(this);
-	type = 'Wynwood Brewery';
-	refreshDrinks();
-});
-$('#domestic_beer a').on('click', function(event){
-	event.preventDefault();
-	// console.log('Clicked');
-	// console.dir(this);
-	type = 'Domestic';
-	refreshDrinks();
-});
-$('#imported_beer a').on('click', function(event){
-	event.preventDefault();
-	// console.log('Clicked');
-	// console.dir(this);
-	type = 'Imported';
-	refreshDrinks();
-});
-$('#wines a').on('click', function(event){
-	event.preventDefault();
-	// console.log('Clicked');
-	// console.dir(this);
-	type = 'Wine';
-	refreshDrinks();
-});
-$('#cocktails a').on('click', function(event){
-	event.preventDefault();
-	// console.log('Clicked');
-	// console.dir(this);
-	type = 'Cocktail';
-	refreshDrinks();
-});
+//
+// $('#craft_beers a').on('click', function(event){
+//
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Wynwood Brewery';
+// 	refreshDrinks();
+// });
+// $('#domestic_beer a').on('click', function(event){
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Domestic';
+// 	refreshDrinks();
+// });
+// $('#imported_beer a').on('click', function(event){
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Imported';
+// 	refreshDrinks();
+// });
+// $('#wines a').on('click', function(event){
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Wine';
+// 	refreshDrinks();
+// });
+// $('#cocktails a').on('click', function(event){
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Cocktail';
+// 	refreshDrinks();
+// });

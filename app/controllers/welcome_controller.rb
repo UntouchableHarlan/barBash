@@ -5,6 +5,8 @@ class WelcomeController < ApplicationController
     if session[:start_time_min].nil?
       get_time
     end
+
+
     new_price
 
     @biggest_change = Drink.all.sort{|a,b| a.price_difference <=> b.price_difference}.first(10)
@@ -13,13 +15,13 @@ class WelcomeController < ApplicationController
     if type == "biggestchange"
       @drinks = @biggest_change
   elsif type and not type.blank?
-      @drinks = Drink.where(name: type)
+      @drinks = Drink.where(category: type)
     end
 
-    @wines = Drink.where(name: "wine")
-    @vodkas = Drink.where(name: "vokda")
-    @whiskeys = Drink.where(name: "whiskey")
-    @tequilas = Drink.where(name: "tequila")
+    # @wines = Drink.where(name: "wine")
+    # @vodkas = Drink.where(name: "vokda")
+    # @whiskeys = Drink.where(name: "whiskey")
+    # @tequilas = Drink.where(name: "tequila")
   end
 
   def beers
