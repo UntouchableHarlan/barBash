@@ -2,52 +2,88 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
+
 // $(document).ready(function() {
 //     $('.btn-success').click(function() {
 //       $('.modal').fadeIn(1000)
 //     })
 
 
-console.log('attaching click');
-console.log($('#beers a'));
-$('#beers a').on('click', function(event){
+// $('#biggestchange a').on('click', function(event){
+// 	event.preventDefault();
+// 	console.log('Clicked');
+// 	console.dir(this);
+// 	type = 'biggestchange';
+// 	refreshDrinks();
+// });
+
+
+// console.log('attaching click');
+// console.log($('#beers a'));
+$('#tequilas a').on('click', function(event){
 	event.preventDefault();
-	console.log('Clicked');
-	console.dir(this);
-	type = 'beer';
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Tequila';
 	refreshDrinks();
 });
-$('#wines a').on('click', function(event){
+$('#rums a').on('click', function(event){
 	event.preventDefault();
-	console.log('Clicked');
-	console.dir(this);
-	type = 'wine';
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Rum';
 	refreshDrinks();
 });
 $('#vodkas a').on('click', function(event){
 	event.preventDefault();
-	console.log('Clicked');
-	console.dir(this);
-	type = 'vodka';
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Vodka';
 	refreshDrinks();
 });
-$('#biggestchange a').on('click', function(event){
-	event.preventDefault();
-	console.log('Clicked');
-	console.dir(this);
-	type = 'biggestchange';
-	refreshDrinks();
-});
+
 $('#whiskeys a').on('click', function(event){
 	event.preventDefault();
-	console.log('Clicked');
-	console.dir(this);
-	type = 'whiskey';
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Whiskey';
 	refreshDrinks();
-});$('#tequilas a').on('click', function(event){
+
+});
+
+$('#craft_beers a').on('click', function(event){
+
 	event.preventDefault();
-	console.log('Clicked');
-	console.dir(this);
-	type = 'tequila';
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Wynwood Brewery';
+	refreshDrinks();
+});
+$('#domestic_beer a').on('click', function(event){
+	event.preventDefault();
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Domestic';
+	refreshDrinks();
+});
+$('#imported_beer a').on('click', function(event){
+	event.preventDefault();
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Imported';
+	refreshDrinks();
+});
+$('#wines a').on('click', function(event){
+	event.preventDefault();
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Wine';
+	refreshDrinks();
+});
+$('#cocktails a').on('click', function(event){
+	event.preventDefault();
+	// console.log('Clicked');
+	// console.dir(this);
+	type = 'Cocktail';
 	refreshDrinks();
 });
