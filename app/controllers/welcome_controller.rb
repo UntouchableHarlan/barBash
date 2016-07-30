@@ -6,8 +6,9 @@ class WelcomeController < ApplicationController
       get_time
     end
     new_price
-    @drinks = Drink.all
+
     @biggest_change = Drink.all.sort{|a,b| a.price_difference <=> b.price_difference}.first(10)
+    @drinks = @biggest_change
     type = params[:type]
     if type == "biggestchange"
       @drinks = @biggest_change

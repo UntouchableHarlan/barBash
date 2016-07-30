@@ -31,4 +31,16 @@ $('#biggestchange a').on('click', function(event){
 	console.dir(this);
 	type = 'biggestchange';
 	refreshDrinks();
+});$('#whiskeys a').on('click', function(event){
+	event.preventDefault();
+	console.log('Clicked');
+	console.dir(this);
+	type = 'whiskey';
+	refreshDrinks();
+});$('#tequilas a').on('click', function(event){
+	event.preventDefault();
+	console.log('Clicked');
+	console.dir(this);
+	type = 'tequila';
+	refreshDrinks();
 });
