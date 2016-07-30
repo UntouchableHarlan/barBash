@@ -66,64 +66,7 @@
 
 
 <!-- Timer -->
-<div class= "reload">
-<div id="hour" style="text-align:center"></div>
 
-
-
-<!--- Buy Section -->
-<<<<<<< HEAD
-
-<%#= render 'beer_table', drink: @drink %>
-<div class="beers">
-<section id="beer" class="container content-section text-center">
-  <!-- <button type="button" name="button">reload thing</button> -->
-    <table class="table">
-      <thead>
-
-        <tr class="top">
-          <th style="text-align: center">Name</th>
-          <th style="text-align: center">Brand</th>
-          <th style="text-align: center">Price</th>
-          <th style="text-align: center">Price Difference</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @drinks.each_with_index do |drink,i| %>
-          <tr>
-            <td class="drink"><%= drink.name %></td>
-            <td class="drinks"><%= drink.brand %></td>
-            <td class="drinkss">$<%= drink.current_price %></td>
-
-            <% if drink.price_difference > 0 %>
-                <td style= "color: green"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
-            <% elsif drink.price_difference < 0%>
-                <td style= "color: red"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
-            <% else %>
-                <td><%= drink.price_difference %></td>
-            <% end %>
-            <td><%= link_to 'Buy', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myModal#{i}" %></td>
-          </tr>
-
-          <div id="myModal<%=i%>" class="modal" role="dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Sign Up</h4>
-                </div>
-                <div class="modal-body">
-                  Buy A <%= drink.name %> for <%= drink.current_price %>
-                </div>
-            </div>
-          </div>
-        <% end %>
-      </tbody>
-    </table>
-</section>
-
-</div>
-
-</div>
 
 <!-- <div id="myModal" class="modal" role="dialog">
   <div class="modal-content">
@@ -139,10 +82,27 @@
 
   </div>
 </div> -->
-=======
+
 <section class="win">
   <div class="wi">
     <%= render 'biggest_change', drinks: @drinks %>
   </div>
 </section>
->>>>>>> 29d203736d630137b1a404d417b5e5d71e548442
+
+<section>
+  <div class="wines">
+    <%#= render 'wine_table', drinks: @drinks %>
+  </div>
+</section>
+
+<section>
+  <div class="vodkas">
+    <%#= render 'whiskey_table' %>
+  </div>
+</section>
+
+<section>
+  <div class="vodkas">
+    <%#= render 'tequilas_table' %>
+  </div>
+</section>

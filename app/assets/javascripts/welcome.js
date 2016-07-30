@@ -2,10 +2,10 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready(function() {
-    $('.btn-success').click(function() {
-      $('.modal').fadeIn(1000)
-    })
+// $(document).ready(function() {
+//     $('.btn-success').click(function() {
+//       $('.modal').fadeIn(1000)
+//     })
 
 
 console.log('attaching click');
@@ -23,7 +23,8 @@ $('#wines a').on('click', function(event){
 	console.dir(this);
 	type = 'wine';
 	refreshDrinks();
-});$('#vodkas a').on('click', function(event){
+});
+$('#vodkas a').on('click', function(event){
 	event.preventDefault();
 	console.log('Clicked');
 	console.dir(this);
@@ -36,7 +37,8 @@ $('#biggestchange a').on('click', function(event){
 	console.dir(this);
 	type = 'biggestchange';
 	refreshDrinks();
-});$('#whiskeys a').on('click', function(event){
+});
+$('#whiskeys a').on('click', function(event){
 	event.preventDefault();
 	console.log('Clicked');
 	console.dir(this);

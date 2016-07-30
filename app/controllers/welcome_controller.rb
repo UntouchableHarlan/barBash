@@ -16,10 +16,10 @@ class WelcomeController < ApplicationController
       @drinks = Drink.where(name: type)
     end
 
-    # @wines = Drink.where(name: "wine")
-    # @vodkas = Drink.where(name: "vokda")
-    # @whiskeys = Drink.where(name: "whiskey")
-    # @tequilas = Drink.where(name: "tequila")
+    @wines = Drink.where(name: "wine")
+    @vodkas = Drink.where(name: "vokda")
+    @whiskeys = Drink.where(name: "whiskey")
+    @tequilas = Drink.where(name: "tequila")
   end
 
   def beers
