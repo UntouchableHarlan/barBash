@@ -97,10 +97,11 @@ var interval = setInterval(function() {
   if (seconds === -1){
     seconds = 60;
     refreshDrinks();
-    setInterval(interval).fadeOut(100).fadeIn(1000)
+    // setInterval(interval).fadeOut(100).fadeIn(1000)
   }
 }, 1000);
 
 function refreshDrinks() {
-  $('.table').fadeOut(100).load("/?type=" + type + " .reload").fadeIn(1000);
+	$('.modal').remove();
+  $('.table').fadeOut(1000).load("/?type=" + type + " #beer").fadeIn(1000);
 }

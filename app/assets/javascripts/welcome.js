@@ -34,7 +34,7 @@ $('#shot a').on('click', function(event){
 	type = 'shot';
 	refreshDrinks();
 });
-$('#beer a').on('click', function(event){
+$('#beerss a').on('click', function(event){
 	event.preventDefault();
 	// console.log('Clicked');
 	// console.dir(this);
