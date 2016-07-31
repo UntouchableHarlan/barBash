@@ -103,5 +103,5 @@ var interval = setInterval(function() {
 
 function refreshDrinks() {
 	$('.modal').remove();
-  $('.table').fadeOut(1000).load("/?type=" + type + " #beer").fadeIn(1000);
+  $('.table').load("/?type=" + type + " #beer").fadeOut(1000).fadeIn(1000);
 }
