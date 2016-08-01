@@ -15,18 +15,22 @@
 //= require turbolinks
 //= require_tree .
 
-
+// Nav Bar Customization
 $(window).scroll(function() {
+  var navbar = $('.navbar-custom');
+  var affixed = navbar.hasClass('affix');
+  var top = $(".navbar").offset().top;
+
 	// console.log("some")
-    if ($(".navbar").offset().top > 50) {
-			console.log("thing");
-        $('.navbar-custom').addClass('affix');
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-			console.log("else");
-        $('nav.navbar-custom').removeClass('affix');
-        $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
-    }
+  if (top > 50 && !affixed) {
+		// console.log("thing");
+    navbar.addClass('affix');
+    $(".navbar-fixed-top").addClass("top-nav-collapse");
+  } else if (top < 50 && affixed) {
+		// console.log("else");
+    navbar.removeClass('affix');
+    $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
+  }
 });
 
 var seconds = 60;
@@ -44,6 +48,7 @@ function format(min, sec) {
 	}
 }
 // Timer
+console.log('starting a new interval');
 var interval = setInterval(function() {
 	var min = parseInt(seconds/60);
 	var sec = (seconds % 60);
@@ -62,3 +67,43 @@ function refreshDrinks() {
 	$('.modal').remove();
   $('.table').load("/?type=" + type + " #beer").fadeOut(1000).fadeIn(1000);
 }
+
+// Stripe payment
+$(function() {
+  var $form = $('#payment-form');
+  $form.submit(function(event) {
+    // Disable the submit button to prevent repeated clicks:
+    $form.find('.submit').prop('disabled', true);
+
+    // Request a token from Stripe:
+    Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from being submitted:
+    return false;
+  });
+});
+
+
+// Sending stripe payment
+function stripeResponseHandler(status, response) {
+  // Grab the form:
+  var $form = $('#payment-form');
+
+  if (response.error) { // Problem!
+
+    // Show the errors on the form:
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('.submit').prop('disabled', false); // Re-enable submission
+
+  } else { // Token was created!
+
+    // Get the token ID:
+    var token = response.id;
+
+    // Insert the token ID into the form so it gets submitted to the server:
+    $form.append($('<input type="hidden" name="stripeToken">').val(token));
+
+    // Submit the form:
+    $form.get(0).submit();
+  }
+};
