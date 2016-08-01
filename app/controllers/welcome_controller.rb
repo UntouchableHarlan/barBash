@@ -13,13 +13,8 @@ class WelcomeController < ApplicationController
   elsif type && !type.blank?
       @drinks = Drink.where(category: type)
     else
-      @drinks = Drink.all
+      @drinks = Drink.all.first(5)
     end
-
-    # @wines = Drink.where(name: "wine")
-    # @vodkas = Drink.where(name: "vokda")
-    # @whiskeys = Drink.where(name: "whiskey")
-    # @tequilas = Drink.where(name: "tequila")
   end
 
   def beers

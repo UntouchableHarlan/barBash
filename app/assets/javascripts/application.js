@@ -25,11 +25,11 @@
 $(window).scroll(function() {
 	// console.log("some")
     if ($(".navbar").offset().top > 50) {
-			console.log("thing");
+
         $('.navbar-custom').addClass('affix');
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
-			console.log("else");
+			
         $('nav.navbar-custom').removeClass('affix');
         $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
     }

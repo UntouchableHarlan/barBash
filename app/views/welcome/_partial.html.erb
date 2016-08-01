@@ -29,6 +29,18 @@
             <% end %>
             <td><%= link_to 'Buy', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myModal#{i}" %></td>
           </tr>
+          <td><%= link_to 'Graph', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myGraph#{i}" %></td>
+        </tr>
+        <div id="myGraph<%=i%>" class="modal" role="dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"><%= drink.name %> </h4>
+              <div class="modal-body">
+                <%= render 'graph', drink: drink %>
+
+
+
 
           <div id="myModal<%=i%>" class="modal" role="dialog">
             <div class="modal-content">
