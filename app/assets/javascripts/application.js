@@ -1,3 +1,6 @@
+
+
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -10,10 +13,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require Chart.bundle
+//= require chartkick
 
 // Nav Bar Customization
 $(window).scroll(function() {
@@ -21,7 +27,6 @@ $(window).scroll(function() {
   var affixed = navbar.hasClass('affix');
   var top = $(".navbar").offset().top;
 
-	// console.log("some")
   if (top > 50 && !affixed) {
 		// console.log("thing");
     navbar.addClass('affix');
@@ -31,6 +36,13 @@ $(window).scroll(function() {
     navbar.removeClass('affix');
     $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
   }
+    if ($(".navbar").offset().top > 50) {
+        $('.navbar-custom').addClass('affix');
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $('nav.navbar-custom').removeClass('affix');
+        $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
+    }
 });
 
 var seconds = 60;
