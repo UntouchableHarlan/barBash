@@ -73,9 +73,22 @@
 // }
 
 
+$(window).scroll(function() {
+	// console.log("some")
+    if ($(".navbar").offset().top > 50) {
+			console.log("thing");
+        $('.navbar-custom').addClass('affix');
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+			console.log("else");
+        $('nav.navbar-custom').removeClass('affix');
+        $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+});
+
 var seconds = 60;
 var type = "";
-
+// Seconds format
 function format(min, sec) {
 	if (sec === 0){
 		return min + ":" + "00"
@@ -87,7 +100,7 @@ function format(min, sec) {
 		return min + ":" + sec
 	}
 }
-
+// Timer
 var interval = setInterval(function() {
 	var min = parseInt(seconds/60);
 	var sec = (seconds % 60);
@@ -100,7 +113,7 @@ var interval = setInterval(function() {
     // setInterval(interval).fadeOut(100).fadeIn(1000)
   }
 }, 1000);
-
+// Refreshes the prices
 function refreshDrinks() {
 	$('.modal').remove();
   $('.table').load("/?type=" + type + " #beer").fadeOut(1000).fadeIn(1000);

@@ -30,20 +30,10 @@
    .navbar-custom.affix {
        top: 0;
        min-width: 100%;
-       background-color: #f8f8f8;
+       background-color: black;
        opacity: 0.9;
        -webkit-transition: background .5s ease-in-out, opacity .5s ease;
        -moz-transition: background .5s ease-in-out, opacity .5s ease;
        transition: background .5s ease-in-out, opacity .5s ease;
    }
  }
-
- a {
-   color: inherit;
- }
-
-.navbar-custom:hover,
-.navbar-custom:focus {
-  background-color: transparent;
-  color: #999999;
-}
