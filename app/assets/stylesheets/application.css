@@ -42,8 +42,15 @@
    color: inherit;
  }
 
-.navbar-custom:hover,
-.navbar-custom:focus {
+ #upthere {
+  font-family: impact;
+  font-weight: bold;
+  font-size: 32px;
+  color: brown;
+ }
+
+.navbar-custom a:hover,
+.navbar-custom a:focus {
   background-color: transparent;
   color: #999999;
 }

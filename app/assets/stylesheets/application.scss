@@ -13,27 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
- @media (min-width: 768px) {
-   .navbar-custom {
-     background-color: transparent;
-     border: 0;
-     box-shadow: none;
-     z-index: 999;
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
-     -webkit-transition: background .5s ease-in-out, opacity .5s ease;
-     -moz-transition: background .5s ease-in-out, opacity .5s ease;
-     transition: background .5s ease-in-out, opacity .5s ease;
-   }
-
-   .navbar-custom.affix {
-       top: 0;
-       min-width: 100%;
-       background-color: black;
-       opacity: 0.9;
-       -webkit-transition: background .5s ease-in-out, opacity .5s ease;
-       -moz-transition: background .5s ease-in-out, opacity .5s ease;
-       transition: background .5s ease-in-out, opacity .5s ease;
-   }
- }
