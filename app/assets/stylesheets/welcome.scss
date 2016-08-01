@@ -9,9 +9,19 @@ body{
 
 
 
-.intro-message {
+.intro-message h1 {
   text-align: center;
-  color: #FF8C00;
+  color:orange;
+  text-shadow: 3px 2px white;
+
+  font-size: 75px;
+  margin-top: 200px;
+}
+.intro-message h3{
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  text-shadow:2px 3px green;
 }
 
 .intro-header {
@@ -20,7 +30,7 @@ body{
     padding-bottom: 488px;
     text-align: center;
     color: #f8f8f8;
-    background: url(drinksss.jpeg) no-repeat center center;
+    background: url(beer.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -64,3 +74,25 @@ div.dropdown {
 #dropdownMenu1 {
   width: 164px;
 }
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 40px;
+}
+
+.arrows path {
+  stroke:green;
+  fill: transparent;
+  stroke-width: 1.5px;  
+}
+ iframe{
+  display: flex;
+  flex-direction: row;
+  margin-left: 550px;
+  margin-top: 350px;
+  margin-bottom: 350px;
+ }

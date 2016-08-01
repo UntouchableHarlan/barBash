@@ -57,6 +57,8 @@ $('#cocktail a').on('click', function(event){
 	refreshDrinks();
 
 });
+$('#arrow').addClass('animated bounce');
+
 //
 // $('#craft_beers a').on('click', function(event){
 //
