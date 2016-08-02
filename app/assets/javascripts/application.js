@@ -56,11 +56,11 @@ function format(min, sec) {
 		return (min + ":0" + sec).fontcolor("red")
 	}
 	else {
-		return min + ":" + sec
+		return min + ":" + sec s
 	}
 }
 // Timer
-console.log('starting a new interval');
+// console.log('starting a new interval');
 var interval = setInterval(function() {
 	var min = parseInt(seconds/60);
 	var sec = (seconds % 60);
