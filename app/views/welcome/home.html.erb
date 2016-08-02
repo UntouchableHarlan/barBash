@@ -1,26 +1,50 @@
 <!-- Image Background -->
-<div class="intro-header">
+<div class="section" id="section1">
   <div class="container">
       <div class="row">
           <div class="col-lg-12">
-              <div class="intro-message">
-                  <h1>Welcome To BeerBash</h1>
+              <!-- <div class="intro-message">
+                  <h1>Welcome To BeerBash</h1><br>
+                  <p> A safer place for your walter.</p><br>
                   <h3>Never pay full price for beer again!</h3>
-              </div>
+                  <p> Drink Up!</p>
+              </div> -->
           </div>
       </div>
-
   </div>
 </div>
 
+<div class="section" id="section2">
+  <center>
+    <div class="jumbotron" style="padding-top: 100px; padding-bottom: 100px;">
+        <iframe src="https://player.vimeo.com/video/177134132" width="1000" height="600" align="center" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </center>
+</div>
+<!-- <p><a href="https://vimeo.com/177134132"></a><a href="https://vimeo.com/user55006035"></a><a href="https://vimeo.com"></a></p> -->
 
-<section id="row1">
-  <br/>
-<!-- Timer -->
-<div id="hour" style="text-align:center"></div>
-  <div class="row">
-    <div class="col-md-4">
-        <%= render 'partial', drinks: @drinks %>
+
+<!-- <div class="btn-group" role="group" aria-label="...">
+  <button id="biggestchange"><a href="#">Main Page</a></button>
+  <button id="beerss"><a href="#">Beers</a> </button>
+  <button id="wine"><a href="#">Wines</a></button>
+  <button id="shot"><a href="#">Shots</a></button>
+  <button id="cocktail"><a href="#">Signature Cocktails</a></button>
+</div> -->
+
+
+<div class="section" id="section3">
+  <div class="home">
+    <br/>
+  <!-- Timer -->
+  <div id="hour" style="text-align:center"></div>
+  <button id="starttimer"><a href="#">Start Timer</a></button>
+  <button id="stoptimer"><a href="#">Stop Timer</a></button>
+
+    <div class="row">
+      <div class=".col-md-6">
+          <%= render 'partial', drinks: @drinks %>
+      </div>
     </div>
   </div>
-</section>
+</div>

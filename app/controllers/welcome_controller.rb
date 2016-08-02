@@ -1,6 +1,9 @@
 class WelcomeController < ApplicationController
 
   def home
+
+  #----------------------------------------------------
+
     if session[:start_time_min].nil?
       get_time
     end
@@ -11,11 +14,12 @@ class WelcomeController < ApplicationController
     elsif type && !type.blank?
       @drinks = Drink.where(category: type)
     else
-      @drinks = Drink.all.first(5)
+      @drinks = Drink.all.first(10)
     end
   end
 
   def create
+
   end
 
 

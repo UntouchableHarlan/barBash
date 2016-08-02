@@ -16,10 +16,22 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 //= require Chart.bundle
 //= require chartkick
+
+$(document).ready(function() {
+  $.fn.fullpage({
+    menu: '.navbar',
+    verticalCentered: true,
+    resize : false,
+    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
+    css3: true
+  });
+});
 
 // Nav Bar Customization
 $(window).scroll(function() {
@@ -45,6 +57,7 @@ $(window).scroll(function() {
     }
 });
 
+
 var seconds = 60;
 var type = "";
 // Seconds format
@@ -56,7 +69,7 @@ function format(min, sec) {
 		return (min + ":0" + sec).fontcolor("red")
 	}
 	else {
-		return min + ":" + sec s
+		return min + ":" + sec
 	}
 }
 // Timer
@@ -72,12 +85,13 @@ var interval = setInterval(function() {
     refreshDrinks();
     // setInterval(interval).fadeOut(100).fadeIn(1000)
   }
-}, 1000);
+}, 2000);
+
 
 // Refreshes the prices
 function refreshDrinks() {
-	$('.modal').remove();
-  $('.table').load("/?type=" + type + " #beer").fadeOut(1000).fadeIn(1000);
+	// $('.modal').remove();
+  $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
 }
 
 // Stripe payment

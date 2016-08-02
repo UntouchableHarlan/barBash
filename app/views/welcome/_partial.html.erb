@@ -1,9 +1,4 @@
-<div class= "reload">
-
   <!--- Buy Section -->
-  <div class="beers">
-    <section id="beer" class="container content-section text-center">
-      <!-- <button type="button" name="button">reload thing</button> -->
       <table class="table">
         <thead>
           <tr class="top">
@@ -27,11 +22,10 @@
             <% else %>
             <td><%= drink.price_difference %></td>
             <% end %>
+            <script src="https://checkout.stripe.com/checkout.js"></script>
             <td><button class="btn btn-success customButton <%= i %>">Purchase</button></td>
             <td><%= link_to 'Graph', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myGraph#{i}" %></td>
           </tr>
-
-
           <div id="myGraph<%=i%>" class="modal" role="dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -46,6 +40,3 @@
           <% end %>
         </tbody>
       </table>
-    </section>
-  </div>
-</div>
