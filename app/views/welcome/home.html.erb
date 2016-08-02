@@ -1,4 +1,5 @@
 <!-- Image Background -->
+
 <div class="intro-header">
   <div class="container">
       <div class="row">
@@ -37,14 +38,22 @@
 <section id="row1">
   <br/>
 <!-- Timer -->
-<% if session[:owner_id]%>
 <div id="hour" style="text-align:center"></div>
-<button id="starttimer"><a href="#">Start Timer</a></button>
+<% if session[:owner_id]%>
+<!-- <div class="set_timer">
+  <%= form_for(:welcome, url: starttimer_path) do |f| %>
+    <%= f.number_field :time_in_seconds, min: 0, max: 1200 %>
+    <%= f.submit 'Set Timer' %>
+  <% end %> -->
+</div>
+<%= session[:time_in_seconds] %>
+<%= link_to 'Start Timer', time_path, id: "starttimer" %>
+<!-- <button id="starttimer"><a href="#">Start Timer</a></button> -->
 <button id="stoptimer"><a href="#">Stop Timer</a></button>
 <% end %>
   <div class="row">
     <div class=".col-md-6">
-        <%= render 'partial', drinks: @drinks %>
+        <%= render 'partial', drinks: @drinks%>
     </div>
   </div>
 </section>

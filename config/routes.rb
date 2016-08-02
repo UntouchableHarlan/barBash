@@ -11,14 +11,14 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   get '/signup' => 'owners#new'
-
+  post '/starttimer' => 'welcome#set_timer'
 
 
 
   get '/bars/edit' => 'bars#editpage'
   patch '/bars/edit' => 'bars#edit'
   get '/beers' => 'welcome#beers'
-
+  get '/time' => 'welcome#get_time'
   resources :drinks
   resources :owners
   resources :sessions

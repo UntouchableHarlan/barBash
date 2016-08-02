@@ -17,12 +17,22 @@ class WelcomeController < ApplicationController
 
   def create
   end
-
+  def get_time
+    session[:start_time_min] = Time.now.min
+    session[:start_time_hour] = Time.now.hour
+    redirect_to root_path
+  end
 
   def beers
     beers = Drink.where(name: "beer").sort{|a,b| a.price_difference <=> b.price_difference}.first(10)
     render json: beers, status: 200
   end
+  #post '/starttimer'
+  # def set_timer
+  #   @timer = params[:welcome][:time_in_seconds].to_i
+  #   gon.timer = @timer
+  #   p gon.timer
+  # end
 
   private
   def new_price
@@ -47,7 +57,7 @@ class WelcomeController < ApplicationController
 
     percent_of_capacity_full = (bar.people_inside.to_f / bar.capacity).round(2)
     drink_bought_in_last_5mins = 5
-      if (Time.now.min - session[:start_time_min]) % 1 == 0
+      if (Time.now.min - session[:start_time_min]) % 5 == 0
         Drink.all.each do |drink|
               if Time.now.hour == @price_hour && (Time.now.min) == @price_minute
                 break
