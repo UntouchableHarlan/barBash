@@ -28,7 +28,7 @@
             <td><%= drink.price_difference %></td>
             <% end %>
             <td><%= link_to 'Buy', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myModal#{i}" %></td>
-    
+
           <td><%= link_to 'Graph', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myGraph#{i}" %></td>
         </tr>
 
@@ -39,9 +39,9 @@
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title"><%= drink.name %> </h4>
+            </div>
               <div class="modal-body">
                 <%= render 'graph', drink: drink %>
-              </div>
             </div>
           </div>
         </div>
