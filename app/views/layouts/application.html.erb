@@ -5,18 +5,14 @@
     <title>BarBash</title>
     <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-
-    <!-- Latest compiled and minified JavaScript -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Latest compiled and minified JavaScript -->
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
@@ -36,28 +32,65 @@
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li>
-                        <a class="page-scroll" id="upthere" href="#row1">BEERS</a>
+                        <a class="page-scroll scroll" id="upthere" href="#section3">BEERS</a>
                     </li>
                     <li>
-                        <%= link_to 'LOG IN', login_path, id: "upthere" %>
+                        <a class="page-scroll scroll" id="downthere" href="#">ABOUT</a>
+                    </li>
+                    <li>
+                        <%= link_to 'LOG IN', login_path, class: "page-scroll" %>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
     </nav><!-- /.container -->
-
-    <%= yield %>
-
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.easings.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-    <script type="text/javascript">Stripe.setPublishableKey('pk_test_62HeHVyg9ixt0DZ2WE0UdVZ1');</script>
+    <div id="fullpage">
+      <%= yield %>
+    </div>
 
 
+    <div class="javascript">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/vendors/jquery.easings.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/vendors/scrolloverflow.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/vendors/scrolloverflow.min.js"></script>
+      <script type="text/javascript">
+      $(function(){
+        $('#fullpage').fullpage();
+      });
 
+      var handler = StripeCheckout.configure({
+      	key: 'pk_test_62HeHVyg9ixt0DZ2WE0UdVZ1',
+      	locale: 'auto',
+      	token: function(token) {
+      		// You can access the token ID with `token.id`.
+      		// Get the token ID to your server-side code for use.
+      	}
+      });
+
+      $('body').on('click','.customButton', function(e) {
+      	e.preventDefault();
+      	var table = $(this).parent().parent().children(), holding = [];
+
+      	table.each(function(i){
+      		holding.push($(this).text());
+      			// console.log($(this).text());
+      	});
+      	// console.log($(this).parent().parent().children());
+      	var name = holding[0], bio = holding[1], price = holding[2];
+      	// Open Checkout with further options:
+      	handler.open({
+      		name: name,
+      		description: bio,
+      		amount: parseInt(price) * 100
+      	});
+      });
+      </script>
+      <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+      <script type="text/javascript">Stripe.setPublishableKey('pk_test_62HeHVyg9ixt0DZ2WE0UdVZ1');</script>
+    </div>
 
   </body>
 </html>

@@ -20,19 +20,6 @@
 //= require Chart.bundle
 //= require chartkick
 
-$(document).ready(function() {
-  $.fn.fullpage({
-    menu: '.navbar',
-    verticalCentered: true,
-    resize : false,
-    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-    navigation: true,
-    navigationPosition: 'right',
-    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
-    css3: true
-  });
-});
-
 // Nav Bar Customization
 $(window).scroll(function() {
   var navbar = $('.navbar-custom');
@@ -77,20 +64,19 @@ function format(min, sec) {
 var interval = setInterval(function() {
 	var min = parseInt(seconds/60);
 	var sec = (seconds % 60);
-  min = parseInt(sec /60)
-  seconds -= 1
+  seconds -= 1;
   $("#hour").html(format(min, sec));
   if (seconds === -1){
     seconds = 60;
     refreshDrinks();
     // setInterval(interval).fadeOut(100).fadeIn(1000)
   }
-}, 2000);
+}, 1000);
 
 
 // Refreshes the prices
 function refreshDrinks() {
-	// $('.modal').remove();
+	$('.modal').remove();
   $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
 }
 

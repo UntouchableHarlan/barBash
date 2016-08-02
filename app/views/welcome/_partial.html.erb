@@ -11,16 +11,16 @@
         <tbody>
           <% @drinks.each_with_index do |drink,i| %>
           <tr>
-            <td class="drink"><%= drink.name %></td>
-            <td class="drinks"><%= drink.bio %></td>
-            <td class="drinkss">$<%= drink.current_price %></td>
+            <td class="drink" style="text-align: center"><%= drink.name %></td>
+            <td class="drinks" style="text-align: center"><%= drink.bio %></td>
+            <td class="drinkss" style="text-align: center">$<%= drink.current_price %></td>
 
             <% if drink.price_difference > 0 %>
-            <td style= "color: green"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+            <td style= "color:green; text-align: center"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
             <% elsif drink.price_difference < 0%>
-            <td style= "color: red"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+            <td style= "color:red; text-align: center"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
             <% else %>
-            <td><%= drink.price_difference %></td>
+            <td style="text-align: center"><%= drink.price_difference %></td>
             <% end %>
             <script src="https://checkout.stripe.com/checkout.js"></script>
             <td><button class="btn btn-success customButton <%= i %>">Purchase</button></td>
