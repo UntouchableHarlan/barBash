@@ -37,10 +37,11 @@
 <section id="row1">
   <br/>
 <!-- Timer -->
+<% if session[:owner_id]%>
 <div id="hour" style="text-align:center"></div>
 <button id="starttimer"><a href="#">Start Timer</a></button>
 <button id="stoptimer"><a href="#">Stop Timer</a></button>
-
+<% end %>
   <div class="row">
     <div class=".col-md-6">
         <%= render 'partial', drinks: @drinks %>

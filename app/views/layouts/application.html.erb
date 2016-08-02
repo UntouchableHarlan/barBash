@@ -38,9 +38,14 @@
                     <li>
                         <a class="page-scroll" id="upthere" href="#row1" data-no-turbolink>BEERS</a>
                     </li>
+                    <% if !session[:owner_id] %>
                     <li>
                         <%= link_to 'LOG IN', login_path, id: "upthere" %>
                     </li>
+                    <% else %>
+                      <%= link_to 'Log Out', logout_path, id: "upthere" %>
+                    </li>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
