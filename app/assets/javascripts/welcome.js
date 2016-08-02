@@ -2,22 +2,6 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
-// $(document).ready(function() {
-//     $('.btn-success').click(function() {
-//       $('.modal').fadeIn(1000)
-//     })
-
-
-// $('#biggestchange a').on('click', function(event){
-// 	event.preventDefault();
-// 	console.log('Clicked');
-// 	console.dir(this);
-// 	type = 'biggestchange';
-// 	refreshDrinks();
-// });
-
-
 // console.log('attaching click');
 // console.log($('#beers a'));
 $('#biggestchange a').on('click', function(event){

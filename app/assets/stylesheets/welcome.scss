@@ -11,8 +11,8 @@ body{
 
 .intro-message h1 {
   text-align: center;
-  color:orange;
-  text-shadow: 3px 2px white;
+  color:white;
+  text-shadow: 3px 2px green;
 
   font-size: 75px;
   margin-top: 200px;
@@ -23,6 +23,14 @@ body{
   font-size: 35px;
   text-shadow:2px 3px green;
 }
+.intro-message p{
+  font-size: 35px;
+  color:  #800000;
+  text-shadow: 3px 2px orange;
+
+
+}
+
 
 .intro-header {
    /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
@@ -31,6 +39,7 @@ body{
     text-align: center;
     color: #f8f8f8;
     background: url(beer.jpg) no-repeat center center;
+    width: 100%;
     background-size: cover;
 }
 
@@ -67,12 +76,9 @@ div.reload{
 
 }
 
-div.dropdown {
-  padding-top: 11px;
-}
-
-#dropdownMenu1 {
-  width: 164px;
+.btn-group{
+  color: gray;
+  padding: 20px 30px 20px 30px;
 }
 
 .arrows {
@@ -92,7 +98,10 @@ div.dropdown {
  iframe{
   display: flex;
   flex-direction: row;
-  margin-left: 550px;
+  margin-left: 450px;
   margin-top: 350px;
   margin-bottom: 350px;
+ }
+ .container1{
+  text-align: center;
  }
