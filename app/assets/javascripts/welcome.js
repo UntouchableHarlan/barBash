@@ -41,3 +41,42 @@ $('#cocktail a').on('click', function(event){
 	refreshDrinks();
 
 });
+$('#arrow').addClass('animated bounce');
+
+//
+// $('#craft_beers a').on('click', function(event){
+//
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Wynwood Brewery';
+// 	refreshDrinks();
+// });
+// $('#domestic_beer a').on('click', function(event){
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Domestic';
+// 	refreshDrinks();
+// });
+// $('#imported_beer a').on('click', function(event){
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Imported';
+// 	refreshDrinks();
+// });
+// $('#wines a').on('click', function(event){
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Wine';
+// 	refreshDrinks();
+// });
+// $('#cocktails a').on('click', function(event){
+// 	event.preventDefault();
+// 	// console.log('Clicked');
+// 	// console.dir(this);
+// 	type = 'Cocktail';
+// 	refreshDrinks();
+// });
