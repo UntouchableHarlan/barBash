@@ -16,10 +16,68 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 //= require Chart.bundle
 //= require chartkick
+
+var seconds = 5;
+var type = "";
+$('#starttimer a').on('click', function(event) {
+	event.preventDefault();
+var seconds = 60;
+var type = "";
+// Seconds format
+function format(min, sec) {
+	if (sec === 0){
+		return min + ":" + "00"
+
+	} else if(sec < 10){
+		return (min + ":0" + sec).fontcolor("red")
+	}
+	else {
+		return min + ":" + sec
+	}
+}
+// Timer
+var interval = setInterval(function() {
+	var min = parseInt(seconds/60);
+	var sec = (seconds % 60);
+  seconds -= 1;
+  $("#hour").html(format(min, sec));
+	$('#stoptimer a').on('click', function(event) {
+		event.preventDefault();
+		clearInterval(interval)
+		$("#hour").html('0:00')
+	});
+
+  if (seconds === -1){
+    seconds = 60;
+    refreshDrinks();
+    // setInterval(interval).fadeOut(100).fadeIn(1000)
+  }
+}, 1000);
+});
+
+
+function refreshDrinks() {
+	// $('.modal').remove();
+
+  $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
+
+}
+
+$(document).ready(function() {
+  $.fn.fullpage({
+    menu: '.navbar',
+    verticalCentered: true,
+    resize : false,
+    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
+    css3: true
+  });
+});
 
 // Nav Bar Customization
 $(window).scroll(function() {
@@ -46,49 +104,18 @@ $(window).scroll(function() {
 });
 
 
-$('#starttimer').on('click', function(event) {
-  	event.preventDefault();
-  seconds = 300;
-  var type = "";
-  function format(min, sec) {
-  	if (sec === 0){
-  		return min + ":" + "00"
 
-  	} else if(sec < 10){
-  		return (min + ":0" + sec).fontcolor("red")
-  	}
-  	else {
-  		return min + ":" + sec
-  	}
-  }
 
 // Seconds format
-// Timer
-var interval = setInterval(function() {
-	var min = parseInt(seconds/60);
-	var sec = (seconds % 60);
 
-  seconds -= 1;
-  $("#hour").html(format(min, sec));
-	$('#stoptimer a').on('click', function(event) {
-		event.preventDefault();
-		clearInterval(interval)
-		$("#hour").html('0:00')
-	});
-  if (seconds === -1){
-    seconds = 300;
-    refreshDrinks();
-    setInterval(interval).fadeOut(100).fadeIn(1000)
-  }
-}, 1000);
-});
+// Timer
+// console.log('starting a new interval');
+
+
+
 
 // Refreshes the prices
-function refreshDrinks() {
-	// $('.modal').remove();
-  $('.table').load("/?type=" + type + " #beer").fadeOut(1000).fadeIn(1000);
 
-}
 
 // Stripe payment
 $(function() {
@@ -108,6 +135,7 @@ $(function() {
 
 // Sending stripe payment
 function stripeResponseHandler(status, response) {
+  console.log("handles");
   // Grab the form:
   var $form = $('#payment-form');
 
@@ -126,6 +154,9 @@ function stripeResponseHandler(status, response) {
     $form.append($('<input type="hidden" name="stripeToken">').val(token));
 
     // Submit the form:
-    $form.get(0).submit();
+    $form.get(0).submit(function(){
+      console.log($form);
+    });
+
   }
 };
