@@ -20,6 +20,7 @@
 //= require Chart.bundle
 //= require chartkick
 
+
 $(document).ready(function() {
   $.fn.fullpage({
     menu: '.navbar',
@@ -58,9 +59,6 @@ $(window).scroll(function() {
     }
 });
 
-
-
-
 var seconds = 60;
 var type = "";
 // Seconds format
@@ -89,7 +87,6 @@ var interval = setInterval(function() {
     // setInterval(interval).fadeOut(100).fadeIn(1000)
   }
 }, 1000);
-
 
 // Refreshes the prices
 function refreshDrinks() {
