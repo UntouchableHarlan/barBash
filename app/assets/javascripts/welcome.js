@@ -5,37 +5,27 @@ var type = "";
 function ready() {
 	$('#biggestchange a').on('click', function(event){
 		event.preventDefault();
-		// console.log('Clicked');
-		// console.dir(this);
 		type = 'biggestchange';
 		refreshDrinks();
 	});
 	$('#shot a').on('click', function(event){
 		event.preventDefault();
-		// console.log('Clicked');
-		// console.dir(this);
 		type = 'shot';
 		refreshDrinks();
 	});
 	$('#beerss a').on('click', function(event){
 		event.preventDefault();
-		// console.log('Clicked');
-		// console.dir(this);
 		type = 'beer';
 		refreshDrinks();
 	});
 	$('#wine a').on('click', function(event){
 		event.preventDefault();
-		// console.log('Clicked');
-		// console.dir(this);
 		type = 'wine';
 		refreshDrinks();
 	});
 
 	$('#cocktail a').on('click', function(event){
 		event.preventDefault();
-		// console.log('Clicked');
-		// console.dir(this);
 		type = 'cocktail';
 		refreshDrinks();
 
@@ -59,7 +49,6 @@ function ready() {
 	});
 
 	$('body').on('click','.customButton', function(e) {
-		// console.log('clicked');
 		e.preventDefault();
 		var table = $(this).parent().parent().children(), holding = [];
 
@@ -116,17 +105,15 @@ function ready() {
 	      }
 			});
 	    refreshDrinks();
-	    // setInterval(interval).fadeOut(100).fadeIn(1000)
+
 	  }
 	}, 1000);
 	});
 	function refreshDrinks() {
-		// $('.modal').remove();
 	  $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
 
 	}
 }
-
 $(document).on('ready turbolinks:load', ready);
 
 
