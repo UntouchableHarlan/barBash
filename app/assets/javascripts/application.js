@@ -20,18 +20,20 @@
 //= require Chart.bundle
 //= require chartkick
 
-// $(document).ready(function() {
-//   $.fn.fullpage({
-//     menu: '.navbar',
-//     verticalCentered: true,
-//     resize : false,
-//     anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-//     navigation: true,
-//     navigationPosition: 'right',
-//     navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
-//     css3: true
-//   });
-// });
+
+$(document).ready(function() {
+  $.fn.fullpage({
+    menu: '.navbar',
+    verticalCentered: true,
+    resize : false,
+    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
+    css3: true
+  });
+});
+
 
 // Nav Bar Customization
 $(window).scroll(function() {
@@ -57,10 +59,12 @@ $(window).scroll(function() {
     }
 });
 
-
-
-
 // Refreshes the prices
+function refreshDrinks() {
+	// $('.modal').remove();
+  $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
+}
+
 
 
 // Stripe payment

@@ -1,4 +1,5 @@
   <!--- Buy Section -->
+
       <table class="table">
         <thead>
           <tr class="top">
@@ -9,33 +10,34 @@
           </tr>
         </thead>
         <tbody>
-          <% @drinks.each_with_index do |drink,i| %>
+          <% drinks.each_with_index do |drink,i| %>
           <tr>
-            <td class="drink"><%= drink.name %></td>
-            <td class="drinks"><%= drink.bio %></td>
-            <td>$<span class="drinkss"><%= drink.current_price %></span></td>
+            <td class="drink" style="text-align: center"><%= drink.name %></td>
+            <td class="drinks" style="text-align: center"><%= drink.bio %></td>
+            <td class="drinkss" style="text-align: center">$<span class="drinkss"><%= drink.current_price %></span></td>
 
             <% if drink.price_difference > 0 %>
-            <td style= "color: green"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+            <td style= "color:green; text-align: center"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
             <% elsif drink.price_difference < 0%>
-            <td style= "color: red"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+            <td style= "color:red; text-align: center"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
             <% else %>
-            <td><%= drink.price_difference %></td>
+            <td style="text-align: center"><%= drink.price_difference %></td>
             <% end %>
+            <script src="https://checkout.stripe.com/checkout.js"></script>
             <td><button class="btn btn-success customButton <%= i %>">Purchase</button></td>
             <td><%= link_to 'Graph', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myGraph#{i}" %></td>
           </tr>
-          <div id="myGraph<%=i%>" class="modal" role="dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><%= drink.name %> </h4>
-                <div class="modal-body">
-                  <%= render 'graph', drink: drink %>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="myGraph <%=i%>" class="modal" role="dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title"><%= drink.name %> </h4>
+         <div class="modal-body">
+           <%= render 'graph', drink: drink %>
+         </div>
+       </div>
+     </div>
+   </div>
           <% end %>
         </tbody>
       </table>

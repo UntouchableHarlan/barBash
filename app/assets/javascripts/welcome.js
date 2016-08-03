@@ -1,33 +1,45 @@
 // # Place all the behaviors and hooks related to the matching controller here.
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
+
 var type = "";
 function ready() {
+	// homepage
 	$('#biggestchange a').on('click', function(event){
 		event.preventDefault();
-		type = 'biggestchange';
-		refreshDrinks();
+		// type = 'biggestchange';
+		$('.shotss').css("display", "none");
+		$('.beersss').css("display", "none");
+		$('.cocktails').css("display", "none");
+		$('.best_deal').css("display", "block");
+
 	});
 	$('#shot a').on('click', function(event){
 		event.preventDefault();
-		type = 'shot';
-		refreshDrinks();
+		// type = 'shot';
+		$('.shotss').css("display", "block");
+		$('.beersss').css("display", "none");
+		$('.cocktails').css("display", "none");
+		$('.best_deal').css("display", "none");
+
 	});
 	$('#beerss a').on('click', function(event){
 		event.preventDefault();
-		type = 'beer';
-		refreshDrinks();
-	});
-	$('#wine a').on('click', function(event){
-		event.preventDefault();
-		type = 'wine';
-		refreshDrinks();
-	});
+		$('.shotss').css("display", "none");
+		$('.beersss').css("display", "block");
+		$('.cocktails').css("display", "none");
+		$('.best_deal').css("display", "none");
 
+		// type = 'beer';
+	});
 	$('#cocktail a').on('click', function(event){
 		event.preventDefault();
-		type = 'cocktail';
-		refreshDrinks();
+		$('.shotss').css("display", "none");
+		$('.beersss').css("display", "none");
+		$('.cocktails').css("display", "block");
+		$('.best_deal').css("display", "none");
+
+		// type = 'cocktail';
 
 	});
 
@@ -42,7 +54,7 @@ function ready() {
 				url: '/sale',
 				data: {name: name, price: price},
 				success: function(){
-					console.log('success!');
+					console.log('welcome.js!');
 				}
 			});
 		}
@@ -70,6 +82,8 @@ function ready() {
 	});
 
 	$('#arrow').addClass('animated bounce');
+
+
 	$('.starttimer').on('click', function(event) {
 	  console.log("This is happneing?")
 	  	event.preventDefault();
@@ -110,9 +124,11 @@ function ready() {
 	}, 1000);
 	});
 	function refreshDrinks() {
-	  $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
+		$('.table').fadeOut(1000)
+		$('.table').fadeIn(1000);
 
 	}
+
 }
 $(document).on('ready turbolinks:load', ready);
 

@@ -1,59 +1,26 @@
-
-body{
-
-}
-
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-.intro-message h1 {
-  text-align: center;
-  color:white;
-  text-shadow: 3px 2px green;
-  font-size: 75px;
-  margin-top: 200px;
-}
-.intro-message h3{
-  text-align: center;
-  color: white;
-  font-size: 35px;
-  text-shadow:2px 3px green;
-}
-.intro-message p{
-  font-size: 35px;
-  color:  green;
-  text-shadow: 3px 2px blue;
-
-
-}
-
 .section {
   background-size: cover;
+  min-height: 100vh;
 }
 
 #section1 {
-   /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-top: 225px;
-    padding-bottom: 84px;
-    text-align: center;
-    color: #f8f8f8;
-    background: url(beer.jpg) no-repeat center center;
-    width: 100%;
-
+  // padding-top: 225px;
+  padding-bottom: 84px;
+  text-align: center;
+  color: #f8f8f8;
+  width: 100%;
 }
 #section2 {
-  background-image: image-url("bg2.jpg");
+  // background-image: image-url("bg2.jpg");
+
 }
 
 #section3 {
-  background-image: image-url("bg3.jpg");
-}
-
-#section4 {
-  background-image: image-url("bg4.jpg");
+  // background-image: image-url("bg3.jpg");
 }
 
 #hour {
@@ -71,46 +38,18 @@ body{
   font-size: 10em;
 
 }
-#up_arrow{
-  color: green;
-  margin-left: 5px;
-}
-#down_arrow{
-  color: red;
-  margin-left: 5px;
-}
-div.down_arrow{
-  color: red;
-}
-div.up_arrow{
-  color: green;
-}
-div.reload{
-
-}
-
-.btn-group{
-  color: gray;
-  padding: 20px 30px 20px 30px;
-}
-
-.arrows {
-  width: 60px;
-  height: 72px;
-  position: absolute;
-  left: 50%;
-  margin-left: -30px;
-  bottom: 40px;
-}
-
-.arrows path {
-  stroke:green;
-  fill: transparent;
-  stroke-width: 1.5px;
-}
  iframe{
 
  }
  .jumbrotron{
   text-align: center;
  }
+.shotss{
+  display: none;
+}
+ .beersss{
+   display: none;
+ }
+.cocktails{
+  display: none;
+}
