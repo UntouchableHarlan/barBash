@@ -1,69 +1,70 @@
-<!-- Image Background -->
-<div class="section">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-              <!-- <div class="intro-message">
-                  <h1>Welcome To BeerBash</h1><br>
-                  <p> A safer place for your wallet, not for the people on the road...
-                .</p><br>
-                  <h3>Never pay full price for beer again!</h3>
-                  <p> Drink Up!</p>
-              </div> -->
-          </div>
-      </div>
-  </div>
-</div>
 
-<div class="section">
-  <center>
-    <div class="jumbotron" style="padding-top: 100px; padding-bottom: 100px;">
-        <iframe src="https://player.vimeo.com/video/177134132" width="1000" height="600" align="center" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <!-- Image Background -->
+  <div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- <div class="intro-message">
+                    <h1>Welcome To BeerBash</h1><br>
+                    <p> A safer place for your wallet, not for the people on the road...
+                  .</p><br>
+                    <h3>Never pay full price for beer again!</h3>
+                    <p> Drink Up!</p>
+                </div> -->
+            </div>
+        </div>
     </div>
-  </center>
-</div>
-
-<!-- the navbar on top of the timer -->
-
-
-
-<div class="section" id="section3">
-  <br>
-  <br>
-  <div class="btn-group" role="group" aria-label="...">
-    <button id="biggestchange"><a href="#">Main Page</a></button>
-    <button id="beerss"><a href="#">Beers and Wine</a> </button>
-    <button id='shot'><a href="#">Shots</a></button>
-    <button id="cocktail"><a href="#">Signature Cocktails</a></button>
   </div>
-  <!-- Timer -->
-  <div id="hour" style="text-align:center"></div>
-  <button class= "starttimer"><a href="">Start Timer</a></button>
-<button id="stoptimer"><a href="#">Stop Timer</a></button>
+
+  <div class="section">
+    <center>
+      <div class="container">
+          <iframe src="https://player.vimeo.com/video/177134132" width="1000" height="600" align="center" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </center>
+  </div>
+
+  <!-- the navbar on top of the timer -->
 
 
-<div class ="table">
-  <div class="shotss">
-    <%= render 'partial', drinks: @tequila %>
-    <%= render 'partial', drinks: @rum %>
-    <%= render 'partial', drinks: @whiskey%>
-    <%= render 'partial', drinks: @vodka %>
-  </div>
-  <div class ="beersss">
-    <%= render 'partial', drinks: @domestic %>
-    <%= render 'partial', drinks: @imported %>
-    <%= render 'partial', drinks: @brewery %>
-    <%= render 'partial', drinks: @wine %>
-  </div>
-  <div class ="cocktails">
 
-    <%= render 'partial', drinks: @cocktail %>
+  <div class="section" id="section3">
+    <br>
+    <br>
+    <div class="btn-group" role="group" aria-label="...">
+      <button id="biggestchange"><a href="#">Main Page</a></button>
+      <button id="beerss"><a href="#">Beers and Wine</a> </button>
+      <button id='shot'><a href="#">Shots</a></button>
+      <button id="cocktail"><a href="#">Signature Cocktails</a></button>
+    </div>
+    <!-- Timer -->
+    <div id="hour" style="text-align:center"></div>
+    <button class= "starttimer"><a href="">Start Timer</a></button>
+  <button id="stoptimer"><a href="#">Stop Timer</a></button>
+
+
+  <div class ="table">
+    <div class="shotss">
+      <%= render 'partial', drinks: @tequila %>
+      <%= render 'partial', drinks: @rum %>
+      <%= render 'partial', drinks: @whiskey%>
+      <%= render 'partial', drinks: @vodka %>
+    </div>
+    <div class ="beersss">
+      <%= render 'partial', drinks: @domestic %>
+      <%= render 'partial', drinks: @imported %>
+      <%= render 'partial', drinks: @brewery %>
+      <%= render 'partial', drinks: @wine %>
+    </div>
+    <div class ="cocktails">
+
+      <%= render 'partial', drinks: @cocktail %>
+    </div>
+    <div class= "best_deal">
+      <%= render 'partial', drinks: @best_deal %>
+      <%= render 'partial', drinks: @best_deal_cocktail %>
+      <%= render 'partial', drinks: @best_deal_beer %>
+      <%= render 'partial', drinks: @best_deal_shot %>
+    </div>
   </div>
-  <div class= "best_deal">
-    <%= render 'partial', drinks: @best_deal %>
-    <%= render 'partial', drinks: @best_deal_cocktail %>
-    <%= render 'partial', drinks: @best_deal_beer %>
-    <%= render 'partial', drinks: @best_deal_shot %>
   </div>
-</div>
-</div>

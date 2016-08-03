@@ -1,5 +1,11 @@
 
-<% date = Time.now %>
+<% interval = (Time.now.beginning_of_day..Time.now.end_of_day) %>
 <div class = "graph">
-<%= line_chart Price.where(drink: drink, :created_at => (date.beginning_of_day..date.end_of_day)).group_by_minute(:created_at, series: false).sum(:amount) %>
+<%# line_chart Price.where(drink: drink,
+                :created_at => (date.beginning_of_day..date.end_of_day)
+               ).group_by_minute(:created_at, series: false).sum(:amount) %>
+<%# Price.where(drink: drink, :created_at => interval
+              ).group_by_minute(:created_at, series: false).sum(:amount) %>
+<%= line_chart drink.price_graph_data %>
+
 </div>

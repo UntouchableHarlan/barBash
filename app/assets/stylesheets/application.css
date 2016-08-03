@@ -54,3 +54,7 @@
   background-color: transparent;
   color: #999999;
 }
+
+.fp-enabled .modal{
+   position:fixed !important;
+}

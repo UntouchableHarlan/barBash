@@ -110,22 +110,27 @@ function ready() {
 			clearInterval(interval)
 			$("#hour").html('0:00')
 		});
-	  if (seconds === -1){
-	    seconds = 10;
+	  if (seconds === 0){
+
 			$.ajax({
 	      url: '/updateprices',
 	      success: function(){
 	        console.log('success!');
+					refreshDrinks();
+
 	      }
 			});
-	    refreshDrinks();
+
 
 	  }
 	}, 1000);
 	});
 	function refreshDrinks() {
+		$('.table').load("/ .table", function() {
+			$('.table').fadeIn(1000);
+			seconds = 10
+		});
 		$('.table').fadeOut(1000)
-		$('.table').fadeIn(1000);
 
 	}
 

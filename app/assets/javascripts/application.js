@@ -31,6 +31,10 @@ $(document).ready(function() {
     navigationPosition: 'right',
     navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
     css3: true
+
+    // $("#myGraph").modal();
+
+
   });
 });
 
@@ -61,7 +65,7 @@ $(window).scroll(function() {
 
 // Refreshes the prices
 function refreshDrinks() {
-	// $('.modal').remove();
+	$('.modal').remove();
   $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
 }
 
