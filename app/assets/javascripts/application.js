@@ -20,6 +20,20 @@
 //= require Chart.bundle
 //= require chartkick
 
+$(document).ready(function() {
+  $.fn.fullpage({
+    menu: '.navbar',
+    verticalCentered: true,
+    resize : false,
+    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
+    css3: true
+  });
+});
+
+
 // Nav Bar Customization
 $(window).scroll(function() {
   var navbar = $('.navbar-custom');
@@ -45,6 +59,8 @@ $(window).scroll(function() {
 });
 
 
+
+
 var seconds = 60;
 var type = "";
 // Seconds format
@@ -56,7 +72,7 @@ function format(min, sec) {
 		return (min + ":0" + sec).fontcolor("red")
 	}
 	else {
-		return min + ":" + sec
+		return min + ":" + sec;
 	}
 }
 // Timer
@@ -64,7 +80,8 @@ function format(min, sec) {
 var interval = setInterval(function() {
 	var min = parseInt(seconds/60);
 	var sec = (seconds % 60);
-  seconds -= 1;
+  min = parseInt(sec /60)
+  seconds -= 1
   $("#hour").html(format(min, sec));
   if (seconds === -1){
     seconds = 60;
@@ -79,6 +96,8 @@ function refreshDrinks() {
 	$('.modal').remove();
   $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
 }
+
+
 
 // Stripe payment
 $(function() {
@@ -98,6 +117,7 @@ $(function() {
 
 // Sending stripe payment
 function stripeResponseHandler(status, response) {
+  console.log("handles");
   // Grab the form:
   var $form = $('#payment-form');
 
@@ -116,6 +136,9 @@ function stripeResponseHandler(status, response) {
     $form.append($('<input type="hidden" name="stripeToken">').val(token));
 
     // Submit the form:
-    $form.get(0).submit();
+    $form.get(0).submit(function(){
+      console.log($form);
+    });
+
   }
 };

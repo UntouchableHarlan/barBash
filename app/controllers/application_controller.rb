@@ -11,10 +11,7 @@ class ApplicationController < ActionController::Base
     redirect_to login_path flash.now[:error] = "Could not save client" unless current_owner
   end
 
-  def get_time
-    session[:start_time_min] = Time.now.min
-    session[:start_time_hour] = Time.now.hour
-  end
+
 
   def timer
     @timer = Bar.take.timer

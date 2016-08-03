@@ -2,30 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-.intro-message h1 {
-  text-align: center;
-  color:white;
-  text-shadow: 3px 2px green;
-
-  font-size: 75px;
-  margin-top: 200px;
-}
-.intro-message h3{
-  text-align: center;
-  color: white;
-  font-size: 35px;
-  text-shadow:2px 3px green;
-}
-.intro-message p{
-  font-size: 35px;
-  color:  #800000;
-  text-shadow: 3px 2px orange;
-
-
-}
-
 .section {
   background-size: cover;
   min-height: 100vh;
@@ -36,12 +12,11 @@
   padding-bottom: 84px;
   text-align: center;
   color: #f8f8f8;
-  background: url(beer.jpg) no-repeat center center;
   width: 100%;
 }
 #section2 {
   // background-image: image-url("bg2.jpg");
-  background: tomato;
+  
 }
 
 #section3 {
@@ -62,43 +37,6 @@
   color: orange;
   font-size: 10em;
 
-}
-#up_arrow{
-  color: green;
-  margin-left: 5px;
-}
-#down_arrow{
-  color: red;
-  margin-left: 5px;
-}
-div.down_arrow{
-  color: red;
-}
-div.up_arrow{
-  color: green;
-}
-div.reload{
-
-}
-
-.btn-group{
-  color: gray;
-  padding: 20px 30px 20px 30px;
-}
-
-.arrows {
-  width: 60px;
-  height: 72px;
-  position: absolute;
-  left: 50%;
-  margin-left: -30px;
-  bottom: 40px;
-}
-
-.arrows path {
-  stroke:green;
-  fill: transparent;
-  stroke-width: 1.5px;
 }
  iframe{
 
