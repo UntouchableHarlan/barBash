@@ -1,7 +1,7 @@
 // # Place all the behaviors and hooks related to the matching controller here.
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
-
+var type = "";
 function ready() {
 	$('#biggestchange a').on('click', function(event){
 		event.preventDefault();
@@ -81,47 +81,54 @@ function ready() {
 	});
 
 	$('#arrow').addClass('animated bounce');
+	$('.starttimer').on('click', function(event) {
+	  console.log("This is happneing?")
+	  	event.preventDefault();
+	  var seconds = 10;
+	  function format(min, sec) {
+	  	if (sec === 0){
+	  		return min + ":" + "00"
+
+	  	} else if(sec < 10){
+	  		return (min + ":0" + sec).fontcolor("red")
+	  	}
+	  	else {
+	  		return min + ":" + sec
+	  	}
+	  }
+	var interval = setInterval(function() {
+		var min = parseInt(seconds/60);
+		var sec = (seconds % 60);
+
+	  seconds -= 1;
+	  $("#hour").html(format(min, sec));
+		$('#stoptimer a').on('click', function(event) {
+			event.preventDefault();
+			clearInterval(interval)
+			$("#hour").html('0:00')
+		});
+	  if (seconds === -1){
+	    seconds = 10;
+			$.ajax({
+	      url: '/updateprices',
+	      success: function(){
+	        console.log('success!');
+	      }
+			});
+	    refreshDrinks();
+	    // setInterval(interval).fadeOut(100).fadeIn(1000)
+	  }
+	}, 1000);
+	});
+	function refreshDrinks() {
+		// $('.modal').remove();
+	  $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
+
+	}
 }
 
 $(document).on('ready turbolinks:load', ready);
 
 
-var seconds = 5;
-var type = "";
-$('#starttimer a').on('click', function(event) {
-	event.preventDefault();
-var seconds = 60;
-var type = "";
-// Seconds format
-function format(min, sec) {
-	if (sec === 0){
-		return min + ":" + "00"
 
-	} else if(sec < 10){
-		return (min + ":0" + sec).fontcolor("red")
-	}
-	else {
-		return min + ":" + sec
-	}
-}
-// Timer
-var interval = setInterval(function() {
-	var min = parseInt(seconds/60);
-	var sec = (seconds % 60);
-  min = parseInt(sec /60);
-  seconds -= 1;
-  $("#hour").html(format(min, sec));
-	$('#stoptimer a').on('click', function(event) {
-		event.preventDefault();
-		clearInterval(interval)
-		$("#hour").html('0:00')
-	});
-
-  if (seconds === -1){
-    seconds = 60;
-    refreshDrinks();
-    // setInterval(interval).fadeOut(100).fadeIn(1000)
-  }
-}, 1000);
-});
 // Timer Button
