@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
       @brewery = Drink.where(table_name: "Wynwood Brewery")
       @wine = Drink.where(table_name: "Wine")
       @cocktail = Drink.where(table_name: "Cocktail")
-      @best_deal = Drink.all.sort{|a,b| (a.current_price - a.price) <=> (b.current_price b.price)}.first(5)
+      @best_deal = Drink.all.sort{|a,b| (a.current_price - a.price) <=> (b.current_price - b.price)}.first(5)
       @best_deal_shot = best_price(Drink.where(category: "shot"))
       @best_deal_beer = best_price(Drink.where(category: "beer"))
       @best_deal_cocktail = best_price(Drink.where(category: 'cocktail'))
