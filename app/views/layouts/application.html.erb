@@ -16,11 +16,9 @@
   </head>
 
   <body>
-    <div id="fullpage">
+
+
       <%= yield %>
-    </div>
-
-
     <div class="javascript">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.js"></script>
@@ -29,9 +27,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/vendors/scrolloverflow.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/vendors/scrolloverflow.min.js"></script>
       <script type="text/javascript">
-      $(function(){
-        $('#fullpage').fullpage();
-      });
+       $(function(){
+       $('#fullpage').fullpage();
+        });
       </script>
       <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
       <script type="text/javascript">Stripe.setPublishableKey('pk_test_62HeHVyg9ixt0DZ2WE0UdVZ1');</script>
