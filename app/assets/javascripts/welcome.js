@@ -8,36 +8,36 @@ function ready() {
 	$('#biggestchange a').on('click', function(event){
 		event.preventDefault();
 		// type = 'biggestchange';
-		$('.shotss').css("display", "none");
-		$('.beersss').css("display", "none");
-		$('.cocktails').css("display", "none");
-		$('.best_deal').css("display", "block");
+		$('.shots_container').css("display", "none");
+		$('.beer_container').css("display", "none");
+		$('.cocktail_container').css("display", "none");
+		$('.best_deal_container').css("display", "block");
 
 	});
 	$('#shot a').on('click', function(event){
 		event.preventDefault();
 		// type = 'shot';
-		$('.shotss').css("display", "block");
-		$('.beersss').css("display", "none");
-		$('.cocktails').css("display", "none");
-		$('.best_deal').css("display", "none");
+		$('.shots_container').css("display", "block");
+		$('.beer_container').css("display", "none");
+		$('.cocktail_container').css("display", "none");
+		$('.best_deal_container').css("display", "none");
 
 	});
 	$('#beerss a').on('click', function(event){
 		event.preventDefault();
-		$('.shotss').css("display", "none");
-		$('.beersss').css("display", "block");
-		$('.cocktails').css("display", "none");
-		$('.best_deal').css("display", "none");
+		$('.shots_container').css("display", "none");
+		$('.beer_container').css("display", "block");
+		$('.cocktail_container').css("display", "none");
+		$('.best_deal_container').css("display", "none");
 
 		// type = 'beer';
 	});
 	$('#cocktail a').on('click', function(event){
 		event.preventDefault();
-		$('.shotss').css("display", "none");
-		$('.beersss').css("display", "none");
-		$('.cocktails').css("display", "block");
-		$('.best_deal').css("display", "none");
+		$('.shots_container').css("display", "none");
+		$('.beer_container').css("display", "none");
+		$('.cocktail_container').css("display", "block");
+		$('.best_deal_container').css("display", "none");
 		// type = 'cocktail';
 	});
 
@@ -115,10 +115,10 @@ function ready() {
 	      success: function(){
 	        console.log('success!');
 					$('#hour').fadeOut(5000);
-					$('.table').fadeOut(5000);
-					$('.table').load("/ #new_tables")
+					$('.tables_container').fadeOut(5000);
+					$('.tables_container').load("/ .tables_container")
 					// sleep(5000)
-					$('.table').fadeIn(1000);
+					$('.tables_container').fadeIn(1000);
 					$('#hour').fadeIn(300, function(){
 						seconds = 300;
 					});
