@@ -13,37 +13,23 @@
   min-height: 100vh;
 }
 #section1 {
-  // padding-top: 225px;
-  // padding-bottom: 84px;
-  // color: #f8f8f8;
   width: 100%;
   background-image: url("beer.jpg");
 }
 #section2 {
   background-image: url("http://www.colorhexa.com/1d1c1a.png");
-  // background: #333333;
   width: 100%;
+
 }
 
 #section3 {
   height: 100%;
-  // background-image: image-url("bg3.jpg");
+  background-image: url("http://www.colorhexa.com/1d1c1a.png");
 }
 
 #hour {
   text-align: center;
   font-size: 79px;
-}
-
-#up   {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  margin-top: -265px;
-  color: orange;
-  font-size: 10em;
-
 }
 
 .shots_container{
@@ -56,21 +42,36 @@
   display: none;
 }
 .best_deal_container{
-  display: flex;
 }
-
 .table th, .table td {
      border-top: none !important;
  }
-#section3{
-  background-image: url("http://www.colorhexa.com/1d1c1a.png")
+ .fp-tableCell{
+   display: flex;
+   flex-direction: column;
+ }
+ul.nav-tabs{
+  order: 1;
+
 }
-#best_deal{
-  width: 40%;
-  height: 40%;
+#hour{
+  order: 2;
 }
-.nav-tabs{
-  // margin-top: -400px;
-  position: absolute;
+div.admin_timers{
+  order: 3;
+}
+.tables_container{
+  order: 5;
+
+
+}
+.best_deal_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+}
+#best_deal, #best_deal_cocktail, #deal_deal_beer, #best_deal_shot{
 
 }

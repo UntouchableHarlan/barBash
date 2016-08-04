@@ -25,7 +25,6 @@
 
 <div class="section" id="section3">
 
-
       <ul class="nav nav-tabs">
         <li id="biggestchange"><a href="#">Main Page</a></li>
         <li id="beerss"><a href="#">Beers and Wine</a> </li>
@@ -34,9 +33,11 @@
       </ul>
       <!-- Timer -->
       <div id="hour" style="text-align:center"></div>
+
+      <div class ="admin_timers">
       <button class= "starttimer"><a href="">Start Timer</a></button>
       <button id="stoptimer"><a href="#">Stop Timer</a></button>
-
+    </div>
 
 <div class ="tables_container">
   <div class= "shots_container">
@@ -75,16 +76,16 @@
     </div>
       <!-- <div class="section" id="section4"> -->
       <div class= "best_deal_container">
-      <div  id ="best_deal">
+      <div class="col-md-6" id ="best_deal">
         <%= render 'partial', drinks: @best_deal %>
       </div>
-      <div  id= "best_deal_cocktail">
+      <div  class="col-md-6" id= "best_deal_cocktail">
         <%= render 'partial', drinks: @best_deal_cocktail %>
       </div>
-      <div  id ="best_deal_beer">
+      <div  class="col-md-6" id ="best_deal_beer">
         <%= render 'partial', drinks: @best_deal_beer %>
       </div>
-      <div  id ="best_deal_shot">
+      <div  class="col-md-6" id ="best_deal_shot">
         <%= render 'partial', drinks: @best_deal_shot %>
       </div>
     </div>
