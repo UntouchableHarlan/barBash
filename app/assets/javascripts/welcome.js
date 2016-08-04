@@ -108,13 +108,24 @@ function ready() {
 			clearInterval(interval)
 			$("#hour").html('0:00')
 		});
-	  if (seconds === 0){
-
+	  if (seconds === 5){
+			// clearInterval(interval)
 			$.ajax({
 	      url: '/updateprices',
 	      success: function(){
 	        console.log('success!');
-					refreshDrinks();
+					$('#hour').fadeOut(5000);
+					$('.table').fadeOut(5000);
+					$('.table').load("/ #new_tables")
+					// sleep(5000)
+					$('.table').fadeIn(1000);
+					$('#hour').fadeIn(300, function(){
+						seconds = 300;
+					});
+
+
+
+					// setInterval(interval)
 
 	      }
 			});
@@ -124,13 +135,16 @@ function ready() {
 	}, 1000);
 	});
 	function refreshDrinks() {
-		$('.table').load("/ #new_tables", function() {
-			$('.table').fadeIn(1000);
-			seconds = 10;
-		});
-		$('.table').fadeOut(1000)
 
 	}
+	function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
 
 }
 $(document).on('ready turbolinks:load', ready);

@@ -36,7 +36,7 @@ class WelcomeController < ApplicationController
       bar = Bar.all[0]
       percent_of_capacity_full = (bar.people_inside.to_f / bar.capacity).round(2)
       drink_bought_in_last_5mins = 5
-    Drink.all.each do |drink|
+    Drink.all.find_each do |drink|
       drink.current_price = (0.077852 + (0.72179 * drink.price) + (1.8922 * percent_of_capacity_full) + (-0.126937 * drink_bought_in_last_5mins) + rand(-0.5..0.5))
       drink.current_price = drink.current_price.round(2)
         if drink.current_price > drink.max_price
