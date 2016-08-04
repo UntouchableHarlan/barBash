@@ -22,16 +22,7 @@
 
 
 $(document).ready(function() {
-  $.fn.fullpage({
-    menu: '.navbar',
-    verticalCentered: true,
-    resize : false,
-    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-    navigation: true,
-    navigationPosition: 'right',
-    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
-    css3: true
-  });
+  $.fn.fullpage();
 });
 
 
@@ -61,7 +52,7 @@ $(window).scroll(function() {
 
 // Refreshes the prices
 function refreshDrinks() {
-	// $('.modal').remove();
+	$('.modal').remove();
   $('.table').load("/?type=" + type + " .table").fadeOut(1000).fadeIn(1000);
 }
 
