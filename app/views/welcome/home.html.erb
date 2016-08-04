@@ -23,14 +23,15 @@
   <!-- the navbar on top of the timer -->
 
 
+<div class="section" id="section3">
 
-  <div class="section" id="section3">
-      <div class="btn-group" role="group" aria-label="...">
-        <button id="biggestchange"><a href="#">Main Page</a></button>
-        <button id="beerss"><a href="#">Beers and Wine</a> </button>
-        <button id='shot'><a href="#">Shots</a></button>
-        <button id="cocktail"><a href="#">Signature Cocktails</a></button>
-      </div>
+
+      <ul class="nav nav-tabs">
+        <li id="biggestchange"><a href="#">Main Page</a></li>
+        <li id="beerss"><a href="#">Beers and Wine</a> </li>
+        <li id="shot"> <a href="#">Shots</a></li>
+        <li id="cocktail"> <a href="#">Signature Cocktails</a></li>
+      </ul>
       <!-- Timer -->
       <div id="hour" style="text-align:center"></div>
       <button class= "starttimer"><a href="">Start Timer</a></button>
@@ -39,16 +40,16 @@
 
 <div class ="tables_container">
   <div class= "shots_container">
-      <div class="col-md-3" style="margin-left: 96px; margin-right: 96px;", id ="tequila">
+      <div  id ="tequila">
         <%= render 'partial', drinks: @tequila %>
       </div>
-      <div class="col-md-3" style="margin-right: 96px;", id ="rum">
+      <div id ="rum">
         <%= render 'partial', drinks: @rum %>
       </div>
-      <div class="col-md-3", id ="whiskey">
+      <div id ="whiskey">
         <%= render 'partial', drinks: @whiskey%>
       </div>
-      <div class="col-md-3", id ="vodka">
+      <div id ="vodka">
         <%= render 'partial', drinks: @vodka%>
       </div>
     </div>
@@ -74,16 +75,16 @@
     </div>
       <!-- <div class="section" id="section4"> -->
       <div class= "best_deal_container">
-      <div class="col-md-3" style="margin-left: 96px; margin-right: 96px;", id ="best_deal">
+      <div  id ="best_deal">
         <%= render 'partial', drinks: @best_deal %>
       </div>
-      <div class="col-md-3" style="margin-right: 96px;", id= "best_deal_cocktail">
+      <div  id= "best_deal_cocktail">
         <%= render 'partial', drinks: @best_deal_cocktail %>
       </div>
-      <div class="col-md-3", id ="best_deal_beer">
+      <div  id ="best_deal_beer">
         <%= render 'partial', drinks: @best_deal_beer %>
       </div>
-      <div class='col-md-3', id ="best_deal_shot">
+      <div  id ="best_deal_shot">
         <%= render 'partial', drinks: @best_deal_shot %>
       </div>
     </div>

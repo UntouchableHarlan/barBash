@@ -22,9 +22,11 @@
 #section2 {
   background-image: url("http://www.colorhexa.com/1d1c1a.png");
   // background: #333333;
+  width: 100%;
 }
 
 #section3 {
+  height: 100%;
   // background-image: image-url("bg3.jpg");
 }
 
@@ -54,5 +56,21 @@
   display: none;
 }
 .best_deal_container{
-  display:block;
+  display: flex;
+}
+
+.table th, .table td {
+     border-top: none !important;
+ }
+#section3{
+  background-image: url("http://www.colorhexa.com/1d1c1a.png")
+}
+#best_deal{
+  width: 40%;
+  height: 40%;
+}
+.nav-tabs{
+  // margin-top: -400px;
+  position: absolute;
+
 }

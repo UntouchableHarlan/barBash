@@ -11,13 +11,13 @@ function ready() {
 		$('.shots_container').css("display", "none");
 		$('.beer_container').css("display", "none");
 		$('.cocktail_container').css("display", "none");
-		$('.best_deal_container').css("display", "block");
+		$('.best_deal_container').css("display", "flex");
 
 	});
 	$('#shot a').on('click', function(event){
 		event.preventDefault();
 		// type = 'shot';
-		$('.shots_container').css("display", "block");
+		$('.shots_container').css("display", "flex");
 		$('.beer_container').css("display", "none");
 		$('.cocktail_container').css("display", "none");
 		$('.best_deal_container').css("display", "none");
@@ -26,7 +26,7 @@ function ready() {
 	$('#beerss a').on('click', function(event){
 		event.preventDefault();
 		$('.shots_container').css("display", "none");
-		$('.beer_container').css("display", "block");
+		$('.beer_container').css("display", "flex");
 		$('.cocktail_container').css("display", "none");
 		$('.best_deal_container').css("display", "none");
 
