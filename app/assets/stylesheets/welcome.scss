@@ -2,21 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.intro-message {
+    color: #fef76b;
+    text-align: center;
+    font-family: impact;
+}
+
 .section {
   background-size: cover;
   min-height: 100vh;
 }
-
 #section1 {
   // padding-top: 225px;
-  padding-bottom: 84px;
-  text-align: center;
-  color: #f8f8f8;
+  // padding-bottom: 84px;
+  // color: #f8f8f8;
   width: 100%;
+  background-image: url("beer.jpg");
 }
 #section2 {
-  // background-image: image-url("bg2.jpg");
-
+  background-image: url("http://www.colorhexa.com/1d1c1a.png");
+  // background: #333333;
 }
 
 #section3 {
@@ -38,12 +43,7 @@
   font-size: 10em;
 
 }
- iframe{
 
- }
- .jumbrotron{
-  text-align: center;
- }
 .shotss{
   display: none;
 }

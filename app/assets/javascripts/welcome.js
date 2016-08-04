@@ -38,9 +38,7 @@ function ready() {
 		$('.beersss').css("display", "none");
 		$('.cocktails').css("display", "block");
 		$('.best_deal').css("display", "none");
-
 		// type = 'cocktail';
-
 	});
 
 	var handler = StripeCheckout.configure({
@@ -126,9 +124,9 @@ function ready() {
 	}, 1000);
 	});
 	function refreshDrinks() {
-		$('.table').load("/ .table", function() {
+		$('.table').load("/ #new_tables", function() {
 			$('.table').fadeIn(1000);
-			seconds = 10
+			seconds = 10;
 		});
 		$('.table').fadeOut(1000)
 

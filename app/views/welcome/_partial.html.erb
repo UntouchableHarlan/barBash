@@ -3,16 +3,16 @@
   <thead>
     <tr class="top">
       <th style="text-align: center">Name</th>
-      <th style="text-align: center">Bio</th>
+      <!-- <th style="text-align: center">Bio</th> -->
       <th style="text-align: center">Price</th>
-      <th style="text-align: center">Price Difference</th>
+      <th style="text-align: center">Difference</th>
     </tr>
   </thead>
   <tbody>
     <% drinks.each_with_index do |drink,i| %>
       <tr>
         <td class="drink" style="text-align: center"><%= drink.name %></td>
-        <td class="drinks" style="text-align: center"><%= drink.bio %></td>
+        <!-- <td class="drinks" style="text-align: center"><%#= drink.bio %></td> -->
         <td class="drinkss" style="text-align: center">$<span class="drinkss"><%= drink.current_price %></span></td>
 
         <% if drink.price_difference > 0 %>
@@ -24,7 +24,7 @@
         <% end %>
         <script src="https://checkout.stripe.com/checkout.js"></script>
         <td><button class="btn btn-success customButton <%= i %>">Purchase</button></td>
-        <td><%= link_to 'Graph', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myGraph#{i}" %></td>
+        <td><%#= link_to 'Graph', '#', remote: true, class: "btn btn-success", "data-toggle": "modal", "data-target": "#myGraph#{i}" %></td>
       </tr>
       <div id="myGraph<%=i%>" class="modal" role="dialog">
         <div class="modal-content">
@@ -32,7 +32,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title"><%= drink.name %> </h4>
             <div class="modal-body">
-              sakomon
+              <%= render 'graph', drink: drink %>
             </div>
           </div>
         </div>
