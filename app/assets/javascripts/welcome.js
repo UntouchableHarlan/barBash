@@ -105,7 +105,7 @@ function ready() {
 
 			seconds -= 1;
 			$("#hour").html(format(min, sec));
-			$('#stoptimer a').on('click', function(event) {
+			$('#stoptimer').on('click', function(event) {
 				event.preventDefault();
 				clearInterval(interval)
 				$("#hour").html('0:00')

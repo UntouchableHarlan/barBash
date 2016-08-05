@@ -16,7 +16,7 @@
 #section1 {
   // width: 100%;
     // background-image: url("hand-bottom.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('buddy.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('buddy.jpeg') no-repeat center center fixed;
   height: 100vh;
   // background-color: tomato;
   // background-color: #F2F2F2;
@@ -30,7 +30,7 @@
 
 
 #section2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('drink2.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('drink2.jpeg') no-repeat;
   // background-image: url("http://www.colorhexa.com/1d1c1a.png");
   // background-image: url("light_beer11.jpg");
   // background-image: url("amber_ale1.jpg");
@@ -109,6 +109,9 @@ div.admin_timers{
 }
 .container_video{
     margin-left: 300px;
-    margin-top: 120px;
+    margin-top: 135px;
 
+}
+.onwers_info{
+  margin-top: 35px;
 }
