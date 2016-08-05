@@ -42,9 +42,8 @@ class WelcomeController < ApplicationController
     Sale.create(price: params["price"].to_f, drink: @drink , quantity: 1)
   end
   def add_sales
-
     Drink.all.each do |drink|
-      Sale.create(drink: drink, price: drink.current_price, quantity: rand(0..9))
+      Sale.create(drink: drink, price: drink.current_price, quantity: rand(0..5))
     end
   end
   def updateprices
@@ -57,7 +56,7 @@ class WelcomeController < ApplicationController
       percent_of_capacity_full = 0.8
     Drink.all.find_each do |drink|
       array = []
-       drink.sales.where(created_at: ((5.minutes.ago)..Time.now)).each {|sale| array << sale.quantity}
+       drink.sales.where(created_at: ((Bar.take.timer.seconds.ago)..Time.now)).each {|sale| array << sale.quantity}
       drink_bought_in_last_5mins = array.inject(0){|sum,x| sum + x }
       @last_price = drink.current_price
       drink.current_price = (0.077852 + (0.72179 * drink.price) + (1.8922 * percent_of_capacity_full) + (-0.126937 * drink_bought_in_last_5mins))
