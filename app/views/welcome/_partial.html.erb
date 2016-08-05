@@ -17,14 +17,14 @@
     <tr>
       <td class="drink_name"><%= drink.name %></td>
       <!-- <td class="drinks" style="text-align: center"><%#= drink.bio %></td> -->
-      <td class="drinkss">$<span class="drinkss"><%= drink.current_price %></span></td>
+      <td class="drinkss"><span class="drinkss"><%= number_to_currency(drink.current_price) %></span></td>
 
       <% if drink.price_difference > 0 %>
-      <td><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+      <td><%= number_to_currency(drink.price_difference) %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
       <% elsif drink.price_difference < 0%>
-      <td> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+      <td> <%= number_to_currency(drink.price_difference) %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
       <% else %>
-      <td><%= drink.price_difference %></td>
+      <td><%= number_to_currency(drink.price_difference) %></td>
       <% end %>
       <% if session[:owner_id] %>
       <td><%= sold_during_last_timer(drink) %></td>
