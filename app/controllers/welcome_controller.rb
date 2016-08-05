@@ -13,7 +13,6 @@ class WelcomeController < ApplicationController
       @brewery = Drink.where(table_name: "Wynwood Brewery").includes(:prices).where(prices: { created_at: interval })
       @wine = Drink.where(table_name: "Wine").includes(:prices).where(prices: { created_at: interval })
       @cocktail = Drink.where(table_name: "Cocktail").includes(:prices).where(prices: { created_at: interval })
-
       @best_deal = Drink.all.includes(:prices).where(prices: { created_at: interval }).sort{ |a,b|
         (a.current_price - a.price) <=> (b.current_price - b.price)
       }.first(5)
@@ -24,7 +23,7 @@ class WelcomeController < ApplicationController
       Sale.where(created_at: interval).each {|sale| array << sale.quantity}
       @total_sales_for_today = array.inject(0){|sum,x| sum + x }
       array1 = []
-      Sale.where(created_at: (5.minutes.ago..Time.now)).each {|sale| array1 << sale.quantity}
+      Sale.where(created_at: (10.seconds.ago..Time.now)).each {|sale| array1 << sale.quantity}
       @total_sales_for_last_timer = array1.inject(0){|sum,x| sum + x }
       # @total_sales_for_last_timer =
       #if third page isn't loading with drinks run this function below and reload once it should fix it, if not reload one more time and you good :), gotta come back and actually fix this but this is a hack for now

@@ -6,6 +6,7 @@
       <!-- <th style="text-align: center">Bio</th> -->
       <th>Price</th>
       <th>Difference</th>
+      <th>Sold During last Timer</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,8 @@
       <% else %>
       <td><%= drink.price_difference %></td>
       <% end %>
+
+      <td><%= sold_during_last_timer(drink) %></td>
 
       <script src="https://checkout.stripe.com/checkout.js"></script>
 

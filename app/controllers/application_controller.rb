@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
+  def sold_during_last_timer(drink)
+    array = []
+    drink.sales.where(created_at: (10.seconds.ago..Time.now)).each {|sale| array << sale.quantity}
+    @total_sales_for_last_timer = array.inject(0){|sum,x| sum + x }
+  end
+  helper_method :sold_during_last_timer
   private
 
   def current_owner
@@ -45,7 +50,10 @@ class ApplicationController < ActionController::Base
         end
       end
     end
+
+
   end
+
   helper_method :current_owner
   helper_method :get_time
   helper_method :new_price

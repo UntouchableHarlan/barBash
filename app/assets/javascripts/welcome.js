@@ -130,11 +130,13 @@ function ready() {
 						// sleep(5000)
 						$('.tables_container').fadeIn(1000);
 						$('#hour').fadeIn(100, function(){
-							seconds = 10;
+							$('.sales_info').load("/ .sales_info")
+								seconds = 10;
 						});
 						// setInterval(interval)
 					}
 				});
+
 			}
 		}, 1000);
 	});
@@ -146,6 +148,7 @@ function ready() {
 		new Chartkick.LineChart("chart", data, {});
 		$('.modal-title').text(name);
 	});
+
 }
 
 $(document).on('ready turbolinks:load', ready);
