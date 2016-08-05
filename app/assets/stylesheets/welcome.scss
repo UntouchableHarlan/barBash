@@ -85,7 +85,8 @@ div.admin_timers{
 
 
 }
-.best_deal_container{
+.best_deal_container, .shots_container,
+.beer_container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -103,7 +104,9 @@ div.admin_timers{
     height: 50%;
 }
 
-#best_deal, #best_deal_cocktail, #best_deal_beer, #best_deal_shot{
+#best_deal, #best_deal_cocktail, #best_deal_beer, #best_deal_shot,
+#wine, #brewery, #imported, #domestic,
+#tequila, #rum, #whiskey, #vodka{
   width: 100%;
   height: 50%;
 }
@@ -114,4 +117,7 @@ div.admin_timers{
 }
 .onwers_info{
   margin-top: 35px;
+}
+div.tables_container h2{
+  text-align: center;
 }
