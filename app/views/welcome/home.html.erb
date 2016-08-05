@@ -48,7 +48,7 @@
 
     </div>
 
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-pills" id="salo">
         <li id="biggestchange"><a href="#">Main Page</a></li>
         <li id="beerss"><a href="#">Beers and Wine</a> </li>
         <li id="shot"> <a href="#">Shots</a></li>
@@ -83,21 +83,21 @@
         <div class= "shots_container">
           <div class="row top_tables">
           <div  id ="tequila">
-            <h2>Tequila Shots</h2>
+            <h2><i class="fa fa-glass" aria-hidden="true"></i>Tequila Shots</h2>
             <%= render 'partial', drinks: @tequila %>
           </div>
           <div id ="rum">
-            <h2>Rum Shots</h2>
+            <h2><i class="fa fa-glass" aria-hidden="true"></i>Rum Shots</h2>
             <%= render 'partial', drinks: @rum %>
           </div>
         </div>
           <div class="row bottom_tables">
           <div id ="whiskey">
-            <h2>Whiskey Shots</h2>
+            <h2><i class="fa fa-glass" aria-hidden="true"></i>Whiskey Shots</h2>
             <%= render 'partial', drinks: @whiskey%>
           </div>
           <div id ="vodka">
-            <h2>Vodka Shots</h2>
+            <h2><i class="fa fa-glass" aria-hidden="true"></i>Vodka Shots</h2>
             <%= render 'partial', drinks: @vodka%>
           </div>
         </div>
@@ -106,7 +106,7 @@
         <div class= "beer_container">
           <div class="row top_tables">
           <div class="col-md-3" id ="domestic">
-            <h2>Domestic Beers</h2>
+            <h2><i class="fa fa-beer" aria-hidden="true"></i>Domestic Beers</h2>
             <%= render 'partial', drinks: @domestic %>
           </div>
           <div class="col-md-3" id ="imported">
@@ -150,7 +150,7 @@
         </div>
         <div class= "cocktail_container">
           <div class ="col-md-6", id ="cocktail">
-            <h2>Cocktails</h2>
+            <h2><i class="fa fa-glass" aria-hidden="true"></i>Cocktails</h2>
             <%= render 'partial', drinks: @cocktail %>
           </div>
         </div>

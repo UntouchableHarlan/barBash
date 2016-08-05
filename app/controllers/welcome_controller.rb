@@ -66,7 +66,7 @@ class WelcomeController < ApplicationController
         elsif drink.current_price < drink.min_price
               drink.current_price = drink.min_price
         end
-        
+
         if drink.save
           Price.create(amount: drink.current_price, drink: drink)
             drink.update(price_difference: (drink.current_price - @last_price).round(2))
