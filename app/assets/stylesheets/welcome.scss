@@ -3,26 +3,38 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .intro-message {
-    color: #fef76b;
+    color: white;
     text-align: center;
     font-family: impact;
 }
 
 .section {
   background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
 }
 #section1 {
   // width: 100%;
-    background-image: url("hand-top.jpg");
+    // background-image: url("hand-bottom.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('buddy.jpeg');
   height: 100vh;
+  // background-color: tomato;
   // background-color: #F2F2F2;
 }
+
+#app-explaination {
+  font-family: roadway;
+  color: white;
+  font-size: 45px;
+}
+
+
 #section2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('drink2.jpeg');
   // background-image: url("http://www.colorhexa.com/1d1c1a.png");
   // background-image: url("light_beer11.jpg");
-  background-image: url("amber_ale1.jpg");
-
+  // background-image: url("amber_ale1.jpg");
+  // background-color: tomato;
 
   width: 100%;
   // background-color: #F2F2F2;
@@ -31,8 +43,8 @@
 
 #section3 {
   height: 100%;
-  background-image: url("light_beer11.jpg");
-
+  // background-image: url("light_beer11.jpg");
+  background-color: #faebd7;
 }
 
 #hour {

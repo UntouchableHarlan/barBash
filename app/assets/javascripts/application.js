@@ -27,28 +27,28 @@ $(document).ready(function() {
 
 
 // Nav Bar Customization
-$(window).scroll(function() {
-  var navbar = $('.navbar-custom');
-  var affixed = navbar.hasClass('affix');
-  var top = $(".navbar").offset().top;
-
-  if (top > 50 && !affixed) {
-		// console.log("thing");
-    navbar.addClass('affix');
-    $(".navbar-fixed-top").addClass("top-nav-collapse");
-  } else if (top < 50 && affixed) {
-		// console.log("else");
-    navbar.removeClass('affix');
-    $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
-  }
-    if ($(".navbar").offset().top > 50) {
-        $('.navbar-custom').addClass('affix');
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $('nav.navbar-custom').removeClass('affix');
-        $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-});
+// $(window).scroll(function() {
+//   var navbar = $('.navbar-custom');
+//   var affixed = navbar.hasClass('affix');
+//   var top = $(".navbar").offset().top;
+//
+//   if (top > 50 && !affixed) {
+// 		// console.log("thing");
+//     navbar.addClass('affix');
+//     $(".navbar-fixed-top").addClass("top-nav-collapse");
+//   } else if (top < 50 && affixed) {
+// 		// console.log("else");
+//     navbar.removeClass('affix');
+//     $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
+//   }
+//     if ($(".navbar").offset().top > 50) {
+//         $('.navbar-custom').addClass('affix');
+//         $(".navbar-fixed-top").addClass("top-nav-collapse");
+//     } else {
+//         $('nav.navbar-custom').removeClass('affix');
+//         $("nav.navbar-fixed-top").removeClass("top-nav-collapse");
+//     }
+// });
 
 // Refreshes the prices
 function refreshDrinks() {
