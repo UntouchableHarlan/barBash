@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+
+ /*@media (min-width: 768px) {
+   .navbar-custom {
+     background-color: transparent;
+     border: 0;
+     box-shadow: none;
+     z-index: 999;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     -webkit-transition: background .5s ease-in-out, opacity .5s ease;
+     -moz-transition: background .5s ease-in-out, opacity .5s ease;
+     transition: background .5s ease-in-out, opacity .5s ease;
+   }
+
+   .navbar-custom.affix {
+       top: 0;
+       min-width: 100%;
+       background-color: #f8f8f8;
+       opacity: 0.9;
+       -webkit-transition: background .5s ease-in-out, opacity .5s ease;
+       -moz-transition: background .5s ease-in-out, opacity .5s ease;
+       transition: background .5s ease-in-out, opacity .5s ease;
+   }
+ }*/
+
+
+.row {
+
+  /*padding-top: 50px;*/
+
+  /*padding-top: 70px;*/
+
+}
+
+.row1 {
+  padding-top: 240px;
+}
+
+ a {
+   /*color: ;*/
+ }
+
+ .page-scroll {
+  font-family: impact;
+  font-weight: bold;
+  font-size: 32px;
+  color: #fef76b;
+ }
+
+ #menu {
+  top:0px;
+  position:fixed;
+	height: 50px;
+	display:block;
+	width: 100%;
+	z-index:9;
+	text-align:center;
+	color: #f2f2f2;
+  display: flex;
+  justify-content: flex-end;
+ }
+
+ #menu li {
+  display: inline-block;
+  margin: 10px;
+  background: rgba(255,255,255,.5);
+  border-radius: 10px;
+ }
+
+ #menu li a {
+   padding: 6px 18px;
+   display: block;
+   color: black;
+ }

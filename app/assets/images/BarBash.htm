@@ -1,210 +1,1520 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:3000/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0030)http://localhost:3000/?#drinks -->
+<html class="fp-enabled gr__localhost" style="overflow: hidden; height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>BarBash</title>
     <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="3g6gFH7wUqd+nnqVdFihHUPPDkEgxX05bi31ZGeHEw6hyW37ghTr77I3TYJ9S0I3GDB0UAvAXKDxIY5C/VYt+g==">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="./BarBash_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="./BarBash_files/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <link rel="stylesheet" media="all" href="./BarBash_files/drinks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
-<link rel="stylesheet" media="all" href="./BarBash_files/owners.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
-<link rel="stylesheet" media="all" href="./BarBash_files/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
-<link rel="stylesheet" media="all" href="./BarBash_files/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
-<link rel="stylesheet" media="all" href="./BarBash_files/welcome.self-b9359f1df3fb3ad07373dd436b9f6c6c354f876e09212df575d49ee360d427ba.css" data-turbolinks-track="reload">
-<link rel="stylesheet" media="all" href="./BarBash_files/application.self-af04b226fd7202dfc532ce7aedb95a0128277937e90d3b3a3d35e1cce9e16886.css" data-turbolinks-track="reload">
+<meta name="csrf-token" content="ly65tsJf6auwvb2/pORRLSyczwmsSxIV9+1JN6ZlKnx16Ah2I8ab9fhVc7jzPRRctL7yWOlQA3Do1DwftuL4Qg==">
     <script src="./BarBash_files/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js" data-turbolinks-track="reload"></script>
 <script src="./BarBash_files/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js" data-turbolinks-track="reload"></script>
-<script src="./BarBash_files/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js" data-turbolinks-track="reload"></script>
 <script src="./BarBash_files/action_cable.self-1641ec3e8ea24ed63601e86efcca7f9266e09f390e82199d56aa7e4bd50e1aa9.js" data-turbolinks-track="reload"></script>
 <script src="./BarBash_files/cable.self-6e0514260c1aa76eaf252412ce74e63f68819fd19bf740595f592c5ba4c36537.js" data-turbolinks-track="reload"></script>
+<script src="./BarBash_files/charges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
 <script src="./BarBash_files/drinks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
+<script src="./BarBash_files/jquery.fullPage.self-9fa846a42e3d97d24aeb3a1f2e7786e690327f49a99ffcd706f3fb2b3e832c28.js" data-turbolinks-track="reload"></script>
 <script src="./BarBash_files/owners.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
-<script src="./BarBash_files/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
-<script src="./BarBash_files/welcome.self-dc448ff99ab6a0232bcce01b523d19b6cdfd96ec03cfd5ef4037919098ec7c28.js" data-turbolinks-track="reload"></script>
-<script src="./BarBash_files/application.self-5a6dbdc3187f7787c6b08a5b4a96322ba8f2471885c86ad874c55fe5d26d6ef9.js" data-turbolinks-track="reload"></script>
-    <script src="./BarBash_files/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="./BarBash_files/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
+<script src="./BarBash_files/welcome.self-55e5593deb0020223aeb48226ad5267426254b764313ca66e098d819a9069f24.js" data-turbolinks-track="reload"></script>
+<script src="./BarBash_files/Chart.bundle.self-b67dc6369d03ee81146111867404935133a0ab5d9595fa92a7731c5317a6127b.js" data-turbolinks-track="reload"></script>
+<script src="./BarBash_files/chartkick.self-932c9c939347486f8354893647909c55dbecc256c9195b21ad2820ed21071625.js" data-turbolinks-track="reload"></script>
+<script src="./BarBash_files/application.self-d7da7347dd1c3bfd33e4448c32961832e3d84240ba17a427ab533be5f5a64c9d.js" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="all" href="./BarBash_files/charges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BarBash_files/drinks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BarBash_files/jquery.fullPage.self-0cc23565e77929336bce2707c9718a2aceeb3bf4dd471326643313be27b1794b.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BarBash_files/owners.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BarBash_files/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BarBash_files/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BarBash_files/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BarBash_files/welcome.self-3283161e0a1d9cf54c1d4a5e72f099e2c2c869e484442f9da570dfa430a9a228.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./BarBash_files/application.self-9888f732e9af67c5b77e0169e6d025b43601894d18f5cc4bcafab8c397d5cea7.css" data-turbolinks-track="reload">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="./BarBash_files/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./BarBash_files/font-awesome.min.css">
     <link href="./BarBash_files/css" rel="stylesheet" type="text/css">
     <link href="./BarBash_files/css(1)" rel="stylesheet" type="text/css">
 
   </head>
 
-  <body>
+  <body data-gr-c-s-loaded="true" class="fp-viewing-drinks" style="overflow: hidden; height: 100%;">
+    <ul class="nav nav-pills" id="menu">
+      <li><a href="http://localhost:3000/?#home">Home</a></li>
+      <li><a href="http://localhost:3000/?#about">About</a></li>
+      <li><a href="http://localhost:3000/?#drinks">Drinks</a></li>
+    </ul>
+      <div id="graph" class="modal" role="dialog" style="display: none;">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">×</button>
+      <h4 class="modal-title">Conquistador</h4>
+      <div class="modal-body">
+        <div class="graph">
+  <div id="chart" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: &#39;Lucida Grande&#39;, &#39;Lucida Sans Unicode&#39;, Verdana, Arial, Helvetica, sans-serif;"><iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;" src="./BarBash_files/saved_resource.html"></iframe><canvas height="225" width="1178" style="display: block; width: 1571px; height: 300px;"></canvas></div>
+</div>
 
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                Menu <i class="fa fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <li>
-                    <a class="page-scroll" href="http://localhost:3000/#beer">Beers</a>
-                </li>
-                <li>
-                    <a href="http://localhost:3000/login">Log In</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+      </div>
     </div>
-    <!-- /.container -->
-</nav>
-<!-- Image Background -->
-<header class="header">
-  <div class="text-vertical-center">
-    <h1>Welcome to BeerBash</h1>
   </div>
-</header>
+</div>
+<div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, -1880px, 0px); transition: all 0ms ease;">
+  <!-- Image Background -->
+  <div class="section fp-section fp-table" id="section1" data-anchor="home" style="height: 940px;"><div class="fp-tableCell" style="height: 940px;">
+      <div class="container">
+        <div class="row row1">
+          <div class="col-lg-12">
+            <div class="intro-message">
+              <h1 style="font-size: 69px;">Welcome To DYNAMIC DRINKS</h1>
+              <div class="container">
+                <p id="app-explaination">
+                  this is the explaination of the app
+                  <br>
+                  it should be no longer than two rows so it can fit nicely with the thingy
+                </p>
+              </div>
+            </div>
+            <div class="container" style="text-align: center;">
+              <a href="http://localhost:3000/?#drinks"><button type="button" class="btn btn-success btn-lg">Drink Menu</button></a>
+              <a href="http://localhost:3000/?#about"><button type="button" class="btn btn-primary btn-lg">About</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div></div>
+  <div class="section fp-section fp-table" id="section2" data-anchor="about" style="height: 940px;"><div class="fp-tableCell" style="height: 940px;">
+    <div class="container_video">
+      <iframe src="./BarBash_files/177134132.html" width="900" height="600" align="center" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    </div>
+  </div></div>
+
+  <!-- the navbar on top of the timer -->
+
+
+  <div class="section fp-section fp-table active fp-completely" id="section3" data-anchor="drinks" style="height: 940px;"><div class="fp-tableCell" style="height: 940px;">
+
+      <ul class="nav nav-tabs">
+        <li id="biggestchange"><a href="http://localhost:3000/?#">Main Page</a></li>
+        <li id="beerss"><a href="http://localhost:3000/?#">Beers and Wine</a> </li>
+        <li id="shot"> <a href="http://localhost:3000/?#">Shots</a></li>
+        <li id="cocktail"> <a href="http://localhost:3000/?#">Signature Cocktails</a></li>
+      </ul>
+
+      <div class="onwers_info">
+        <div class="admin_timers">
+          <form class="form-inline">
+            <div class="form-group">
+              <label>Timer:</label>
+              <input type="number" class="grab_time" placeholder="In Seconds">
+            </div>
+            <a href="http://localhost:3000/?#"><button class="btn btn-success starttimer">Start Timer</button></a>
+            <a href="http://localhost:3000/?#"><button class="btn btn-danger" id="stoptimer">Stop Timer</button></a>
+            <!-- <div class ="sales_info"> -->
+              <h3 style="text-align:center">Total Sales Today: $13707 | Total Sales for Last Timer: 0 </h3>
+            <!-- </div> -->
+          </form></div>
+
+    </div>
+      <!-- Timer -->
+      <div id="hour" style="text-align:center"></div>
 
 
 
 
-<!-- Timer -->
-<div id="hour" style="text-align:center">11:11:22 AM</div>
+      <div class="tables_container">
+        <div class="shots_container">
+          <div class="row top_tables">
+          <div id="tequila">
+            <h2>Tequila Shot's</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Conquistador</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.99</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
 
 
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.5,&quot;4:54pm&quot;:1.99,&quot;5:09pm&quot;:3.99,&quot;4:56pm&quot;:1.99,&quot;5:20pm&quot;:2.47,&quot;2:58pm&quot;:4.12,&quot;5:10pm&quot;:3.99,&quot;2:59pm&quot;:3.23,&quot;4:58pm&quot;:1.99,&quot;3:18pm&quot;:3.23,&quot;3:20pm&quot;:1.99,&quot;3:21pm&quot;:1.99,&quot;5:22pm&quot;:2.21,&quot;4:20pm&quot;:2.98,&quot;4:59pm&quot;:1.99,&quot;5:13pm&quot;:1.99,&quot;4:23pm&quot;:2.47,&quot;4:24pm&quot;:1.99,&quot;5:01pm&quot;:1.99,&quot;4:25pm&quot;:1.99,&quot;4:48pm&quot;:3.1,&quot;4:52pm&quot;:2.59,&quot;4:53pm&quot;:3.23,&quot;2:55pm&quot;:3.5,&quot;5:23pm&quot;:1.99,&quot;5:24pm&quot;:1.99,&quot;5:43pm&quot;:3.1,&quot;6:00pm&quot;:4.12,&quot;6:07pm&quot;:4.12,&quot;6:10pm&quot;:4.12,&quot;6:12pm&quot;:4.12,&quot;6:14pm&quot;:4.12,&quot;6:15pm&quot;:3.99,&quot;6:20pm&quot;:4.12,&quot;6:22pm&quot;:3.74,&quot;6:25pm&quot;:3.74,&quot;6:39pm&quot;:3.74,&quot;6:40pm&quot;:3.99,&quot;6:41pm&quot;:3.74,&quot;7:01pm&quot;:3.99}" data-name="Conquistador" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
 
-<!--- Buy Section -->
-<section id="beer" class="container content-section text-center">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Brand</th>
-          <th>Price</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
+    <tr>
+      <td class="drink_name">Patron Silver</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.66</span></td>
 
-      <tbody>
-          <tr>
-            <td>tequila</td>
-            <td>conquistador</td>
-            <td>$3.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>tequila</td>
-            <td>patron_silver</td>
-            <td>$4.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>tequila</td>
-            <td>patron_gold</td>
-            <td>$4.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>whiskey</td>
-            <td>makers_mark</td>
-            <td>$3.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>whiskey</td>
-            <td>jameson</td>
-            <td>$4.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>whiskey</td>
-            <td>black_label</td>
-            <td>$5.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>whiskey</td>
-            <td>blue_label</td>
-            <td>$7.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>vokda</td>
-            <td>svedka</td>
-            <td>$3.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>vokda</td>
-            <td>absolute</td>
-            <td>$4.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>vokda</td>
-            <td>grey_goose</td>
-            <td>$5.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>vokda</td>
-            <td>ciroc</td>
-            <td>$5.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>beer</td>
-            <td>budwieser</td>
-            <td>$3.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>beer</td>
-            <td>amstel</td>
-            <td>$3.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>beer</td>
-            <td>stella</td>
-            <td>$4.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>beer</td>
-            <td>craft</td>
-            <td>$5.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>wine</td>
-            <td>pino_grigo</td>
-            <td>$4.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>wine</td>
-            <td>chardonnay</td>
-            <td>$4.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>wine</td>
-            <td>sauvignon_blanc</td>
-            <td>$5.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-          <tr>
-            <td>wine</td>
-            <td>merlot</td>
-            <td>$5.0</td>
-            <td><a href="http://localhost:3000/#">Buy</a></td>
-          </tr>
-      </tbody>
-    </table>
-</section>
+      <td>0.13<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.25,&quot;4:54pm&quot;:2.76,&quot;5:09pm&quot;:4.66,&quot;4:56pm&quot;:2.45,&quot;5:20pm&quot;:3.64,&quot;2:58pm&quot;:4.66,&quot;5:10pm&quot;:4.15,&quot;2:59pm&quot;:3.64,&quot;4:58pm&quot;:2.45,&quot;3:18pm&quot;:3.64,&quot;3:20pm&quot;:2.45,&quot;3:21pm&quot;:2.45,&quot;5:22pm&quot;:2.45,&quot;4:20pm&quot;:4.53,&quot;4:59pm&quot;:2.45,&quot;5:13pm&quot;:2.45,&quot;4:23pm&quot;:3.14,&quot;4:24pm&quot;:2.5,&quot;5:01pm&quot;:2.45,&quot;4:25pm&quot;:2.45,&quot;4:48pm&quot;:4.02,&quot;4:52pm&quot;:2.63,&quot;4:53pm&quot;:3.77,&quot;2:55pm&quot;:4.25,&quot;5:23pm&quot;:2.45,&quot;5:24pm&quot;:2.45,&quot;5:43pm&quot;:3.26,&quot;6:00pm&quot;:4.66,&quot;6:07pm&quot;:4.66,&quot;6:10pm&quot;:4.66,&quot;6:12pm&quot;:4.66,&quot;6:14pm&quot;:4.66,&quot;6:15pm&quot;:3.52,&quot;6:20pm&quot;:4.02,&quot;6:22pm&quot;:4.15,&quot;6:25pm&quot;:4.66,&quot;6:39pm&quot;:4.28,&quot;6:40pm&quot;:4.66,&quot;6:41pm&quot;:4.02,&quot;7:01pm&quot;:4.66}" data-name="Patron Silver" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">1800</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.59</span></td>
+
+      <td>0.26<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.5,&quot;4:54pm&quot;:2.81,&quot;5:09pm&quot;:4.08,&quot;4:56pm&quot;:2.73,&quot;5:20pm&quot;:3.44,&quot;2:58pm&quot;:4.84,&quot;5:10pm&quot;:3.06,&quot;2:59pm&quot;:4.84,&quot;4:58pm&quot;:2.73,&quot;3:18pm&quot;:4.08,&quot;3:20pm&quot;:2.81,&quot;3:21pm&quot;:2.73,&quot;5:22pm&quot;:2.73,&quot;4:20pm&quot;:3.82,&quot;4:59pm&quot;:2.73,&quot;5:13pm&quot;:2.73,&quot;4:23pm&quot;:3.32,&quot;4:24pm&quot;:2.73,&quot;5:01pm&quot;:2.73,&quot;4:25pm&quot;:2.73,&quot;4:48pm&quot;:4.46,&quot;4:52pm&quot;:2.94,&quot;4:53pm&quot;:3.82,&quot;2:55pm&quot;:4.5,&quot;5:23pm&quot;:2.73,&quot;5:24pm&quot;:2.73,&quot;5:43pm&quot;:3.32,&quot;6:00pm&quot;:4.84,&quot;6:07pm&quot;:4.84,&quot;6:10pm&quot;:4.84,&quot;6:12pm&quot;:4.84,&quot;6:14pm&quot;:4.84,&quot;6:15pm&quot;:4.08,&quot;6:20pm&quot;:3.82,&quot;6:22pm&quot;:3.95,&quot;6:25pm&quot;:4.33,&quot;6:39pm&quot;:4.2,&quot;6:40pm&quot;:4.84,&quot;6:41pm&quot;:4.71,&quot;7:01pm&quot;:4.59}" data-name="1800" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Margaritaville Gold</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.22</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:3.21,&quot;5:09pm&quot;:3.84,&quot;4:56pm&quot;:2.21,&quot;5:20pm&quot;:3.34,&quot;2:58pm&quot;:4.48,&quot;5:10pm&quot;:3.72,&quot;2:59pm&quot;:4.48,&quot;4:58pm&quot;:2.21,&quot;3:18pm&quot;:4.1,&quot;3:20pm&quot;:2.96,&quot;3:21pm&quot;:2.21,&quot;5:22pm&quot;:2.21,&quot;4:20pm&quot;:3.72,&quot;4:59pm&quot;:2.21,&quot;5:13pm&quot;:2.21,&quot;4:23pm&quot;:2.57,&quot;4:24pm&quot;:2.45,&quot;5:01pm&quot;:2.21,&quot;4:25pm&quot;:2.21,&quot;4:48pm&quot;:3.46,&quot;4:52pm&quot;:3.08,&quot;4:53pm&quot;:4.1,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:2.21,&quot;5:24pm&quot;:2.21,&quot;5:43pm&quot;:2.96,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.97,&quot;6:20pm&quot;:4.22,&quot;6:22pm&quot;:3.46,&quot;6:25pm&quot;:4.35,&quot;6:39pm&quot;:4.1,&quot;6:40pm&quot;:4.48,&quot;6:41pm&quot;:3.97,&quot;7:01pm&quot;:4.22}" data-name="Margaritaville Gold" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Patron Gold</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.66</span></td>
+
+      <td>0.64<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.25,&quot;4:54pm&quot;:2.45,&quot;5:09pm&quot;:4.15,&quot;4:56pm&quot;:2.45,&quot;5:20pm&quot;:3.52,&quot;2:58pm&quot;:4.66,&quot;5:10pm&quot;:3.9,&quot;2:59pm&quot;:4.15,&quot;4:58pm&quot;:2.45,&quot;3:18pm&quot;:3.52,&quot;3:20pm&quot;:3.14,&quot;3:21pm&quot;:2.45,&quot;5:22pm&quot;:2.45,&quot;4:20pm&quot;:4.15,&quot;4:59pm&quot;:2.45,&quot;5:13pm&quot;:2.45,&quot;4:23pm&quot;:3.01,&quot;4:24pm&quot;:3.01,&quot;5:01pm&quot;:2.45,&quot;4:25pm&quot;:2.76,&quot;4:48pm&quot;:3.9,&quot;4:52pm&quot;:2.45,&quot;4:53pm&quot;:3.26,&quot;2:55pm&quot;:4.25,&quot;5:23pm&quot;:2.45,&quot;5:24pm&quot;:2.45,&quot;5:43pm&quot;:2.45,&quot;6:00pm&quot;:4.66,&quot;6:07pm&quot;:4.66,&quot;6:10pm&quot;:4.66,&quot;6:12pm&quot;:4.66,&quot;6:14pm&quot;:4.66,&quot;6:15pm&quot;:3.52,&quot;6:20pm&quot;:4.66,&quot;6:22pm&quot;:4.53,&quot;6:25pm&quot;:4.28,&quot;6:39pm&quot;:4.28,&quot;6:40pm&quot;:4.28,&quot;6:41pm&quot;:4.02,&quot;7:01pm&quot;:4.66}" data-name="Patron Gold" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+          <div id="rum">
+            <h2>Rum Shot's</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Captain Morgan</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.22</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.57,&quot;5:09pm&quot;:4.35,&quot;4:56pm&quot;:2.11,&quot;5:20pm&quot;:3.72,&quot;2:58pm&quot;:4.48,&quot;5:10pm&quot;:3.97,&quot;2:59pm&quot;:3.34,&quot;4:58pm&quot;:2.11,&quot;3:18pm&quot;:3.59,&quot;3:20pm&quot;:2.83,&quot;3:21pm&quot;:2.11,&quot;5:22pm&quot;:2.11,&quot;4:20pm&quot;:3.72,&quot;4:59pm&quot;:2.11,&quot;5:13pm&quot;:2.11,&quot;4:23pm&quot;:2.45,&quot;4:24pm&quot;:2.11,&quot;5:01pm&quot;:2.11,&quot;4:25pm&quot;:2.11,&quot;4:48pm&quot;:3.59,&quot;4:52pm&quot;:3.46,&quot;4:53pm&quot;:3.59,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:2.11,&quot;5:24pm&quot;:2.11,&quot;5:43pm&quot;:3.59,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.22,&quot;6:20pm&quot;:3.72,&quot;6:22pm&quot;:3.84,&quot;6:25pm&quot;:4.1,&quot;6:39pm&quot;:4.48,&quot;6:40pm&quot;:4.1,&quot;6:41pm&quot;:4.22,&quot;7:01pm&quot;:4.22}" data-name="Captain Morgan" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Bacardi Gold</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.61</span></td>
+
+      <td> -0.25<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.5,&quot;4:54pm&quot;:1.76,&quot;5:09pm&quot;:2.98,&quot;4:56pm&quot;:1.76,&quot;5:20pm&quot;:2.72,&quot;2:58pm&quot;:4.12,&quot;5:10pm&quot;:1.83,&quot;2:59pm&quot;:3.86,&quot;4:58pm&quot;:1.76,&quot;3:18pm&quot;:2.98,&quot;3:20pm&quot;:1.76,&quot;3:21pm&quot;:1.76,&quot;5:22pm&quot;:1.76,&quot;4:20pm&quot;:3.74,&quot;4:59pm&quot;:1.76,&quot;5:13pm&quot;:1.76,&quot;4:23pm&quot;:1.76,&quot;4:24pm&quot;:1.76,&quot;5:01pm&quot;:1.76,&quot;4:25pm&quot;:1.76,&quot;4:48pm&quot;:3.74,&quot;4:52pm&quot;:2.59,&quot;4:53pm&quot;:2.34,&quot;2:55pm&quot;:3.5,&quot;5:23pm&quot;:1.76,&quot;5:24pm&quot;:1.76,&quot;5:43pm&quot;:2.21,&quot;6:00pm&quot;:4.12,&quot;6:07pm&quot;:4.12,&quot;6:10pm&quot;:4.12,&quot;6:12pm&quot;:4.12,&quot;6:14pm&quot;:4.12,&quot;6:15pm&quot;:3.48,&quot;6:20pm&quot;:3.48,&quot;6:22pm&quot;:3.48,&quot;6:25pm&quot;:3.74,&quot;6:39pm&quot;:3.74,&quot;6:40pm&quot;:3.86,&quot;6:41pm&quot;:4.12,&quot;7:01pm&quot;:3.61}" data-name="Bacardi Gold" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Brugal</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.04</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.75,&quot;4:54pm&quot;:2.65,&quot;5:09pm&quot;:3.28,&quot;4:56pm&quot;:1.86,&quot;5:20pm&quot;:2.9,&quot;2:58pm&quot;:4.3,&quot;5:10pm&quot;:2.52,&quot;2:59pm&quot;:3.66,&quot;4:58pm&quot;:1.86,&quot;3:18pm&quot;:3.28,&quot;3:20pm&quot;:1.86,&quot;3:21pm&quot;:1.86,&quot;5:22pm&quot;:2.78,&quot;4:20pm&quot;:4.3,&quot;4:59pm&quot;:1.86,&quot;5:13pm&quot;:1.86,&quot;4:23pm&quot;:3.66,&quot;4:24pm&quot;:3.03,&quot;5:01pm&quot;:1.86,&quot;4:25pm&quot;:2.01,&quot;4:48pm&quot;:3.41,&quot;4:52pm&quot;:2.27,&quot;4:53pm&quot;:3.92,&quot;2:55pm&quot;:3.75,&quot;5:23pm&quot;:1.86,&quot;5:24pm&quot;:1.86,&quot;5:43pm&quot;:2.52,&quot;6:00pm&quot;:4.3,&quot;6:07pm&quot;:4.3,&quot;6:10pm&quot;:4.3,&quot;6:12pm&quot;:4.3,&quot;6:14pm&quot;:4.3,&quot;6:15pm&quot;:3.92,&quot;6:20pm&quot;:3.66,&quot;6:22pm&quot;:4.3,&quot;6:25pm&quot;:3.66,&quot;6:39pm&quot;:3.66,&quot;6:40pm&quot;:4.17,&quot;6:41pm&quot;:3.79,&quot;7:01pm&quot;:4.04}" data-name="Brugal" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Sailor Jerry</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.94</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.25,&quot;4:54pm&quot;:2.16,&quot;5:09pm&quot;:3.81,&quot;4:56pm&quot;:1.5,&quot;5:20pm&quot;:2.92,&quot;2:58pm&quot;:3.94,&quot;5:10pm&quot;:2.92,&quot;2:59pm&quot;:2.79,&quot;4:58pm&quot;:1.5,&quot;3:18pm&quot;:3.18,&quot;3:20pm&quot;:2.79,&quot;3:21pm&quot;:1.5,&quot;5:22pm&quot;:1.53,&quot;4:20pm&quot;:3.81,&quot;4:59pm&quot;:1.5,&quot;5:13pm&quot;:1.5,&quot;4:23pm&quot;:2.29,&quot;4:24pm&quot;:2.16,&quot;5:01pm&quot;:1.5,&quot;4:25pm&quot;:1.65,&quot;4:48pm&quot;:3.81,&quot;4:52pm&quot;:3.56,&quot;4:53pm&quot;:3.56,&quot;2:55pm&quot;:3.25,&quot;5:23pm&quot;:1.5,&quot;5:24pm&quot;:1.5,&quot;5:43pm&quot;:2.29,&quot;6:00pm&quot;:3.94,&quot;6:07pm&quot;:3.94,&quot;6:10pm&quot;:3.94,&quot;6:12pm&quot;:3.94,&quot;6:14pm&quot;:3.94,&quot;6:15pm&quot;:3.3,&quot;6:20pm&quot;:3.43,&quot;6:22pm&quot;:3.05,&quot;6:25pm&quot;:3.43,&quot;6:39pm&quot;:3.68,&quot;6:40pm&quot;:3.81,&quot;6:41pm&quot;:3.94,&quot;7:01pm&quot;:3.94}" data-name="Sailor Jerry" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Malibu</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.99</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.5,&quot;4:54pm&quot;:1.35,&quot;5:09pm&quot;:4.12,&quot;4:56pm&quot;:1.35,&quot;5:20pm&quot;:3.1,&quot;2:58pm&quot;:4.12,&quot;5:10pm&quot;:3.48,&quot;2:59pm&quot;:4.12,&quot;4:58pm&quot;:1.35,&quot;3:18pm&quot;:4.12,&quot;3:20pm&quot;:2.98,&quot;3:21pm&quot;:2.72,&quot;5:22pm&quot;:2.59,&quot;4:20pm&quot;:3.1,&quot;4:59pm&quot;:1.35,&quot;5:13pm&quot;:1.35,&quot;4:23pm&quot;:1.45,&quot;4:24pm&quot;:1.35,&quot;5:01pm&quot;:1.35,&quot;4:25pm&quot;:1.35,&quot;4:48pm&quot;:3.74,&quot;4:52pm&quot;:2.98,&quot;4:53pm&quot;:2.72,&quot;2:55pm&quot;:3.5,&quot;5:23pm&quot;:1.96,&quot;5:24pm&quot;:1.35,&quot;5:43pm&quot;:3.36,&quot;6:00pm&quot;:4.12,&quot;6:07pm&quot;:4.12,&quot;6:10pm&quot;:4.12,&quot;6:12pm&quot;:4.12,&quot;6:14pm&quot;:4.12,&quot;6:15pm&quot;:3.74,&quot;6:20pm&quot;:3.74,&quot;6:22pm&quot;:2.98,&quot;6:25pm&quot;:3.48,&quot;6:39pm&quot;:4.12,&quot;6:40pm&quot;:4.12,&quot;6:41pm&quot;:3.48,&quot;7:01pm&quot;:3.99}" data-name="Malibu" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+        </div>
+          <div class="row bottom_tables">
+          <div id="whiskey">
+            <h2>Whiskey Shot's</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Jack Daniels</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.1</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.32,&quot;5:09pm&quot;:3.84,&quot;4:56pm&quot;:2.01,&quot;5:20pm&quot;:3.34,&quot;2:58pm&quot;:4.48,&quot;5:10pm&quot;:3.84,&quot;2:59pm&quot;:4.48,&quot;4:58pm&quot;:2.01,&quot;3:18pm&quot;:3.97,&quot;3:20pm&quot;:3.97,&quot;3:21pm&quot;:2.01,&quot;5:22pm&quot;:3.34,&quot;4:20pm&quot;:4.48,&quot;4:59pm&quot;:2.01,&quot;5:13pm&quot;:2.01,&quot;4:23pm&quot;:2.57,&quot;4:24pm&quot;:2.19,&quot;5:01pm&quot;:2.01,&quot;4:25pm&quot;:2.01,&quot;4:48pm&quot;:3.46,&quot;4:52pm&quot;:2.01,&quot;4:53pm&quot;:3.34,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:2.83,&quot;5:24pm&quot;:2.01,&quot;5:43pm&quot;:3.08,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.1,&quot;6:20pm&quot;:4.35,&quot;6:22pm&quot;:4.35,&quot;6:25pm&quot;:4.1,&quot;6:39pm&quot;:3.97,&quot;6:40pm&quot;:4.22,&quot;6:41pm&quot;:4.48,&quot;7:01pm&quot;:4.1}" data-name="Jack Daniels" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Jameson</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.97</span></td>
+
+      <td>0.13<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.96,&quot;5:10pm&quot;:3.59,&quot;4:56pm&quot;:2.01,&quot;5:20pm&quot;:4.1,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:4.22,&quot;4:58pm&quot;:2.01,&quot;3:18pm&quot;:4.48,&quot;3:20pm&quot;:3.59,&quot;3:21pm&quot;:2.96,&quot;5:22pm&quot;:3.08,&quot;4:20pm&quot;:4.22,&quot;4:59pm&quot;:2.01,&quot;5:13pm&quot;:2.01,&quot;4:23pm&quot;:2.7,&quot;4:24pm&quot;:2.57,&quot;5:01pm&quot;:2.01,&quot;4:25pm&quot;:2.01,&quot;4:48pm&quot;:3.59,&quot;4:52pm&quot;:2.45,&quot;4:53pm&quot;:3.46,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:2.45,&quot;5:24pm&quot;:2.01,&quot;5:43pm&quot;:2.96,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.34,&quot;6:20pm&quot;:4.35,&quot;6:22pm&quot;:4.1,&quot;6:25pm&quot;:4.1,&quot;6:39pm&quot;:3.97,&quot;6:40pm&quot;:3.84,&quot;6:41pm&quot;:4.22,&quot;7:01pm&quot;:3.97}" data-name="Jameson" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Jim Bean</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.92</span></td>
+
+      <td> -0.25<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.75,&quot;4:54pm&quot;:1.75,&quot;5:10pm&quot;:3.66,&quot;4:56pm&quot;:1.75,&quot;5:20pm&quot;:2.39,&quot;2:58pm&quot;:4.3,&quot;2:59pm&quot;:3.41,&quot;4:58pm&quot;:1.75,&quot;3:18pm&quot;:3.66,&quot;3:20pm&quot;:2.65,&quot;3:21pm&quot;:2.39,&quot;5:22pm&quot;:1.75,&quot;4:20pm&quot;:3.66,&quot;4:59pm&quot;:1.75,&quot;5:13pm&quot;:1.75,&quot;4:23pm&quot;:3.16,&quot;4:24pm&quot;:3.16,&quot;5:01pm&quot;:1.75,&quot;4:25pm&quot;:2.78,&quot;4:48pm&quot;:4.3,&quot;4:52pm&quot;:3.03,&quot;4:53pm&quot;:2.78,&quot;2:55pm&quot;:3.75,&quot;5:23pm&quot;:1.75,&quot;5:24pm&quot;:1.75,&quot;5:43pm&quot;:3.03,&quot;6:00pm&quot;:4.3,&quot;6:07pm&quot;:4.3,&quot;6:10pm&quot;:4.3,&quot;6:12pm&quot;:4.3,&quot;6:14pm&quot;:4.3,&quot;6:15pm&quot;:3.92,&quot;6:20pm&quot;:4.04,&quot;6:22pm&quot;:3.41,&quot;6:25pm&quot;:4.3,&quot;6:39pm&quot;:4.04,&quot;6:40pm&quot;:4.3,&quot;6:41pm&quot;:3.66,&quot;7:01pm&quot;:3.92}" data-name="Jim Bean" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Wild Turkey</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.35</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:3.59,&quot;5:10pm&quot;:3.46,&quot;4:56pm&quot;:2.07,&quot;5:20pm&quot;:2.96,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:4.48,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:3.84,&quot;3:20pm&quot;:2.05,&quot;3:21pm&quot;:2.05,&quot;5:22pm&quot;:2.05,&quot;4:20pm&quot;:4.35,&quot;4:59pm&quot;:2.05,&quot;5:13pm&quot;:2.05,&quot;4:23pm&quot;:3.84,&quot;4:24pm&quot;:2.83,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.57,&quot;4:48pm&quot;:4.48,&quot;4:52pm&quot;:4.22,&quot;4:53pm&quot;:4.22,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:2.7,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.1,&quot;6:20pm&quot;:3.46,&quot;6:22pm&quot;:3.97,&quot;6:25pm&quot;:4.22,&quot;6:39pm&quot;:4.22,&quot;6:40pm&quot;:4.35,&quot;6:41pm&quot;:4.48,&quot;7:01pm&quot;:4.35}" data-name="Wild Turkey" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Black Label</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.33</span></td>
+
+      <td> -0.26<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.5,&quot;4:54pm&quot;:2.5,&quot;5:10pm&quot;:4.84,&quot;4:56pm&quot;:2.5,&quot;5:20pm&quot;:4.2,&quot;2:58pm&quot;:4.84,&quot;2:59pm&quot;:4.46,&quot;4:58pm&quot;:2.5,&quot;3:18pm&quot;:3.82,&quot;3:20pm&quot;:2.94,&quot;3:21pm&quot;:2.68,&quot;5:22pm&quot;:2.55,&quot;4:20pm&quot;:4.59,&quot;4:59pm&quot;:2.5,&quot;5:13pm&quot;:2.5,&quot;4:23pm&quot;:3.57,&quot;4:24pm&quot;:2.81,&quot;5:01pm&quot;:2.5,&quot;4:25pm&quot;:2.5,&quot;4:48pm&quot;:4.84,&quot;4:52pm&quot;:2.68,&quot;4:53pm&quot;:3.19,&quot;2:55pm&quot;:4.5,&quot;5:23pm&quot;:2.5,&quot;5:24pm&quot;:2.5,&quot;5:43pm&quot;:3.95,&quot;6:00pm&quot;:4.84,&quot;6:07pm&quot;:4.84,&quot;6:10pm&quot;:4.84,&quot;6:12pm&quot;:4.84,&quot;6:14pm&quot;:4.84,&quot;6:15pm&quot;:4.84,&quot;6:20pm&quot;:3.95,&quot;6:22pm&quot;:4.59,&quot;6:25pm&quot;:4.33,&quot;6:39pm&quot;:4.71,&quot;6:40pm&quot;:4.84,&quot;6:41pm&quot;:4.33,&quot;7:01pm&quot;:4.33}" data-name="Black Label" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+          <div id="vodka">
+            <h2>Vodka Shot's</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Absolute</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.53</span></td>
+
+      <td>0.38<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.25,&quot;4:54pm&quot;:2.37,&quot;5:10pm&quot;:3.77,&quot;4:56pm&quot;:2.23,&quot;2:58pm&quot;:4.66,&quot;5:20pm&quot;:3.26,&quot;2:59pm&quot;:3.64,&quot;4:58pm&quot;:2.23,&quot;3:18pm&quot;:4.66,&quot;3:20pm&quot;:3.77,&quot;3:21pm&quot;:3.77,&quot;5:22pm&quot;:2.25,&quot;4:20pm&quot;:4.66,&quot;4:59pm&quot;:2.23,&quot;5:13pm&quot;:2.23,&quot;4:23pm&quot;:3.14,&quot;4:24pm&quot;:2.37,&quot;5:01pm&quot;:2.23,&quot;4:25pm&quot;:2.23,&quot;4:48pm&quot;:3.64,&quot;4:52pm&quot;:2.23,&quot;4:53pm&quot;:3.01,&quot;2:55pm&quot;:4.25,&quot;5:23pm&quot;:2.23,&quot;5:24pm&quot;:2.23,&quot;5:43pm&quot;:2.76,&quot;6:00pm&quot;:4.66,&quot;6:07pm&quot;:4.66,&quot;6:10pm&quot;:4.66,&quot;6:12pm&quot;:4.66,&quot;6:14pm&quot;:4.66,&quot;6:15pm&quot;:4.15,&quot;6:20pm&quot;:4.28,&quot;6:22pm&quot;:4.02,&quot;6:25pm&quot;:4.02,&quot;6:39pm&quot;:4.02,&quot;6:40pm&quot;:4.02,&quot;6:41pm&quot;:4.41,&quot;7:01pm&quot;:4.53}" data-name="Absolute" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Grey Goose</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">5.2</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.05,&quot;5:10pm&quot;:4.57,&quot;4:56pm&quot;:3.05,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.42,&quot;2:59pm&quot;:4.44,&quot;4:58pm&quot;:3.05,&quot;3:18pm&quot;:4.95,&quot;3:20pm&quot;:3.8,&quot;3:21pm&quot;:3.05,&quot;5:22pm&quot;:3.05,&quot;4:20pm&quot;:5.2,&quot;4:59pm&quot;:3.05,&quot;5:13pm&quot;:3.05,&quot;4:23pm&quot;:4.69,&quot;4:24pm&quot;:4.31,&quot;5:01pm&quot;:3.05,&quot;4:25pm&quot;:3.05,&quot;4:48pm&quot;:4.31,&quot;4:52pm&quot;:3.05,&quot;4:53pm&quot;:3.3,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.05,&quot;5:24pm&quot;:3.05,&quot;5:43pm&quot;:3.93,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.31,&quot;6:20pm&quot;:5.07,&quot;6:22pm&quot;:5.2,&quot;6:25pm&quot;:5.2,&quot;6:39pm&quot;:4.69,&quot;6:40pm&quot;:5.2,&quot;6:41pm&quot;:4.69,&quot;7:01pm&quot;:5.2}" data-name="Grey Goose" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Sky Vodka</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.77</span></td>
+
+      <td> -0.12<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.75,&quot;4:54pm&quot;:2.75,&quot;5:10pm&quot;:4.13,&quot;4:56pm&quot;:2.75,&quot;2:58pm&quot;:5.02,&quot;5:20pm&quot;:3.5,&quot;2:59pm&quot;:4.26,&quot;4:58pm&quot;:2.75,&quot;3:18pm&quot;:4.13,&quot;3:20pm&quot;:2.99,&quot;3:21pm&quot;:2.75,&quot;5:22pm&quot;:2.75,&quot;4:20pm&quot;:4.51,&quot;4:59pm&quot;:2.75,&quot;5:13pm&quot;:2.75,&quot;4:23pm&quot;:3.12,&quot;4:24pm&quot;:2.75,&quot;5:01pm&quot;:2.75,&quot;4:25pm&quot;:2.75,&quot;4:48pm&quot;:4.0,&quot;4:52pm&quot;:2.99,&quot;4:53pm&quot;:3.5,&quot;2:55pm&quot;:4.75,&quot;5:23pm&quot;:2.75,&quot;5:24pm&quot;:2.75,&quot;5:43pm&quot;:4.77,&quot;6:00pm&quot;:5.02,&quot;6:07pm&quot;:5.02,&quot;6:10pm&quot;:5.02,&quot;6:12pm&quot;:5.02,&quot;6:14pm&quot;:5.02,&quot;6:15pm&quot;:4.51,&quot;6:20pm&quot;:4.39,&quot;6:22pm&quot;:4.39,&quot;6:25pm&quot;:4.39,&quot;6:39pm&quot;:5.02,&quot;6:40pm&quot;:4.77,&quot;6:41pm&quot;:4.64,&quot;7:01pm&quot;:4.77}" data-name="Sky Vodka" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Smirnoff</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.92</span></td>
+
+      <td> -0.25<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.75,&quot;4:54pm&quot;:1.76,&quot;5:10pm&quot;:4.17,&quot;4:56pm&quot;:1.76,&quot;2:58pm&quot;:4.3,&quot;5:20pm&quot;:3.79,&quot;2:59pm&quot;:4.04,&quot;4:58pm&quot;:1.76,&quot;3:18pm&quot;:3.66,&quot;3:20pm&quot;:2.52,&quot;3:21pm&quot;:1.76,&quot;5:22pm&quot;:3.54,&quot;4:20pm&quot;:3.41,&quot;4:59pm&quot;:1.76,&quot;5:13pm&quot;:1.76,&quot;4:23pm&quot;:3.16,&quot;4:24pm&quot;:2.78,&quot;5:01pm&quot;:1.76,&quot;4:25pm&quot;:2.39,&quot;4:48pm&quot;:3.92,&quot;4:52pm&quot;:2.65,&quot;4:53pm&quot;:3.41,&quot;2:55pm&quot;:3.75,&quot;5:23pm&quot;:3.41,&quot;5:24pm&quot;:1.76,&quot;5:43pm&quot;:3.28,&quot;6:00pm&quot;:4.3,&quot;6:07pm&quot;:4.3,&quot;6:10pm&quot;:4.3,&quot;6:12pm&quot;:4.3,&quot;6:14pm&quot;:4.3,&quot;6:15pm&quot;:4.04,&quot;6:20pm&quot;:4.04,&quot;6:22pm&quot;:4.17,&quot;6:25pm&quot;:4.3,&quot;6:39pm&quot;:3.79,&quot;6:40pm&quot;:4.17,&quot;6:41pm&quot;:4.17,&quot;7:01pm&quot;:3.92}" data-name="Smirnoff" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Svedka</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.25</span></td>
+
+      <td> -0.38<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.0,&quot;4:54pm&quot;:1.0,&quot;5:10pm&quot;:2.74,&quot;4:56pm&quot;:1.0,&quot;2:58pm&quot;:3.76,&quot;5:20pm&quot;:2.49,&quot;2:59pm&quot;:3.38,&quot;4:58pm&quot;:1.0,&quot;3:18pm&quot;:3.12,&quot;3:20pm&quot;:2.23,&quot;3:21pm&quot;:1.47,&quot;5:22pm&quot;:1.0,&quot;4:20pm&quot;:3.63,&quot;4:59pm&quot;:1.0,&quot;5:13pm&quot;:1.0,&quot;4:23pm&quot;:3.25,&quot;4:24pm&quot;:2.87,&quot;5:01pm&quot;:1.0,&quot;4:25pm&quot;:2.11,&quot;4:48pm&quot;:2.74,&quot;4:52pm&quot;:1.73,&quot;4:53pm&quot;:2.23,&quot;2:55pm&quot;:3.0,&quot;5:23pm&quot;:1.0,&quot;5:24pm&quot;:1.0,&quot;5:43pm&quot;:2.87,&quot;6:00pm&quot;:3.76,&quot;6:07pm&quot;:3.76,&quot;6:10pm&quot;:3.76,&quot;6:12pm&quot;:3.76,&quot;6:14pm&quot;:3.76,&quot;6:15pm&quot;:3.5,&quot;6:20pm&quot;:2.74,&quot;6:22pm&quot;:3.5,&quot;6:25pm&quot;:3.63,&quot;6:39pm&quot;:3.38,&quot;6:40pm&quot;:3.12,&quot;6:41pm&quot;:3.5,&quot;7:01pm&quot;:3.25}" data-name="Svedka" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+        </div>
+      </div>
+
+        <div class="beer_container">
+          <div class="row top_tables">
+          <div class="col-md-3" id="domestic">
+            <h2>Domestic Beer's</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Budweiser</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.99</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.5,&quot;4:54pm&quot;:1.75,&quot;5:10pm&quot;:3.99,&quot;4:56pm&quot;:1.75,&quot;2:58pm&quot;:4.12,&quot;5:20pm&quot;:2.59,&quot;2:59pm&quot;:3.1,&quot;4:58pm&quot;:1.75,&quot;3:18pm&quot;:3.99,&quot;3:20pm&quot;:2.98,&quot;3:21pm&quot;:1.75,&quot;5:22pm&quot;:2.21,&quot;4:20pm&quot;:3.74,&quot;4:59pm&quot;:1.75,&quot;5:13pm&quot;:1.75,&quot;4:23pm&quot;:1.96,&quot;4:24pm&quot;:1.96,&quot;5:01pm&quot;:1.75,&quot;4:25pm&quot;:1.75,&quot;4:48pm&quot;:2.98,&quot;4:52pm&quot;:1.75,&quot;4:53pm&quot;:2.21,&quot;2:55pm&quot;:3.5,&quot;5:23pm&quot;:1.75,&quot;5:24pm&quot;:1.75,&quot;5:43pm&quot;:2.09,&quot;6:00pm&quot;:4.12,&quot;6:07pm&quot;:4.12,&quot;6:10pm&quot;:4.12,&quot;6:12pm&quot;:4.12,&quot;6:14pm&quot;:4.12,&quot;6:15pm&quot;:2.98,&quot;6:20pm&quot;:3.23,&quot;6:22pm&quot;:3.36,&quot;6:25pm&quot;:4.12,&quot;6:39pm&quot;:3.48,&quot;6:40pm&quot;:3.86,&quot;6:41pm&quot;:4.12,&quot;7:01pm&quot;:3.99}" data-name="Budweiser" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Bud Light</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.12</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.5,&quot;4:54pm&quot;:2.59,&quot;5:10pm&quot;:3.1,&quot;4:56pm&quot;:1.75,&quot;2:58pm&quot;:4.12,&quot;5:20pm&quot;:3.48,&quot;2:59pm&quot;:2.98,&quot;4:58pm&quot;:1.75,&quot;3:18pm&quot;:4.12,&quot;3:20pm&quot;:2.21,&quot;3:21pm&quot;:1.75,&quot;5:22pm&quot;:1.75,&quot;4:20pm&quot;:3.1,&quot;4:59pm&quot;:1.75,&quot;5:13pm&quot;:1.75,&quot;4:23pm&quot;:1.75,&quot;4:24pm&quot;:1.75,&quot;5:01pm&quot;:1.75,&quot;4:25pm&quot;:1.75,&quot;4:48pm&quot;:3.99,&quot;4:52pm&quot;:3.48,&quot;4:53pm&quot;:3.36,&quot;2:55pm&quot;:3.5,&quot;5:23pm&quot;:1.75,&quot;5:24pm&quot;:1.75,&quot;5:43pm&quot;:2.72,&quot;6:00pm&quot;:4.12,&quot;6:07pm&quot;:4.12,&quot;6:10pm&quot;:4.12,&quot;6:12pm&quot;:4.12,&quot;6:14pm&quot;:4.12,&quot;6:15pm&quot;:3.74,&quot;6:20pm&quot;:2.98,&quot;6:22pm&quot;:3.99,&quot;6:25pm&quot;:3.74,&quot;6:39pm&quot;:4.12,&quot;6:40pm&quot;:3.86,&quot;6:41pm&quot;:3.99,&quot;7:01pm&quot;:4.12}" data-name="Bud Light" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Pabst Blue Ribbon</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">2.78</span></td>
+
+      <td>0.13<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:2.0,&quot;4:54pm&quot;:1.51,&quot;5:10pm&quot;:1.89,&quot;4:56pm&quot;:0.5,&quot;2:58pm&quot;:3.04,&quot;5:20pm&quot;:2.02,&quot;2:59pm&quot;:1.89,&quot;4:58pm&quot;:0.5,&quot;3:18pm&quot;:2.15,&quot;3:20pm&quot;:1.0,&quot;3:21pm&quot;:0.5,&quot;5:22pm&quot;:0.62,&quot;4:20pm&quot;:2.78,&quot;4:59pm&quot;:0.5,&quot;5:13pm&quot;:0.5,&quot;4:23pm&quot;:1.0,&quot;4:24pm&quot;:0.62,&quot;5:01pm&quot;:0.5,&quot;4:25pm&quot;:0.5,&quot;4:48pm&quot;:2.53,&quot;4:52pm&quot;:1.64,&quot;4:53pm&quot;:2.27,&quot;2:55pm&quot;:2.0,&quot;5:23pm&quot;:0.5,&quot;5:24pm&quot;:0.5,&quot;5:43pm&quot;:2.78,&quot;6:00pm&quot;:3.04,&quot;6:07pm&quot;:3.04,&quot;6:10pm&quot;:3.04,&quot;6:12pm&quot;:3.04,&quot;6:14pm&quot;:3.04,&quot;6:15pm&quot;:2.53,&quot;6:20pm&quot;:2.27,&quot;6:22pm&quot;:3.04,&quot;6:25pm&quot;:2.4,&quot;6:39pm&quot;:2.4,&quot;6:40pm&quot;:2.65,&quot;6:41pm&quot;:2.4,&quot;7:01pm&quot;:2.78}" data-name="Pabst Blue Ribbon" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Redd's Apple Ale</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.84</span></td>
+
+      <td> -0.26<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:1.95,&quot;5:10pm&quot;:3.34,&quot;4:56pm&quot;:1.95,&quot;2:58pm&quot;:4.48,&quot;5:20pm&quot;:3.34,&quot;2:59pm&quot;:3.46,&quot;4:58pm&quot;:1.95,&quot;3:18pm&quot;:3.34,&quot;3:20pm&quot;:3.08,&quot;3:21pm&quot;:2.32,&quot;5:22pm&quot;:1.95,&quot;4:20pm&quot;:4.22,&quot;4:59pm&quot;:1.95,&quot;5:13pm&quot;:1.95,&quot;4:23pm&quot;:4.1,&quot;4:24pm&quot;:3.34,&quot;5:01pm&quot;:1.95,&quot;4:25pm&quot;:2.57,&quot;4:48pm&quot;:4.48,&quot;4:52pm&quot;:2.7,&quot;4:53pm&quot;:2.7,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:1.95,&quot;5:24pm&quot;:1.95,&quot;5:43pm&quot;:3.34,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.59,&quot;6:20pm&quot;:3.34,&quot;6:22pm&quot;:4.35,&quot;6:25pm&quot;:3.97,&quot;6:39pm&quot;:4.22,&quot;6:40pm&quot;:4.35,&quot;6:41pm&quot;:3.97,&quot;7:01pm&quot;:3.84}" data-name="Redd&#39;s Apple Ale" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Yuengling</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.74</span></td>
+
+      <td> -0.12<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:3.5,&quot;4:54pm&quot;:1.75,&quot;5:10pm&quot;:3.36,&quot;4:56pm&quot;:1.75,&quot;2:58pm&quot;:4.12,&quot;5:20pm&quot;:2.72,&quot;2:59pm&quot;:3.1,&quot;4:58pm&quot;:1.75,&quot;3:18pm&quot;:2.98,&quot;3:20pm&quot;:2.47,&quot;3:21pm&quot;:1.75,&quot;5:22pm&quot;:1.75,&quot;4:21pm&quot;:3.23,&quot;4:59pm&quot;:1.75,&quot;5:13pm&quot;:1.75,&quot;4:23pm&quot;:1.96,&quot;4:24pm&quot;:1.75,&quot;5:01pm&quot;:1.75,&quot;4:25pm&quot;:1.75,&quot;4:48pm&quot;:3.48,&quot;4:52pm&quot;:1.96,&quot;4:53pm&quot;:2.72,&quot;2:55pm&quot;:3.5,&quot;5:23pm&quot;:1.75,&quot;5:24pm&quot;:1.75,&quot;5:43pm&quot;:2.98,&quot;6:00pm&quot;:4.12,&quot;6:07pm&quot;:4.12,&quot;6:10pm&quot;:4.12,&quot;6:12pm&quot;:4.12,&quot;6:14pm&quot;:4.12,&quot;6:15pm&quot;:3.36,&quot;6:20pm&quot;:3.1,&quot;6:22pm&quot;:3.74,&quot;6:25pm&quot;:3.99,&quot;6:39pm&quot;:4.12,&quot;6:40pm&quot;:3.48,&quot;6:41pm&quot;:3.99,&quot;7:01pm&quot;:3.74}" data-name="Yuengling" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+          <div class="col-md-3" id="imported">
+            <h2>Imported Beers</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Guinness</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.35</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.07,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.97,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:3.46,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:3.34,&quot;3:20pm&quot;:2.05,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:2.7,&quot;4:21pm&quot;:3.97,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:2.83,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.07,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:4.48,&quot;4:52pm&quot;:3.72,&quot;4:53pm&quot;:3.97,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.05,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:3.59,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.84,&quot;6:20pm&quot;:4.1,&quot;6:22pm&quot;:4.22,&quot;6:25pm&quot;:4.48,&quot;6:39pm&quot;:4.1,&quot;6:40pm&quot;:3.97,&quot;6:41pm&quot;:4.22,&quot;7:01pm&quot;:4.35}" data-name="Guinness" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Amstel Light</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.48</span></td>
+
+      <td>0.26<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.05,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.72,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:4.48,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:3.97,&quot;3:20pm&quot;:2.7,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:3.84,&quot;4:21pm&quot;:4.48,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:3.46,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:3.34,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.57,&quot;4:48pm&quot;:3.34,&quot;4:52pm&quot;:2.07,&quot;4:53pm&quot;:2.83,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.19,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:2.57,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.72,&quot;6:20pm&quot;:3.46,&quot;6:22pm&quot;:3.46,&quot;6:25pm&quot;:4.48,&quot;6:39pm&quot;:3.84,&quot;6:40pm&quot;:4.35,&quot;6:41pm&quot;:3.97,&quot;7:01pm&quot;:4.48}" data-name="Amstel Light" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Fosters</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.1</span></td>
+
+      <td>0.26<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.32,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.72,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:3.72,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:3.97,&quot;3:20pm&quot;:2.7,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:2.96,&quot;4:21pm&quot;:4.48,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:3.72,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:3.21,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.57,&quot;4:48pm&quot;:4.1,&quot;4:52pm&quot;:3.21,&quot;4:53pm&quot;:3.21,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.45,&quot;5:23pm&quot;:2.32,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:3.72,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.72,&quot;6:20pm&quot;:3.72,&quot;6:22pm&quot;:4.22,&quot;6:25pm&quot;:4.22,&quot;6:39pm&quot;:3.84,&quot;6:40pm&quot;:4.35,&quot;6:41pm&quot;:4.48,&quot;7:01pm&quot;:4.1}" data-name="Fosters" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Beck's</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.48</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.96,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.46,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:4.35,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:4.48,&quot;3:20pm&quot;:3.21,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:3.34,&quot;4:21pm&quot;:3.59,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:3.21,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.45,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:3.72,&quot;4:52pm&quot;:2.7,&quot;4:53pm&quot;:3.46,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.05,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:3.34,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.72,&quot;6:20pm&quot;:4.1,&quot;6:22pm&quot;:4.35,&quot;6:25pm&quot;:4.22,&quot;6:39pm&quot;:4.22,&quot;6:40pm&quot;:4.22,&quot;6:41pm&quot;:4.1,&quot;7:01pm&quot;:4.48}" data-name="Beck&#39;s" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Heineken</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.84</span></td>
+
+      <td> -0.64<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:3.34,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:4.35,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:3.46,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:4.22,&quot;3:20pm&quot;:2.19,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:3.97,&quot;4:21pm&quot;:3.84,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:3.08,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.05,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:4.22,&quot;4:52pm&quot;:3.08,&quot;4:53pm&quot;:3.34,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.32,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:4.22,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.22,&quot;6:20pm&quot;:3.84,&quot;6:22pm&quot;:3.34,&quot;6:25pm&quot;:4.1,&quot;6:39pm&quot;:3.84,&quot;6:40pm&quot;:3.84,&quot;6:41pm&quot;:4.48,&quot;7:01pm&quot;:3.84}" data-name="Heineken" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+        </div>
+        <div class="row bottom_tables">
+          <div class="col-md-3" ,="" id="brewery">
+            <h2>Wynwood Brewery Beer's</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Pop's Porter</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">5.07</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.0,&quot;5:10pm&quot;:5.07,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.8,&quot;2:59pm&quot;:4.95,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.31,&quot;3:20pm&quot;:3.93,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.0,&quot;4:20pm&quot;:4.06,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:3.3,&quot;4:24pm&quot;:3.17,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:4.57,&quot;4:52pm&quot;:3.3,&quot;4:53pm&quot;:3.55,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.0,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.44,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.44,&quot;6:20pm&quot;:4.69,&quot;6:22pm&quot;:4.82,&quot;6:25pm&quot;:5.2,&quot;6:39pm&quot;:4.57,&quot;6:40pm&quot;:4.57,&quot;6:41pm&quot;:4.82,&quot;7:01pm&quot;:5.07}" data-name="Pop&#39;s Porter" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">La Rubia</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">5.2</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:4.57,&quot;5:10pm&quot;:5.2,&quot;4:56pm&quot;:3.3,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:4.06,&quot;2:59pm&quot;:4.19,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.57,&quot;3:20pm&quot;:3.42,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.93,&quot;4:20pm&quot;:5.07,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:3.8,&quot;4:24pm&quot;:3.42,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:4.95,&quot;4:52pm&quot;:4.31,&quot;4:53pm&quot;:4.82,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.82,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.69,&quot;6:20pm&quot;:4.31,&quot;6:22pm&quot;:4.57,&quot;6:25pm&quot;:5.07,&quot;6:39pm&quot;:4.95,&quot;6:40pm&quot;:4.69,&quot;6:41pm&quot;:5.07,&quot;7:01pm&quot;:5.2}" data-name="La Rubia" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Wynwood IPA</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">5.07</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.0,&quot;5:10pm&quot;:4.57,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:4.44,&quot;2:59pm&quot;:4.31,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.44,&quot;3:20pm&quot;:3.55,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.68,&quot;4:20pm&quot;:4.82,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:4.69,&quot;4:24pm&quot;:4.31,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:4.82,&quot;4:52pm&quot;:3.93,&quot;4:53pm&quot;:3.17,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.69,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.31,&quot;6:20pm&quot;:5.07,&quot;6:22pm&quot;:4.57,&quot;6:25pm&quot;:5.07,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:5.2,&quot;7:01pm&quot;:5.07}" data-name="Wynwood IPA" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Magic City</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.69</span></td>
+
+      <td>0.12<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.0,&quot;5:10pm&quot;:4.69,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.68,&quot;2:59pm&quot;:4.44,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.82,&quot;3:20pm&quot;:3.8,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.0,&quot;4:20pm&quot;:4.69,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:4.19,&quot;4:24pm&quot;:3.68,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:5.2,&quot;4:52pm&quot;:3.93,&quot;4:53pm&quot;:4.31,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.0,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.19,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.69,&quot;6:20pm&quot;:4.31,&quot;6:22pm&quot;:4.82,&quot;6:25pm&quot;:5.2,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.69,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.69}" data-name="Magic City" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Rickenbacker</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.82</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.93,&quot;5:10pm&quot;:4.57,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.42,&quot;2:59pm&quot;:5.2,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.31,&quot;3:20pm&quot;:3.17,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.0,&quot;4:20pm&quot;:4.95,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:4.06,&quot;4:24pm&quot;:3.42,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:4.19,&quot;4:52pm&quot;:3.17,&quot;4:53pm&quot;:4.06,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.0,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.57,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.82,&quot;6:20pm&quot;:4.44,&quot;6:22pm&quot;:4.95,&quot;6:25pm&quot;:4.82,&quot;6:39pm&quot;:4.82,&quot;6:40pm&quot;:4.57,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.82}" data-name="Rickenbacker" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+          <div class="col-md-3" ,="" id="wine">
+            <h2>Wine Selection</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Pinot Noir</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.35</span></td>
+
+      <td>0.13<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.19,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.72,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:3.34,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:3.72,&quot;3:20pm&quot;:2.45,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:3.84,&quot;4:21pm&quot;:4.1,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:3.34,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.45,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:3.46,&quot;4:52pm&quot;:2.45,&quot;4:53pm&quot;:3.34,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.7,&quot;5:23pm&quot;:2.19,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:2.96,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.84,&quot;6:20pm&quot;:3.34,&quot;6:22pm&quot;:3.72,&quot;6:25pm&quot;:3.84,&quot;6:39pm&quot;:4.22,&quot;6:40pm&quot;:3.84,&quot;6:41pm&quot;:4.1,&quot;7:01pm&quot;:4.35}" data-name="Pinot Noir" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Cabernet Sauvignon</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.35</span></td>
+
+      <td>0.13<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.05,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.59,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:4.35,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:4.22,&quot;3:20pm&quot;:2.57,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:4.22,&quot;4:21pm&quot;:3.72,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:2.83,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.7,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:3.97,&quot;4:52pm&quot;:3.08,&quot;4:53pm&quot;:3.46,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:3.34,&quot;5:23pm&quot;:2.7,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:3.46,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.1,&quot;6:20pm&quot;:4.1,&quot;6:22pm&quot;:3.84,&quot;6:25pm&quot;:4.35,&quot;6:39pm&quot;:4.48,&quot;6:40pm&quot;:4.22,&quot;6:41pm&quot;:3.84,&quot;7:01pm&quot;:4.35}" data-name="Cabernet Sauvignon" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Pinot Girg</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.97</span></td>
+
+      <td> -0.51<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.19,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.34,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:3.34,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:4.22,&quot;3:20pm&quot;:3.72,&quot;3:21pm&quot;:2.45,&quot;5:20pm&quot;:3.21,&quot;4:21pm&quot;:3.97,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:3.08,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.07,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:3.46,&quot;4:52pm&quot;:2.05,&quot;4:53pm&quot;:3.59,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.07,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:2.83,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.22,&quot;6:20pm&quot;:3.46,&quot;6:22pm&quot;:3.72,&quot;6:25pm&quot;:3.84,&quot;6:39pm&quot;:4.48,&quot;6:40pm&quot;:4.1,&quot;6:41pm&quot;:4.22,&quot;7:01pm&quot;:3.97}" data-name="Pinot Girg" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Riesling</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.84</span></td>
+
+      <td> -0.38<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.05,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.34,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:3.59,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:4.35,&quot;3:20pm&quot;:3.97,&quot;3:21pm&quot;:3.46,&quot;5:20pm&quot;:3.34,&quot;4:21pm&quot;:3.34,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:2.45,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.45,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:3.34,&quot;4:52pm&quot;:2.05,&quot;4:53pm&quot;:3.59,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.05,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:2.7,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.34,&quot;6:20pm&quot;:3.84,&quot;6:22pm&quot;:3.34,&quot;6:25pm&quot;:4.1,&quot;6:39pm&quot;:4.48,&quot;6:40pm&quot;:4.35,&quot;6:41pm&quot;:4.22,&quot;7:01pm&quot;:3.84}" data-name="Riesling" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Cabernet Sauvignon</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.35</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.19,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:3.34,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:3.34,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:3.72,&quot;3:20pm&quot;:2.83,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:3.08,&quot;4:21pm&quot;:3.84,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:2.19,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.07,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:3.46,&quot;4:52pm&quot;:2.57,&quot;4:53pm&quot;:3.21,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.32,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:3.84,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.35,&quot;6:20pm&quot;:3.46,&quot;6:22pm&quot;:4.35,&quot;6:25pm&quot;:4.48,&quot;6:39pm&quot;:4.1,&quot;6:40pm&quot;:4.48,&quot;6:41pm&quot;:3.84,&quot;7:01pm&quot;:4.35}" data-name="Cabernet Sauvignon" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+        </div>
+        </div>
+        <!-- <div class="section" id="section4"> -->
+        <div class="best_deal_container">
+          <div class="row top_tables">
+            <div class="col-md-3" id="best_deal">
+              <h2>Best Deal's</h2>
+              <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">The Grandpa</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">5.54</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:6.0,&quot;4:54pm&quot;:4.5,&quot;4:56pm&quot;:4.5,&quot;5:10pm&quot;:5.16,&quot;2:58pm&quot;:5.92,&quot;2:59pm&quot;:4.78,&quot;4:58pm&quot;:4.5,&quot;3:18pm&quot;:4.78,&quot;3:20pm&quot;:4.5,&quot;3:21pm&quot;:4.5,&quot;5:20pm&quot;:5.16,&quot;4:21pm&quot;:4.91,&quot;4:59pm&quot;:4.5,&quot;4:23pm&quot;:4.5,&quot;5:13pm&quot;:4.5,&quot;4:24pm&quot;:4.5,&quot;5:01pm&quot;:4.5,&quot;4:25pm&quot;:4.5,&quot;4:48pm&quot;:5.29,&quot;4:52pm&quot;:4.5,&quot;4:53pm&quot;:4.5,&quot;2:55pm&quot;:6.0,&quot;5:22pm&quot;:5.03,&quot;5:23pm&quot;:4.5,&quot;5:24pm&quot;:4.5,&quot;5:43pm&quot;:4.78,&quot;6:00pm&quot;:5.92,&quot;6:07pm&quot;:5.92,&quot;6:10pm&quot;:5.92,&quot;6:12pm&quot;:5.92,&quot;6:14pm&quot;:5.92,&quot;6:15pm&quot;:5.41,&quot;6:20pm&quot;:5.29,&quot;6:22pm&quot;:5.29,&quot;6:25pm&quot;:5.54,&quot;6:39pm&quot;:5.54,&quot;6:40pm&quot;:5.41,&quot;6:41pm&quot;:5.54,&quot;7:01pm&quot;:5.54}" data-name="The Grandpa" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">A.J</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.57</span></td>
+
+      <td> -0.12<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:5.2,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.82,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:4.31,&quot;3:20pm&quot;:3.8,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:3.55,&quot;4:21pm&quot;:4.82,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.55,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:4.95,&quot;4:52pm&quot;:3.55,&quot;4:53pm&quot;:3.55,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:4.57,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.06,&quot;6:20pm&quot;:5.2,&quot;6:22pm&quot;:4.19,&quot;6:25pm&quot;:4.82,&quot;6:39pm&quot;:4.69,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:4.69,&quot;7:01pm&quot;:4.57}" data-name="A.J" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Magic City</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.69</span></td>
+
+      <td>0.12<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.0,&quot;5:10pm&quot;:4.69,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.68,&quot;2:59pm&quot;:4.44,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.82,&quot;3:20pm&quot;:3.8,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.0,&quot;4:20pm&quot;:4.69,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:4.19,&quot;4:24pm&quot;:3.68,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:5.2,&quot;4:52pm&quot;:3.93,&quot;4:53pm&quot;:4.31,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.0,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.19,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.69,&quot;6:20pm&quot;:4.31,&quot;6:22pm&quot;:4.82,&quot;6:25pm&quot;:5.2,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.69,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.69}" data-name="Magic City" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Irish Car Bomb</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.69</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:4.82,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.31,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:5.07,&quot;3:20pm&quot;:4.06,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:3.55,&quot;4:21pm&quot;:4.57,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.55,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:4.44,&quot;4:52pm&quot;:4.31,&quot;4:53pm&quot;:5.2,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:4.44,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.57,&quot;6:20pm&quot;:4.06,&quot;6:22pm&quot;:4.57,&quot;6:25pm&quot;:4.95,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.69}" data-name="Irish Car Bomb" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Rickenbacker</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.82</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.93,&quot;5:10pm&quot;:4.57,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.42,&quot;2:59pm&quot;:5.2,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.31,&quot;3:20pm&quot;:3.17,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.0,&quot;4:20pm&quot;:4.95,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:4.06,&quot;4:24pm&quot;:3.42,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:4.19,&quot;4:52pm&quot;:3.17,&quot;4:53pm&quot;:4.06,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.0,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.57,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.82,&quot;6:20pm&quot;:4.44,&quot;6:22pm&quot;:4.95,&quot;6:25pm&quot;:4.82,&quot;6:39pm&quot;:4.82,&quot;6:40pm&quot;:4.57,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.82}" data-name="Rickenbacker" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+            </div>
+            <div class="col-md-3" id="best_deal_cocktail">
+              <h2>Best Cocktail Deal's</h2>
+              <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">The Grandpa</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">5.54</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:6.0,&quot;4:54pm&quot;:4.5,&quot;4:56pm&quot;:4.5,&quot;5:10pm&quot;:5.16,&quot;2:58pm&quot;:5.92,&quot;2:59pm&quot;:4.78,&quot;4:58pm&quot;:4.5,&quot;3:18pm&quot;:4.78,&quot;3:20pm&quot;:4.5,&quot;3:21pm&quot;:4.5,&quot;5:20pm&quot;:5.16,&quot;4:21pm&quot;:4.91,&quot;4:59pm&quot;:4.5,&quot;4:23pm&quot;:4.5,&quot;5:13pm&quot;:4.5,&quot;4:24pm&quot;:4.5,&quot;5:01pm&quot;:4.5,&quot;4:25pm&quot;:4.5,&quot;4:48pm&quot;:5.29,&quot;4:52pm&quot;:4.5,&quot;4:53pm&quot;:4.5,&quot;2:55pm&quot;:6.0,&quot;5:22pm&quot;:5.03,&quot;5:23pm&quot;:4.5,&quot;5:24pm&quot;:4.5,&quot;5:43pm&quot;:4.78,&quot;6:00pm&quot;:5.92,&quot;6:07pm&quot;:5.92,&quot;6:10pm&quot;:5.92,&quot;6:12pm&quot;:5.92,&quot;6:14pm&quot;:5.92,&quot;6:15pm&quot;:5.41,&quot;6:20pm&quot;:5.29,&quot;6:22pm&quot;:5.29,&quot;6:25pm&quot;:5.54,&quot;6:39pm&quot;:5.54,&quot;6:40pm&quot;:5.41,&quot;6:41pm&quot;:5.54,&quot;7:01pm&quot;:5.54}" data-name="The Grandpa" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">A.J</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.57</span></td>
+
+      <td> -0.12<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:5.2,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.82,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:4.31,&quot;3:20pm&quot;:3.8,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:3.55,&quot;4:21pm&quot;:4.82,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.55,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:4.95,&quot;4:52pm&quot;:3.55,&quot;4:53pm&quot;:3.55,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:4.57,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.06,&quot;6:20pm&quot;:5.2,&quot;6:22pm&quot;:4.19,&quot;6:25pm&quot;:4.82,&quot;6:39pm&quot;:4.69,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:4.69,&quot;7:01pm&quot;:4.57}" data-name="A.J" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Irish Car Bomb</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.69</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:4.82,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.31,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:5.07,&quot;3:20pm&quot;:4.06,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:3.55,&quot;4:21pm&quot;:4.57,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.55,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:4.44,&quot;4:52pm&quot;:4.31,&quot;4:53pm&quot;:5.2,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:4.44,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.57,&quot;6:20pm&quot;:4.06,&quot;6:22pm&quot;:4.57,&quot;6:25pm&quot;:4.95,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.69}" data-name="Irish Car Bomb" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">The Boss</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.82</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:4.19,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.19,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:4.19,&quot;3:20pm&quot;:3.55,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:4.19,&quot;4:21pm&quot;:4.44,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.68,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:4.95,&quot;4:52pm&quot;:3.8,&quot;4:53pm&quot;:4.95,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:3.93,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.95,&quot;6:20pm&quot;:5.2,&quot;6:22pm&quot;:4.82,&quot;6:25pm&quot;:4.69,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:4.82,&quot;7:01pm&quot;:4.82}" data-name="The Boss" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">The Dude</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.82</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:4.57,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.19,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:5.2,&quot;3:20pm&quot;:4.19,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:4.82,&quot;4:21pm&quot;:4.69,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.55,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:5.2,&quot;4:52pm&quot;:4.06,&quot;4:53pm&quot;:4.06,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:4.31,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.19,&quot;6:20pm&quot;:5.2,&quot;6:22pm&quot;:4.44,&quot;6:25pm&quot;:4.57,&quot;6:39pm&quot;:4.95,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:5.07,&quot;7:01pm&quot;:4.82}" data-name="The Dude" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+            </div>
+          </div>
+          <div class="row bottom_tables">
+            <div class="col-md-3" id="best_deal_beer">
+              <h2>Best Beer Deal's</h2>
+              <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Magic City</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.69</span></td>
+
+      <td>0.12<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.0,&quot;5:10pm&quot;:4.69,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.68,&quot;2:59pm&quot;:4.44,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.82,&quot;3:20pm&quot;:3.8,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.0,&quot;4:20pm&quot;:4.69,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:4.19,&quot;4:24pm&quot;:3.68,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:5.2,&quot;4:52pm&quot;:3.93,&quot;4:53pm&quot;:4.31,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.0,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.19,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.69,&quot;6:20pm&quot;:4.31,&quot;6:22pm&quot;:4.82,&quot;6:25pm&quot;:5.2,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.69,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.69}" data-name="Magic City" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Rickenbacker</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.82</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.93,&quot;5:10pm&quot;:4.57,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.42,&quot;2:59pm&quot;:5.2,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.31,&quot;3:20pm&quot;:3.17,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.0,&quot;4:20pm&quot;:4.95,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:4.06,&quot;4:24pm&quot;:3.42,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:4.19,&quot;4:52pm&quot;:3.17,&quot;4:53pm&quot;:4.06,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.0,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.57,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.82,&quot;6:20pm&quot;:4.44,&quot;6:22pm&quot;:4.95,&quot;6:25pm&quot;:4.82,&quot;6:39pm&quot;:4.82,&quot;6:40pm&quot;:4.57,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.82}" data-name="Rickenbacker" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Redd's Apple Ale</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.84</span></td>
+
+      <td> -0.26<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:1.95,&quot;5:10pm&quot;:3.34,&quot;4:56pm&quot;:1.95,&quot;2:58pm&quot;:4.48,&quot;5:20pm&quot;:3.34,&quot;2:59pm&quot;:3.46,&quot;4:58pm&quot;:1.95,&quot;3:18pm&quot;:3.34,&quot;3:20pm&quot;:3.08,&quot;3:21pm&quot;:2.32,&quot;5:22pm&quot;:1.95,&quot;4:20pm&quot;:4.22,&quot;4:59pm&quot;:1.95,&quot;5:13pm&quot;:1.95,&quot;4:23pm&quot;:4.1,&quot;4:24pm&quot;:3.34,&quot;5:01pm&quot;:1.95,&quot;4:25pm&quot;:2.57,&quot;4:48pm&quot;:4.48,&quot;4:52pm&quot;:2.7,&quot;4:53pm&quot;:2.7,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:1.95,&quot;5:24pm&quot;:1.95,&quot;5:43pm&quot;:3.34,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.59,&quot;6:20pm&quot;:3.34,&quot;6:22pm&quot;:4.35,&quot;6:25pm&quot;:3.97,&quot;6:39pm&quot;:4.22,&quot;6:40pm&quot;:4.35,&quot;6:41pm&quot;:3.97,&quot;7:01pm&quot;:3.84}" data-name="Redd&#39;s Apple Ale" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Heineken</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.84</span></td>
+
+      <td> -0.64<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:3.34,&quot;4:56pm&quot;:2.05,&quot;5:10pm&quot;:4.35,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:3.46,&quot;4:58pm&quot;:2.05,&quot;3:18pm&quot;:4.22,&quot;3:20pm&quot;:2.19,&quot;3:21pm&quot;:2.05,&quot;5:20pm&quot;:3.97,&quot;4:21pm&quot;:3.84,&quot;4:59pm&quot;:2.05,&quot;4:23pm&quot;:3.08,&quot;5:13pm&quot;:2.05,&quot;4:24pm&quot;:2.05,&quot;5:01pm&quot;:2.05,&quot;4:25pm&quot;:2.05,&quot;4:48pm&quot;:4.22,&quot;4:52pm&quot;:3.08,&quot;4:53pm&quot;:3.34,&quot;2:55pm&quot;:4.0,&quot;5:22pm&quot;:2.32,&quot;5:23pm&quot;:2.05,&quot;5:24pm&quot;:2.05,&quot;5:43pm&quot;:4.22,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.22,&quot;6:20pm&quot;:3.84,&quot;6:22pm&quot;:3.34,&quot;6:25pm&quot;:4.1,&quot;6:39pm&quot;:3.84,&quot;6:40pm&quot;:3.84,&quot;6:41pm&quot;:4.48,&quot;7:01pm&quot;:3.84}" data-name="Heineken" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Pop's Porter</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">5.07</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.0,&quot;5:10pm&quot;:5.07,&quot;4:56pm&quot;:3.0,&quot;2:58pm&quot;:5.2,&quot;5:20pm&quot;:3.8,&quot;2:59pm&quot;:4.95,&quot;4:58pm&quot;:3.0,&quot;3:18pm&quot;:4.31,&quot;3:20pm&quot;:3.93,&quot;3:21pm&quot;:3.0,&quot;5:22pm&quot;:3.0,&quot;4:20pm&quot;:4.06,&quot;4:59pm&quot;:3.0,&quot;5:13pm&quot;:3.0,&quot;4:23pm&quot;:3.3,&quot;4:24pm&quot;:3.17,&quot;5:01pm&quot;:3.0,&quot;4:25pm&quot;:3.0,&quot;4:48pm&quot;:4.57,&quot;4:52pm&quot;:3.3,&quot;4:53pm&quot;:3.55,&quot;2:55pm&quot;:5.0,&quot;5:23pm&quot;:3.0,&quot;5:24pm&quot;:3.0,&quot;5:43pm&quot;:4.44,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.44,&quot;6:20pm&quot;:4.69,&quot;6:22pm&quot;:4.82,&quot;6:25pm&quot;:5.2,&quot;6:39pm&quot;:4.57,&quot;6:40pm&quot;:4.57,&quot;6:41pm&quot;:4.82,&quot;7:01pm&quot;:5.07}" data-name="Pop&#39;s Porter" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+            </div>
+            <div class="col-md-3" id="best_deal_shot">
+              <h2>Best Shot Deal's</h2>
+              <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">Black Label</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.33</span></td>
+
+      <td> -0.26<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.5,&quot;4:54pm&quot;:2.5,&quot;5:10pm&quot;:4.84,&quot;4:56pm&quot;:2.5,&quot;5:20pm&quot;:4.2,&quot;2:58pm&quot;:4.84,&quot;2:59pm&quot;:4.46,&quot;4:58pm&quot;:2.5,&quot;3:18pm&quot;:3.82,&quot;3:20pm&quot;:2.94,&quot;3:21pm&quot;:2.68,&quot;5:22pm&quot;:2.55,&quot;4:20pm&quot;:4.59,&quot;4:59pm&quot;:2.5,&quot;5:13pm&quot;:2.5,&quot;4:23pm&quot;:3.57,&quot;4:24pm&quot;:2.81,&quot;5:01pm&quot;:2.5,&quot;4:25pm&quot;:2.5,&quot;4:48pm&quot;:4.84,&quot;4:52pm&quot;:2.68,&quot;4:53pm&quot;:3.19,&quot;2:55pm&quot;:4.5,&quot;5:23pm&quot;:2.5,&quot;5:24pm&quot;:2.5,&quot;5:43pm&quot;:3.95,&quot;6:00pm&quot;:4.84,&quot;6:07pm&quot;:4.84,&quot;6:10pm&quot;:4.84,&quot;6:12pm&quot;:4.84,&quot;6:14pm&quot;:4.84,&quot;6:15pm&quot;:4.84,&quot;6:20pm&quot;:3.95,&quot;6:22pm&quot;:4.59,&quot;6:25pm&quot;:4.33,&quot;6:39pm&quot;:4.71,&quot;6:40pm&quot;:4.84,&quot;6:41pm&quot;:4.33,&quot;7:01pm&quot;:4.33}" data-name="Black Label" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Jameson</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">3.97</span></td>
+
+      <td>0.13<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.96,&quot;5:10pm&quot;:3.59,&quot;4:56pm&quot;:2.01,&quot;5:20pm&quot;:4.1,&quot;2:58pm&quot;:4.48,&quot;2:59pm&quot;:4.22,&quot;4:58pm&quot;:2.01,&quot;3:18pm&quot;:4.48,&quot;3:20pm&quot;:3.59,&quot;3:21pm&quot;:2.96,&quot;5:22pm&quot;:3.08,&quot;4:20pm&quot;:4.22,&quot;4:59pm&quot;:2.01,&quot;5:13pm&quot;:2.01,&quot;4:23pm&quot;:2.7,&quot;4:24pm&quot;:2.57,&quot;5:01pm&quot;:2.01,&quot;4:25pm&quot;:2.01,&quot;4:48pm&quot;:3.59,&quot;4:52pm&quot;:2.45,&quot;4:53pm&quot;:3.46,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:2.45,&quot;5:24pm&quot;:2.01,&quot;5:43pm&quot;:2.96,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:3.34,&quot;6:20pm&quot;:4.35,&quot;6:22pm&quot;:4.1,&quot;6:25pm&quot;:4.1,&quot;6:39pm&quot;:3.97,&quot;6:40pm&quot;:3.84,&quot;6:41pm&quot;:4.22,&quot;7:01pm&quot;:3.97}" data-name="Jameson" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Sky Vodka</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.77</span></td>
+
+      <td> -0.12<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.75,&quot;4:54pm&quot;:2.75,&quot;5:10pm&quot;:4.13,&quot;4:56pm&quot;:2.75,&quot;2:58pm&quot;:5.02,&quot;5:20pm&quot;:3.5,&quot;2:59pm&quot;:4.26,&quot;4:58pm&quot;:2.75,&quot;3:18pm&quot;:4.13,&quot;3:20pm&quot;:2.99,&quot;3:21pm&quot;:2.75,&quot;5:22pm&quot;:2.75,&quot;4:20pm&quot;:4.51,&quot;4:59pm&quot;:2.75,&quot;5:13pm&quot;:2.75,&quot;4:23pm&quot;:3.12,&quot;4:24pm&quot;:2.75,&quot;5:01pm&quot;:2.75,&quot;4:25pm&quot;:2.75,&quot;4:48pm&quot;:4.0,&quot;4:52pm&quot;:2.99,&quot;4:53pm&quot;:3.5,&quot;2:55pm&quot;:4.75,&quot;5:23pm&quot;:2.75,&quot;5:24pm&quot;:2.75,&quot;5:43pm&quot;:4.77,&quot;6:00pm&quot;:5.02,&quot;6:07pm&quot;:5.02,&quot;6:10pm&quot;:5.02,&quot;6:12pm&quot;:5.02,&quot;6:14pm&quot;:5.02,&quot;6:15pm&quot;:4.51,&quot;6:20pm&quot;:4.39,&quot;6:22pm&quot;:4.39,&quot;6:25pm&quot;:4.39,&quot;6:39pm&quot;:5.02,&quot;6:40pm&quot;:4.77,&quot;6:41pm&quot;:4.64,&quot;7:01pm&quot;:4.77}" data-name="Sky Vodka" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">1800</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.59</span></td>
+
+      <td>0.26<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.5,&quot;4:54pm&quot;:2.81,&quot;5:09pm&quot;:4.08,&quot;4:56pm&quot;:2.73,&quot;5:20pm&quot;:3.44,&quot;2:58pm&quot;:4.84,&quot;5:10pm&quot;:3.06,&quot;2:59pm&quot;:4.84,&quot;4:58pm&quot;:2.73,&quot;3:18pm&quot;:4.08,&quot;3:20pm&quot;:2.81,&quot;3:21pm&quot;:2.73,&quot;5:22pm&quot;:2.73,&quot;4:20pm&quot;:3.82,&quot;4:59pm&quot;:2.73,&quot;5:13pm&quot;:2.73,&quot;4:23pm&quot;:3.32,&quot;4:24pm&quot;:2.73,&quot;5:01pm&quot;:2.73,&quot;4:25pm&quot;:2.73,&quot;4:48pm&quot;:4.46,&quot;4:52pm&quot;:2.94,&quot;4:53pm&quot;:3.82,&quot;2:55pm&quot;:4.5,&quot;5:23pm&quot;:2.73,&quot;5:24pm&quot;:2.73,&quot;5:43pm&quot;:3.32,&quot;6:00pm&quot;:4.84,&quot;6:07pm&quot;:4.84,&quot;6:10pm&quot;:4.84,&quot;6:12pm&quot;:4.84,&quot;6:14pm&quot;:4.84,&quot;6:15pm&quot;:4.08,&quot;6:20pm&quot;:3.82,&quot;6:22pm&quot;:3.95,&quot;6:25pm&quot;:4.33,&quot;6:39pm&quot;:4.2,&quot;6:40pm&quot;:4.84,&quot;6:41pm&quot;:4.71,&quot;7:01pm&quot;:4.59}" data-name="1800" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Jack Daniels</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.1</span></td>
+
+      <td>0.0</td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:4.0,&quot;4:54pm&quot;:2.32,&quot;5:09pm&quot;:3.84,&quot;4:56pm&quot;:2.01,&quot;5:20pm&quot;:3.34,&quot;2:58pm&quot;:4.48,&quot;5:10pm&quot;:3.84,&quot;2:59pm&quot;:4.48,&quot;4:58pm&quot;:2.01,&quot;3:18pm&quot;:3.97,&quot;3:20pm&quot;:3.97,&quot;3:21pm&quot;:2.01,&quot;5:22pm&quot;:3.34,&quot;4:20pm&quot;:4.48,&quot;4:59pm&quot;:2.01,&quot;5:13pm&quot;:2.01,&quot;4:23pm&quot;:2.57,&quot;4:24pm&quot;:2.19,&quot;5:01pm&quot;:2.01,&quot;4:25pm&quot;:2.01,&quot;4:48pm&quot;:3.46,&quot;4:52pm&quot;:2.01,&quot;4:53pm&quot;:3.34,&quot;2:55pm&quot;:4.0,&quot;5:23pm&quot;:2.83,&quot;5:24pm&quot;:2.01,&quot;5:43pm&quot;:3.08,&quot;6:00pm&quot;:4.48,&quot;6:07pm&quot;:4.48,&quot;6:10pm&quot;:4.48,&quot;6:12pm&quot;:4.48,&quot;6:14pm&quot;:4.48,&quot;6:15pm&quot;:4.1,&quot;6:20pm&quot;:4.35,&quot;6:22pm&quot;:4.35,&quot;6:25pm&quot;:4.1,&quot;6:39pm&quot;:3.97,&quot;6:40pm&quot;:4.22,&quot;6:41pm&quot;:4.48,&quot;7:01pm&quot;:4.1}" data-name="Jack Daniels" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+            </div>
+          </div>
+        </div>
+        <div class="cocktail_container">
+          <div class="col-md-6" ,="" id="cocktail">
+            <h2>Cocktails</h2>
+            <!--- Buy Section -->
+<table class="table">
+  <thead>
+    <tr class="top">
+      <th>Name</th>
+      <!-- <th style="text-align: center">Bio</th> -->
+      <th>Price</th>
+      <th>Difference</th>
+      <th>SDLT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="drink_name">The Boss</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.82</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 0">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:4.19,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.19,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:4.19,&quot;3:20pm&quot;:3.55,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:4.19,&quot;4:21pm&quot;:4.44,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.68,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:4.95,&quot;4:52pm&quot;:3.8,&quot;4:53pm&quot;:4.95,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:3.93,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.95,&quot;6:20pm&quot;:5.2,&quot;6:22pm&quot;:4.82,&quot;6:25pm&quot;:4.69,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:4.82,&quot;7:01pm&quot;:4.82}" data-name="The Boss" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">The Grandpa</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">5.54</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 1">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:6.0,&quot;4:54pm&quot;:4.5,&quot;4:56pm&quot;:4.5,&quot;5:10pm&quot;:5.16,&quot;2:58pm&quot;:5.92,&quot;2:59pm&quot;:4.78,&quot;4:58pm&quot;:4.5,&quot;3:18pm&quot;:4.78,&quot;3:20pm&quot;:4.5,&quot;3:21pm&quot;:4.5,&quot;5:20pm&quot;:5.16,&quot;4:21pm&quot;:4.91,&quot;4:59pm&quot;:4.5,&quot;4:23pm&quot;:4.5,&quot;5:13pm&quot;:4.5,&quot;4:24pm&quot;:4.5,&quot;5:01pm&quot;:4.5,&quot;4:25pm&quot;:4.5,&quot;4:48pm&quot;:5.29,&quot;4:52pm&quot;:4.5,&quot;4:53pm&quot;:4.5,&quot;2:55pm&quot;:6.0,&quot;5:22pm&quot;:5.03,&quot;5:23pm&quot;:4.5,&quot;5:24pm&quot;:4.5,&quot;5:43pm&quot;:4.78,&quot;6:00pm&quot;:5.92,&quot;6:07pm&quot;:5.92,&quot;6:10pm&quot;:5.92,&quot;6:12pm&quot;:5.92,&quot;6:14pm&quot;:5.92,&quot;6:15pm&quot;:5.41,&quot;6:20pm&quot;:5.29,&quot;6:22pm&quot;:5.29,&quot;6:25pm&quot;:5.54,&quot;6:39pm&quot;:5.54,&quot;6:40pm&quot;:5.41,&quot;6:41pm&quot;:5.54,&quot;7:01pm&quot;:5.54}" data-name="The Grandpa" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">Irish Car Bomb</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.69</span></td>
+
+      <td> -0.13<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 2">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:4.82,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.31,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:5.07,&quot;3:20pm&quot;:4.06,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:3.55,&quot;4:21pm&quot;:4.57,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.55,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:4.44,&quot;4:52pm&quot;:4.31,&quot;4:53pm&quot;:5.2,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:4.44,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.57,&quot;6:20pm&quot;:4.06,&quot;6:22pm&quot;:4.57,&quot;6:25pm&quot;:4.95,&quot;6:39pm&quot;:5.2,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:4.57,&quot;7:01pm&quot;:4.69}" data-name="Irish Car Bomb" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">The Dude</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.82</span></td>
+
+      <td>0.25<i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 3">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:4.57,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.19,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:5.2,&quot;3:20pm&quot;:4.19,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:4.82,&quot;4:21pm&quot;:4.69,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.55,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:5.2,&quot;4:52pm&quot;:4.06,&quot;4:53pm&quot;:4.06,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:4.31,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.19,&quot;6:20pm&quot;:5.2,&quot;6:22pm&quot;:4.44,&quot;6:25pm&quot;:4.57,&quot;6:39pm&quot;:4.95,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:5.07,&quot;7:01pm&quot;:4.82}" data-name="The Dude" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+    <tr>
+      <td class="drink_name">A.J</td>
+      <!-- <td class="drinks" style="text-align: center"></td> -->
+      <td class="drinkss">$<span class="drinkss">4.57</span></td>
+
+      <td> -0.12<i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+
+      <td>0</td>
+
+      <script src="./BarBash_files/checkout.js"></script>
+
+      <td><button class="btn btn-success customButton 4">Purchase</button></td>
+
+
+      <td><a class="btn btn-success" data-toggle="modal" data-target="#graph" data-data="{&quot;2:56pm&quot;:5.0,&quot;4:54pm&quot;:3.55,&quot;4:56pm&quot;:3.55,&quot;5:10pm&quot;:5.2,&quot;2:58pm&quot;:5.2,&quot;2:59pm&quot;:4.82,&quot;4:58pm&quot;:3.55,&quot;3:18pm&quot;:4.31,&quot;3:20pm&quot;:3.8,&quot;3:21pm&quot;:3.55,&quot;5:20pm&quot;:3.55,&quot;4:21pm&quot;:4.82,&quot;4:59pm&quot;:3.55,&quot;4:23pm&quot;:3.55,&quot;5:13pm&quot;:3.55,&quot;4:24pm&quot;:3.55,&quot;5:01pm&quot;:3.55,&quot;4:25pm&quot;:3.55,&quot;4:48pm&quot;:4.95,&quot;4:52pm&quot;:3.55,&quot;4:53pm&quot;:3.55,&quot;2:55pm&quot;:5.0,&quot;5:22pm&quot;:3.55,&quot;5:23pm&quot;:3.55,&quot;5:24pm&quot;:3.55,&quot;5:43pm&quot;:4.57,&quot;6:00pm&quot;:5.2,&quot;6:07pm&quot;:5.2,&quot;6:10pm&quot;:5.2,&quot;6:12pm&quot;:5.2,&quot;6:14pm&quot;:5.2,&quot;6:15pm&quot;:4.06,&quot;6:20pm&quot;:5.2,&quot;6:22pm&quot;:4.19,&quot;6:25pm&quot;:4.82,&quot;6:39pm&quot;:4.69,&quot;6:40pm&quot;:4.95,&quot;6:41pm&quot;:4.69,&quot;7:01pm&quot;:4.57}" data-name="A.J" href="http://localhost:3000/?#">Graph</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+          </div>
+        </div>
+      </div>
+      </div></div>
+  </div>
+  
+
+    <div class="javascript">
+      <script src="./BarBash_files/bootstrap.min.js"></script>
+      <script src="./BarBash_files/jquery.fullPage.js"></script>
+      <script src="./BarBash_files/jquery.fullPage.min.js"></script>
+      <script src="./BarBash_files/jquery.easings.min.js"></script>
+      <script src="./BarBash_files/scrolloverflow.js"></script>
+      <script src="./BarBash_files/scrolloverflow.min.js"></script>
+      <script type="text/javascript">
+       $(function(){
+       $('#fullpage').fullpage();
+        });
+      </script>
+      <script type="text/javascript" src="./BarBash_files/saved_resource"></script>
+      <script type="text/javascript">Stripe.setPublishableKey('pk_test_62HeHVyg9ixt0DZ2WE0UdVZ1');</script>
+    </div>
 
   
 
-</body></html>
+<iframe name="stripeXDM_default521991_provider" id="stripeXDM_default521991_provider" src="./BarBash_files/channel.html" frameborder="0" style="position: absolute; top: -2000px; left: 0px;"></iframe><iframe frameborder="0" allowtransparency="true" src="./BarBash_files/H9IfhIVekby9x6Hlpz6wQ.html" name="stripe_checkout_app" class="stripe_checkout_app" style="z-index: 2147483647; display: none; border: 0px none transparent; overflow-x: hidden; overflow-y: auto; visibility: visible; margin: 0px; padding: 0px; -webkit-tap-highlight-color: transparent; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.00392157);"></iframe></body></html>

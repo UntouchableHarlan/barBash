@@ -149,19 +149,7 @@ function ready() {
 			return min + ":" + sec
 		}
 	}
-	$('.marketcrash').on('click', function(){
-		$.ajax({
-			url: '/marketcrash',
-			success: function(){
-				console.log('Market Crashed');
-				$('.tables_container').fadeOut(500);
-				$('.tables_container').load('/ .tables_container', function(){
-					$('.tables_container').fadeIn(500);
-					$('.market_crash').append('<h1>The Market Just Crahsed All Drink Are Rock Bottom!</h1>');
-				});
-			}
-		});
-	});
+
 }
 
 $(document).on('ready turbolinks:load', ready);

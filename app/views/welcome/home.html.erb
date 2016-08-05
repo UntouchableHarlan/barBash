@@ -44,6 +44,10 @@
 
   <div class="section" id="section3" data-anchor="drinks">
 
+    <div class="market_crash">
+
+    </div>
+
       <ul class="nav nav-tabs">
         <li id="biggestchange"><a href="#">Main Page</a></li>
         <li id="beerss"><a href="#">Beers and Wine</a> </li>
@@ -61,6 +65,7 @@
             </div>
             <a href="#"><button class= "btn btn-success starttimer">Start Timer</button></a>
             <a href="#"><button class="btn btn-danger" id="stoptimer">Stop Timer</button></a>
+            <a href="#"><button class= "btn btn marketcrash">Market Crash</button></a>
             <!-- <div class ="sales_info"> -->
               <h3 style="text-align:center">Total Sales Today: $<%= @total_sales_for_today %> | Total Sales for Last Timer: <%= @total_sales_for_last_timer %> </h3>
             <!-- </div> -->
@@ -78,21 +83,21 @@
         <div class= "shots_container">
           <div class="row top_tables">
           <div  id ="tequila">
-            <h2>Tequila Shot's</h2>
+            <h2>Tequila Shots</h2>
             <%= render 'partial', drinks: @tequila %>
           </div>
           <div id ="rum">
-            <h2>Rum Shot's</h2>
+            <h2>Rum Shots</h2>
             <%= render 'partial', drinks: @rum %>
           </div>
         </div>
           <div class="row bottom_tables">
           <div id ="whiskey">
-            <h2>Whiskey Shot's</h2>
+            <h2>Whiskey Shots</h2>
             <%= render 'partial', drinks: @whiskey%>
           </div>
           <div id ="vodka">
-            <h2>Vodka Shot's</h2>
+            <h2>Vodka Shots</h2>
             <%= render 'partial', drinks: @vodka%>
           </div>
         </div>
@@ -101,7 +106,7 @@
         <div class= "beer_container">
           <div class="row top_tables">
           <div class="col-md-3" id ="domestic">
-            <h2>Domestic Beer's</h2>
+            <h2>Domestic Beers</h2>
             <%= render 'partial', drinks: @domestic %>
           </div>
           <div class="col-md-3" id ="imported">
@@ -111,7 +116,7 @@
         </div>
         <div class="row bottom_tables">
           <div class="col-md-3", id ="brewery">
-            <h2>Wynwood Brewery Beer's</h2>
+            <h2>Wynwood Brewery Beers</h2>
             <%= render 'partial', drinks: @brewery %>
           </div>
           <div class ="col-md-3", id ="wine">
@@ -124,21 +129,21 @@
         <div class= "best_deal_container">
           <div class="row top_tables">
             <div class="col-md-3"  id ="best_deal">
-              <h2>Best Deal's</h2>
+              <h2>Best Deals</h2>
               <%= render 'partial', drinks: @best_deal %>
             </div>
             <div class="col-md-3" id= "best_deal_cocktail">
-              <h2>Best Cocktail Deal's</h2>
+              <h2>Best Cocktail Deals</h2>
               <%= render 'partial', drinks: @best_deal_cocktail %>
             </div>
           </div>
           <div class="row bottom_tables">
             <div class="col-md-3"  id ="best_deal_beer">
-              <h2>Best Beer Deal's</h2>
+              <h2>Best Beer Deals</h2>
               <%= render 'partial', drinks: @best_deal_beer %>
             </div>
             <div  class="col-md-3" id ="best_deal_shot">
-              <h2>Best Shot Deal's</h2>
+              <h2>Best Shot Deals</h2>
               <%= render 'partial', drinks: @best_deal_shot %>
             </div>
           </div>

@@ -6,7 +6,9 @@
       <!-- <th style="text-align: center">Bio</th> -->
       <th>Price</th>
       <th>Difference</th>
+      <% if session[:owner_id] %>
       <th>SDLT</th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -24,9 +26,9 @@
       <% else %>
       <td><%= drink.price_difference %></td>
       <% end %>
-
+      <% if session[:owner_id] %>
       <td><%= sold_during_last_timer(drink) %></td>
-
+      <% end %>
       <script src="https://checkout.stripe.com/checkout.js"></script>
 
       <td><button class="btn btn-success customButton <%= i %>">Purchase</button></td>

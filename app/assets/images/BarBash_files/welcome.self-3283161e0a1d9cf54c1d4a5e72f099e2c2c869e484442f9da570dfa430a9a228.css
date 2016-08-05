@@ -1,0 +1,134 @@
+/* line 5, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.intro-message {
+  color: white;
+  text-align: center;
+  font-family: impact;
+}
+
+/* line 11, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* line 16, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+#section1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("buddy.jpeg") no-repeat center center fixed;
+  height: 100vh;
+}
+
+/* line 25, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+#app-explaination {
+  font-family: roadway;
+  color: white;
+  font-size: 45px;
+}
+
+/* line 32, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+#section2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("drink2.jpeg") no-repeat;
+  width: 100%;
+}
+
+/* line 44, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+#section3 {
+  height: 100%;
+  background-color: #faebd7;
+}
+
+/* line 50, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+#hour {
+  text-align: center;
+  font-size: 79px;
+}
+
+/* line 55, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.shots_container {
+  display: none;
+}
+
+/* line 58, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.beer_container {
+  display: none;
+}
+
+/* line 61, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.cocktail_container {
+  display: none;
+}
+
+/* line 66, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.table th, .table td {
+  border-top: none !important;
+}
+
+/* line 69, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.fp-tableCell {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 73, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+ul.nav-tabs {
+  order: 1;
+}
+
+/* line 77, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+#hour {
+  order: 2;
+}
+
+/* line 80, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+div.admin_timers {
+  order: 3;
+}
+
+/* line 83, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.tables_container {
+  order: 5;
+}
+
+/* line 88, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.best_deal_container, .shots_container,
+.beer_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+/* line 99, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.top_tables, .bottom_tables {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+/* line 107, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+#best_deal, #best_deal_cocktail, #best_deal_beer, #best_deal_shot,
+#wine, #brewery, #imported, #domestic,
+#tequila, #rum, #whiskey, #vodka {
+  width: 100%;
+  height: 50%;
+}
+
+/* line 113, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.container_video {
+  margin-left: 300px;
+  margin-top: 135px;
+}
+
+/* line 118, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+.onwers_info {
+  margin-top: 35px;
+}
+
+/* line 121, /Users/zachroberts/Documents/Wyncode/barBash/app/assets/stylesheets/welcome.scss */
+div.tables_container h2 {
+  text-align: center;
+}

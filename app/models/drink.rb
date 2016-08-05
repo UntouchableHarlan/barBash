@@ -5,7 +5,6 @@ class Drink < ApplicationRecord
 
   def price_graph_data
     interval = (Time.now.beginning_of_day..Time.now.end_of_day)
-    # pp Drink.first.price_graph_data.group_by { |price| p [price.created_at.time.min, price.created_at.time.hour] }
     data = self.prices.group_by { |price|
       array = [0,1,2,3,4,5,6,7,8,9]
       if array.include?(price.created_at.time.min)

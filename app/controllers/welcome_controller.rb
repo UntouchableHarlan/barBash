@@ -73,6 +73,15 @@ class WelcomeController < ApplicationController
         end
       end
     end
+    def market_crash
+      Drink.all.each do |drink|
+        last_price = drink.current_price
+        drink.current_price = drink.min_price
+        drink.price_difference = drink.current_price - last_price
+        drink.save
+      end
+    end
+
 
   private
   def best_price(drinks)
