@@ -11,7 +11,7 @@
 </div>
 <div id="fullpage">
   <!-- Image Background -->
-  <div class="section" id="section1">
+  <div class="section" id="section1" data-anchor="home">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -26,14 +26,14 @@
               </div>
             </div>
             <div class="container" style="text-align: center;">
-              <button type="button" class="btn btn-success btn-lg">Drink Menu</button>
-              <button type="button" class="btn btn-primary btn-lg">About</button>
+              <a href="#drinks"><button type="button" class="btn btn-success btn-lg">Drink Menu</button></a>
+              <a href="#about"><button type="button" class="btn btn-primary btn-lg">About</button></a>
             </div>
           </div>
         </div>
       </div>
   </div>
-  <div class="section" id="section2">
+  <div class="section" id="section2" data-anchor="about">
     <div class="container_video">
       <iframe src="https://player.vimeo.com/video/177134132" width="900" height="600" align="center" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
@@ -42,20 +42,32 @@
   <!-- the navbar on top of the timer -->
 
 
-  <div class="section" id="section3">
-      </tr>
+  <div class="section" id="section3" data-anchor="drinks">
+
       <ul class="nav nav-tabs">
         <li id="biggestchange"><a href="#">Main Page</a></li>
         <li id="beerss"><a href="#">Beers and Wine</a> </li>
         <li id="shot"> <a href="#">Shots</a></li>
         <li id="cocktail"> <a href="#">Signature Cocktails</a></li>
       </ul>
+      <!-- Single button -->
+      <!-- <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li id="biggestchange"><a href="#">Main Page</a></li>
+          <li id="beerss"><a href="#">Beers and Wine</a> </li>
+          <li id="shot"> <a href="#">Shots</a></li>
+          <li id="cocktail"> <a href="#">Signature Cocktails</a></li>
+        </ul>
+      </div> -->
       <!-- Timer -->
       <div id="hour" style="text-align:center"></div>
 
       <div class ="admin_timers">
-        <button class= "starttimer"><a href="">Start Timer</a></button>
-        <button id="stoptimer"><a href="#">Stop Timer</a></button>
+        <a href="#"><button class= "btn btn-success tarttimer">Start Timer</button></a>
+        <a href="#"><button class="btn btn-danger" id="stoptimer">Stop Timer</button></a>
       </div>
 
       <div class="tables_container">
