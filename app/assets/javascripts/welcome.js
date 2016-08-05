@@ -130,7 +130,7 @@ function ready() {
 						// sleep(5000)
 						$('.tables_container').fadeIn(1000);
 						$('#hour').fadeIn(100, function(){
-							seconds = 300;
+							seconds = 10;
 						});
 						// setInterval(interval)
 					}

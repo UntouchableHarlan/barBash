@@ -50,13 +50,23 @@
         <li id="shot"> <a href="#">Shots</a></li>
         <li id="cocktail"> <a href="#">Signature Cocktails</a></li>
       </ul>
+      <% if session[:owner_id] %>
+      <div class = "onwers_info">
+        <div class ="admin_timers">
+          <button class= "starttimer"><a href="">Start Timer</a></button>
+          <button id="stoptimer"><a href="#">Stop Timer</a></button>
+        </div>
+      <div class ="sales_info">
+        <h3>Total Sales Today: <%= @total_sales_for_today %></h3>
+        <h3>Total Sales for Last Timer: <%= @total_sales_for_last_timer %> </h3>
+      <div>
+
+    </div>
+    <% end %>
       <!-- Timer -->
       <div id="hour" style="text-align:center"></div>
 
-      <div class ="admin_timers">
-        <button class= "starttimer"><a href="">Start Timer</a></button>
-        <button id="stoptimer"><a href="#">Stop Timer</a></button>
-      </div>
+
 
       <div class="tables_container">
         <div class= "shots_container">

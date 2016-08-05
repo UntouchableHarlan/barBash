@@ -5,7 +5,6 @@ class WelcomeController < ApplicationController
       # @drinks = Drink.all
       interval = (Time.now.beginning_of_day..Time.now.end_of_day)
       @tequila = Drink.where(table_name: "Tequila").includes(:prices).where(prices: { created_at: interval })
-
       @rum = Drink.where(table_name: "Rum").includes(:prices).where(prices: { created_at: interval })
       @whiskey = Drink.where(table_name: "Whiskey").includes(:prices).where(prices: { created_at: interval })
       @vodka = Drink.where(table_name: "Vodka").includes(:prices).where(prices: { created_at: interval })
@@ -21,12 +20,18 @@ class WelcomeController < ApplicationController
       @best_deal_shot = best_price(Drink.where(category: "shot").includes(:prices).where(prices: { created_at: interval }))
       @best_deal_beer = best_price(Drink.where(category: "beer").includes(:prices).where(prices: { created_at: interval }))
       @best_deal_cocktail = best_price(Drink.where(category: 'cocktail').includes(:prices).where(prices: { created_at: interval }))
+      array = []
+      Sale.where(created_at: interval).each {|sale| array << sale.quantity}
+      @total_sales_for_today = array.inject(0){|sum,x| sum + x }
+      array1 = []
+      Sale.where(created_at: (5.minutes.ago..Time.now)).each {|sale| array1 << sale.quantity}
+      @total_sales_for_last_timer = array1.inject(0){|sum,x| sum + x }
+      # @total_sales_for_last_timer =
       #if third page isn't loading with drinks run this function below and reload once it should fix it, if not reload one more time and you good :), gotta come back and actually fix this but this is a hack for now
-      
+
       # Drink.all.each do |drink|
       #   drink.prices.create(amount: drink.price)
       # end
-
   end
 
   def add_sale
@@ -34,6 +39,7 @@ class WelcomeController < ApplicationController
     Sale.create(price: params["price"].to_f, drink: @drink , quantity: 1)
   end
   def add_sales
+
     Drink.all.each do |drink|
       Sale.create(drink: drink, price: drink.current_price, quantity: rand(0..9))
     end
@@ -45,11 +51,14 @@ class WelcomeController < ApplicationController
         end
       end
       bar = Bar.all[0]
-      percent_of_capacity_full = (bar.people_inside.to_f / bar.capacity).round(2)
-      drink_bought_in_last_5mins = 5
+      percent_of_capacity_full = 0.8
+
     Drink.all.find_each do |drink|
+      array = []
+       drink.sales.where(created_at: ((5.minutes.ago)..Time.now)).each {|sale| array << sale.quantity}
+      drink_bought_in_last_5mins = array.inject(0){|sum,x| sum + x }
       @last_price = drink.current_price
-      drink.current_price = (0.077852 + (0.72179 * drink.price) + (1.8922 * percent_of_capacity_full) + (-0.126937 * drink_bought_in_last_5mins) + rand(-0.5..0.5))
+      drink.current_price = (0.077852 + (0.72179 * drink.price) + (1.8922 * percent_of_capacity_full) + (-0.126937 * drink_bought_in_last_5mins))
       drink.current_price = drink.current_price.round(2)
         if drink.current_price > drink.max_price
           drink.current_price = drink.max_price

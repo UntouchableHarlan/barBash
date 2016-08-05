@@ -75,8 +75,8 @@ owner = Owner.create(name: "admin", email: "admin@admin.com", password: "asdf")
   create_drink("shot", "Vodka", "Absolute", 4.25, 6.21, 2.23, 4.25, 0, "Absolutely yes")
   create_drink("shot", "Vodka", "Grey Goose", 5.00, 6.95, 3.05, 5.00, 0, "high quaility vodka")
   create_drink("shot", "Vodka", "Sky Vodka", 4.75, 6.75, 2.75, 4.75, 0, "Gives you the ability to fly high in the sky")
-  create_drink("shot", "Vodka", "Smirnoff", 3.75, 1.76, 5.55, 3.75, 0, "More flavors than anyone could count")
-  create_drink("shot", "Vodka", "Svedka", 3.00, 1.00, 4.75, 3.00, 0, "Its been a rough night")
+  create_drink("shot", "Vodka", "Smirnoff", 3.75, 5.55, 1.76, 3.75, 0, "More flavors than anyone could count")
+  create_drink("shot", "Vodka", "Svedka", 3.00, 4.75, 1.00, 3.00, 0, "Its been a rough night")
 
 
 
