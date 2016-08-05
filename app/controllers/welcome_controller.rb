@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
 
   def home
+    # Bar.take.update(timer: 20)
 
-      # @drinks = Drink.all
       interval = (Time.now.beginning_of_day..Time.now.end_of_day)
       @tequila = Drink.where(table_name: "Tequila").includes(:prices).where(prices: { created_at: interval })
       @rum = Drink.where(table_name: "Rum").includes(:prices).where(prices: { created_at: interval })
@@ -23,7 +23,7 @@ class WelcomeController < ApplicationController
       Sale.where(created_at: interval).each {|sale| array << sale.quantity}
       @total_sales_for_today = array.inject(0){|sum,x| sum + x }
       array1 = []
-      Sale.where(created_at: (10.seconds.ago..Time.now)).each {|sale| array1 << sale.quantity}
+      Sale.where(created_at: (Bar.take.timer.seconds.ago..Time.now)).each {|sale| array1 << sale.quantity}
       @total_sales_for_last_timer = array1.inject(0){|sum,x| sum + x }
       # @total_sales_for_last_timer =
       #if third page isn't loading with drinks run this function below and reload once it should fix it, if not reload one more time and you good :), gotta come back and actually fix this but this is a hack for now
@@ -31,6 +31,10 @@ class WelcomeController < ApplicationController
       # Drink.all.each do |drink|
       #   drink.prices.create(amount: drink.price)
       # end
+  end
+  def add_timer
+    Bar.take.update(timer: params[:timer])
+
   end
 
   def add_sale
@@ -51,7 +55,6 @@ class WelcomeController < ApplicationController
       end
       bar = Bar.all[0]
       percent_of_capacity_full = 0.8
-
     Drink.all.find_each do |drink|
       array = []
        drink.sales.where(created_at: ((5.minutes.ago)..Time.now)).each {|sale| array << sale.quantity}

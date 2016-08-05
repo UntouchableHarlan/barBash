@@ -79,65 +79,55 @@ function ready() {
 	$('body').on('click', '#submitButton', function(e){
 		// e.preventDefault();
 	});
-
 	$('#arrow').addClass('animated bounce');
-
-
 	$('.starttimer').on('click', function(event) {
 		event.preventDefault();
-		var seconds = 10;
-
-		function format(min, sec) {
-			if (sec === 0){
-				return min + ":" + "00"
-
-			} else if(sec < 10){
-				return (min + ":0" + sec).fontcolor("red")
+		var seconds = $('.grab_time').val();
+		$.ajax({
+			url: '/addtimer',
+			data: {timer: seconds},
+			success: function(){
+				console.log('timer added')
 			}
-			else {
-				return min + ":" + sec
-			}
-		}
-
+		});
 		var interval = setInterval(function() {
 			var min = parseInt(seconds/60);
 			var sec = (seconds % 60);
-
 			seconds -= 1;
 			$("#hour").html(format(min, sec));
-			$('#stoptimer').on('click', function(event) {
-				event.preventDefault();
-				clearInterval(interval)
-				$("#hour").html('0:00')
-			});
-			if (seconds === 9){
+			if (seconds === 7){
 				$.ajax({
 					url: '/addsales',
 					success: function(){
 						console.log('sales added');
 					}
-				})
+				});
 			}
-			if (seconds === 5){
+			if (seconds === 4){
 				// clearInterval(interval)
 				$.ajax({
 					url: '/updateprices',
 					success: function(){
 						console.log('success!');
-						$('#hour').fadeOut(5000);
-						$('.tables_container').fadeOut(5000);
+						$('#hour').fadeOut(4000);
+						$('.tables_container').fadeOut(4000);
 						$('.tables_container').load("/ .tables_container")
 						// sleep(5000)
 						$('.tables_container').fadeIn(1000);
 						$('#hour').fadeIn(100, function(){
 							$('.sales_info').load("/ .sales_info")
-								seconds = 10;
+								seconds = $('.grab_time').val();
 						});
 						// setInterval(interval)
 					}
 				});
 
 			}
+			$('#stoptimer').on('click', function(event) {
+				event.preventDefault();
+				clearInterval(interval)
+				$("#hour").html('0:00')
+			});
 		}, 1000);
 	});
 
@@ -148,6 +138,17 @@ function ready() {
 		new Chartkick.LineChart("chart", data, {});
 		$('.modal-title').text(name);
 	});
+	function format(min, sec) {
+		if (sec === 0){
+			return min + ":" + "00"
+
+		} else if(sec < 10){
+			return (min + ":0" + sec).fontcolor("red")
+		}
+		else {
+			return min + ":" + sec
+		}
+	}
 
 }
 

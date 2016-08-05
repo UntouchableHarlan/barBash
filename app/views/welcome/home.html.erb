@@ -54,6 +54,11 @@
       <% if session[:owner_id] %>
       <div class = "onwers_info">
         <div class ="admin_timers">
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="exampleInputName2">Timer:</label>
+              <input type="number" class="grab_time" placeholder="In Seconds">
+            </div>
             <a href="#"><button class= "btn btn-success starttimer">Start Timer</button></a>
             <a href="#"><button class="btn btn-danger" id="stoptimer">Stop Timer</button></a>
             <!-- <div class ="sales_info"> -->
