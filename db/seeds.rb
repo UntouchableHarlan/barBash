@@ -8,6 +8,7 @@
 
 
 Price.destroy_all
+Sale.destroy_all
 Drink.destroy_all
 Bar.destroy_all
 Owner.destroy_all
@@ -118,3 +119,7 @@ owner = Owner.create(name: "admin", email: "admin@admin.com", password: "asdf")
   create_drink("cocktail", "Cocktail", "Irish Car Bomb", 5.00, 6.85, 3.55, 5.00, 0, "Jameson/Baileys shot, Half a glass of Giunness")
   create_drink("cocktail", "Cocktail", "The Dude", 5.00, 6.85, 3.55, 5.00, 0, "typical White Russian")
   create_drink("cocktail", "Cocktail", "A.J", 5.00, 6.85, 3.55, 5.00, 0, "Strawberry Daiquiri")
+
+  Drink.all.each do |drink|
+    drink.prices.create(amount: drink.price)
+  end

@@ -21,11 +21,22 @@ class WelcomeController < ApplicationController
       @best_deal_shot = best_price(Drink.where(category: "shot").includes(:prices).where(prices: { created_at: interval }))
       @best_deal_beer = best_price(Drink.where(category: "beer").includes(:prices).where(prices: { created_at: interval }))
       @best_deal_cocktail = best_price(Drink.where(category: 'cocktail').includes(:prices).where(prices: { created_at: interval }))
+      #if third page isn't loading with drinks run this function below and reload once it should fix it, if not reload one more time and you good :), gotta come back and actually fix this but this is a hack for now
+      
+      # Drink.all.each do |drink|
+      #   drink.prices.create(amount: drink.price)
+      # end
+
   end
 
   def add_sale
     @drink = Drink.find_by(name: params["name"])
     Sale.create(price: params["price"].to_f, drink: @drink , quantity: 1)
+  end
+  def add_sales
+    Drink.all.each do |drink|
+      Sale.create(drink: drink, price: drink.current_price, quantity: rand(0..9))
+    end
   end
   def updateprices
     if Price.all.size == 0

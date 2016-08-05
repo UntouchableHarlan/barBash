@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/time' => 'welcome#get_time'
   get '/sale' => 'welcome#add_sale'
   get '/updateprices' => 'welcome#updateprices'
-
+  get '/addsales' => 'welcome#add_sales'
   resources :drinks
   resources :owners
   resources :sessions

@@ -84,9 +84,9 @@ function ready() {
 
 
 	$('.starttimer').on('click', function(event) {
-		console.log("This is happneing?")
 		event.preventDefault();
 		var seconds = 10;
+
 		function format(min, sec) {
 			if (sec === 0){
 				return min + ":" + "00"
@@ -110,6 +110,14 @@ function ready() {
 				clearInterval(interval)
 				$("#hour").html('0:00')
 			});
+			if (seconds === 9){
+				$.ajax({
+					url: '/addsales',
+					success: function(){
+						console.log('sales added');
+					}
+				})
+			}
 			if (seconds === 5){
 				// clearInterval(interval)
 				$.ajax({
@@ -121,7 +129,7 @@ function ready() {
 						$('.tables_container').load("/ .tables_container")
 						// sleep(5000)
 						$('.tables_container').fadeIn(1000);
-						$('#hour').fadeIn(300, function(){
+						$('#hour').fadeIn(100, function(){
 							seconds = 300;
 						});
 						// setInterval(interval)
