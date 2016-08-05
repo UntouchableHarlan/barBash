@@ -56,12 +56,10 @@
         <div class ="admin_timers">
             <a href="#"><button class= "btn btn-success starttimer">Start Timer</button></a>
             <a href="#"><button class="btn btn-danger" id="stoptimer">Stop Timer</button></a>
+            <!-- <div class ="sales_info"> -->
+              <h3 style="text-align:center">Total Sales Today: $<%= @total_sales_for_today %> | Total Sales for Last Timer: <%= @total_sales_for_last_timer %> </h3>
+            <!-- </div> -->
           </div>
-
-      <div class ="sales_info">
-        <h3>Total Sales Today: $<%= @total_sales_for_today %></h3>
-        <h3>Total Sales for Last Timer: <%= @total_sales_for_last_timer %> </h3>
-      </div>
 
     </div>
     <% end %>
