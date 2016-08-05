@@ -1,0 +1,127 @@
+.intro-message {
+    color: white;
+    text-align: center;
+    font-family: impact;
+}
+
+.section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+#section1 {
+  // width: 100%;
+    // background-image: url("hand-bottom.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('buddy.jpeg') no-repeat center center fixed;
+  height: 100vh;
+  // background-color: tomato;
+  // background-color: #F2F2F2;
+}
+
+#app-explaination {
+  font-family: roadway;
+  color: white;
+  font-size: 45px;
+}
+
+
+#section2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('drink2.jpeg') no-repeat;
+  // background-image: url("http://www.colorhexa.com/1d1c1a.png");
+  // background-image: url("light_beer11.jpg");
+  // background-image: url("amber_ale1.jpg");
+  // background-color: tomato;
+
+  width: 100%;
+  // background-color: #F2F2F2;
+
+}
+
+#section3 {
+  height: 100%;
+  // background-image: url("light_beer11.jpg");
+  background-color: #faebd7;
+}
+
+#hour {
+  text-align: center;
+  font-size: 69px;
+}
+
+.shots_container{
+  display: none;
+}
+ .beer_container{
+   display: none;
+ }
+.cocktail_container{
+  display: none;
+}
+.best_deal_container{
+}
+.table th, .table td {
+     border-top: none !important;
+ }
+ .fp-tableCell{
+   display: flex;
+   flex-direction: column;
+ }
+ul#salo{
+  order: 1;
+  margin-top: 25px;
+
+}
+#hour{
+  order: 2;
+}
+div.admin_timers{
+  order: 3;
+}
+.tables_container{
+  order: 5;
+
+
+}
+.best_deal_container, .shots_container,
+.beer_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  padding-bottom: 250px;
+
+
+}
+.top_tables, .bottom_tables{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+#best_deal, #best_deal_cocktail, #best_deal_beer, #best_deal_shot,
+#wine, #brewery, #imported, #domestic,
+#tequila, #rum, #whiskey, #vodka{
+  width: 100%;
+  height: 50%;
+}
+.container_video{
+    margin-left: 300px;
+    margin-top: 135px;
+
+}
+.onwers_info{
+  margin-top: 35px;
+}
+
+div.tables_container h2{
+  text-align: center;
+}
+.table th{
+  font-size: 19px;
+}
+.table td{
+  font-size: 16px;
+}
