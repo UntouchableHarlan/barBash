@@ -20,9 +20,9 @@
       <td class="drinkss">$<span class="drinkss"><%= drink.current_price %></span></td>
 
       <% if drink.price_difference > 0 %>
-      <td><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
+      <td style="color: green;"><%= drink.price_difference %><i class="fa fa-arrow-up" id="up_arrow" aria-hidden="true"></i></td>
       <% elsif drink.price_difference < 0%>
-      <td> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
+      <td style="color: red;"> <%= drink.price_difference %><i class="fa fa-arrow-down" id="down_arrow" aria-hidden="true"></i></td>
       <% else %>
       <td><%= drink.price_difference %></td>
       <% end %>
@@ -31,10 +31,10 @@
       <% end %>
       <script src="https://checkout.stripe.com/checkout.js"></script>
 
-      <td><button class="btn btn-success customButton <%= i %>">Purchase</button></td>
+      <td><button class="btn btn-info customButton <%= i %>">Purchase</button></td>
 
 
-      <td><%= link_to 'Graph', '#', class: "btn btn-success", data: {toggle: "modal", target: "#graph", data: drink.price_graph_data, name: drink.name} %></td>
+      <td><%= link_to 'Graph', '#', class: "btn btn-warning", data: {toggle: "modal", target: "#graph", data: drink.price_graph_data, name: drink.name} %></td>
     </tr>
 
     <% end %>
