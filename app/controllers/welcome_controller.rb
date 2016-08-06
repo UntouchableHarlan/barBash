@@ -1,8 +1,10 @@
 class WelcomeController < ApplicationController
 
   def home
-    # Bar.take.update(timer: 20)
-
+    if Bar.timer.nil?
+    Bar.take.update(timer: 20)
+  end
+  
       interval = (Time.now.beginning_of_day..Time.now.end_of_day)
       @tequila = Drink.where(table_name: "Tequila").includes(:prices).where(prices: { created_at: interval })
       @rum = Drink.where(table_name: "Rum").includes(:prices).where(prices: { created_at: interval })
