@@ -12,8 +12,15 @@
 #section1 {
   // width: 100%;
     // background-image: url("hand-bottom.jpg");
+
+
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-url('buddy.jpeg') no-repeat center center fixed;
+  width: 100%;
   height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   // background-color: tomato;
   // background-color: #F2F2F2;
 }
@@ -34,7 +41,11 @@
 
   width: 100%;
   // background-color: #F2F2F2;
-
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #section3 {
@@ -107,11 +118,32 @@ div.admin_timers{
   width: 100%;
   height: 50%;
 }
+
+.video {
+  padding-top: 2em;
+  width: 850px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 14%;
+}
+
 .container_video{
-    margin-left: 300px;
-    margin-top: 135px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 
 }
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .onwers_info{
   margin-top: 35px;
 }
