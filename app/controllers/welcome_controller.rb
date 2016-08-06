@@ -30,7 +30,8 @@ class WelcomeController < ApplicationController
       @total_sales_for_last_timer = array1.inject(0){|sum,x| sum + x }
       # @total_sales_for_last_timer =
       #if third page isn't loading with drinks run this function below and reload once it should fix it, if not reload one more time and you good :), gotta come back and actually fix this but this is a hack for now
-      if !@tequila
+
+      if @tequila.empty?
         Drink.all.each do |drink|
           drink.prices.create(amount: drink.price)
         end
