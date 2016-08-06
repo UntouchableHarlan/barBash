@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
     Bar.take.update(timer: 20)
   end
 
+
       interval = (Time.now.beginning_of_day..Time.now.end_of_day)
       @tequila = Drink.where(table_name: "Tequila").includes(:prices).where(prices: { created_at: interval })
       @rum = Drink.where(table_name: "Rum").includes(:prices).where(prices: { created_at: interval })
@@ -29,10 +30,13 @@ class WelcomeController < ApplicationController
       @total_sales_for_last_timer = array1.inject(0){|sum,x| sum + x }
       # @total_sales_for_last_timer =
       #if third page isn't loading with drinks run this function below and reload once it should fix it, if not reload one more time and you good :), gotta come back and actually fix this but this is a hack for now
+      if !@tequila
+        Drink.all.each do |drink|
+          drink.prices.create(amount: drink.price)
+        end
+      end
 
-      # Drink.all.each do |drink|
-      #   drink.prices.create(amount: drink.price)
-      # end
+
   end
   def add_timer
     Bar.take.update(timer: params[:timer])
