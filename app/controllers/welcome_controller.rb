@@ -26,10 +26,10 @@ class WelcomeController < ApplicationController
       Sale.where(created_at: interval).each {|sale| array << sale.quantity}
       @total_sales_for_today = array.inject(0){|sum,x| sum + x }
       array1 = []
-      Sale.where(created_at: (Bar.take.timer.seconds.ago..Time.now)).each {|sale| array1 << sale.quantity}
+      timer = Bar.take.timer + 10
+      Sale.where(created_at: (timer.seconds.ago..Time.now)).each {|sale| array1 << sale.quantity}
       @total_sales_for_last_timer = array1.inject(0){|sum,x| sum + x }
-      # @total_sales_for_last_timer =
-      #if third page isn't loading with drinks run this function below and reload once it should fix it, if not reload one more time and you good :), gotta come back and actually fix this but this is a hack for now
+
 
       if @tequila.empty?
         Drink.all.each do |drink|

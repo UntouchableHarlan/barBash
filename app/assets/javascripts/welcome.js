@@ -109,13 +109,12 @@ function ready() {
 					url: '/updateprices',
 					success: function(){
 						console.log('success!');
-						$('#hour').fadeOut(4000);
 						$('.tables_container').fadeOut(4000);
 						$('.tables_container').load("/ .tables_container")
-						// sleep(5000)
-						$('.tables_container').fadeIn(1000);
-						$('#hour').fadeIn(100, function(){
-							$('.sales_info').load("/ .sales_info")
+						$('.tables_container').fadeIn(1000, function(){
+							$('.sales_info').load("/ .sales_info", function(){
+								console.log("sales info update")
+							})
 								seconds = $('.grab_time').val();
 						});
 						// setInterval(interval)
