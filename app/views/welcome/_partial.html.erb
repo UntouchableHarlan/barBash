@@ -33,10 +33,10 @@
       <% end %>
       <script src="https://checkout.stripe.com/checkout.js"></script>
 
-      <td><button class="btn btn-info customButton <%= i %>">Purchase</button></td>
+      <!-- <td><button class="btn btn-info customButton <%#= i %>">Purchase</button></td> -->
 
 
-      <td><%= link_to 'Graph', '#', class: "btn btn-warning", data: {toggle: "modal", target: "#graph", data: drink.price_graph_data, name: drink.name} %></td>
+      <!-- <td><%#= link_to 'Graph', '#', class: "btn btn-warning", data: {toggle: "modal", target: "#graph", data: drink.price_graph_data, name: drink.name} %></td> -->
     </tr>
 
     <% end %>
