@@ -2,32 +2,11 @@ class WelcomeController < ApplicationController
 
   def home
     set_interval
-    if Bar.take.timer.nil?
-    Bar.take.update(timer: 20)
-    end
-    @tequila = prices_for_drink_today("Tequila")
-    @rum = prices_for_drink_today("Rum")
-    @whiskey = prices_for_drink_today("Whiskey")
-    @vodka = prices_for_drink_today("Vodka")
-    @domestic = prices_for_drink_today("Domestic")
-    @imported = prices_for_drink_today("Imported")
-    @brewery = prices_for_drink_today("Wynwood Brewery")
-    @wine = prices_for_drink_today("Wine")
-    @cocktail = prices_for_drink_today("Cocktail")
-    @tequila = prices_for_drink_today("Tequila")
-    @best_deal = Drink.all.includes(:prices).where(prices: { created_at: @interval }).sort{ |a,b|
-       (a.current_price - a.price) <=> (b.current_price - b.price)
-     }.first(5)
-    @best_deal_shot = best_deal("shot")
-    @best_deal_beer = best_deal("beer")
-    @best_deal_cocktail = best_deal("cocktail")
-    @total_sales_for_today = add_up_sales(@interval)
-    @total_sales_for_last_timer = add_up_sales(Bar.take.timer.seconds.ago..Time.now)
-    if @tequila.empty?
-      Drink.all.each do |drink|
-        drink.prices.create(amount: drink.price)
-      end
-    end
+    Bar.take.update(timer: 20) if Bar.take.timer.nil?
+    get_todays_drink_prices
+    get_best_drink_prices
+    sales_info
+    new_day_data
   end
   def add_timer
     Bar.take.update(timer: params[:timer])
@@ -43,31 +22,14 @@ class WelcomeController < ApplicationController
   end
   def updateprices
     if Price.all.size == 0
-        Drink.all.each do |drink|
-          Price.create(amount: drink.price, drink: drink)
-        end
-      end
-      bar = Bar.all[0]
-      percent_of_capacity_full = 0.8
-    Drink.all.find_each do |drink|
-      array = []
-       drink.sales.where(created_at: ((Bar.take.timer.seconds.ago)..Time.now)).each {|sale| array << sale.quantity}
-      drink_bought_in_last_5mins = array.inject(0){|sum,x| sum + x }
-      @last_price = drink.current_price
-      drink.current_price = (0.077852 + (0.72179 * drink.price) + (1.8922 * percent_of_capacity_full) + (-0.126937 * drink_bought_in_last_5mins))
-      drink.current_price = drink.current_price.round(2)
-        if drink.current_price > drink.max_price
-          drink.current_price = drink.max_price
-        elsif drink.current_price < drink.min_price
-              drink.current_price = drink.min_price
-        end
-
-        if drink.save
-          Price.create(amount: drink.current_price, drink: drink)
-            drink.update(price_difference: (drink.current_price - @last_price).round(2))
-        end
+      Drink.all.each do |drink|
+        Price.create(amount: drink.price, drink: drink)
       end
     end
+    Drink.all.find_each do |drink|
+      drink.update_drink_price
+    end
+  end
     def market_crash
       Drink.all.each do |drink|
         last_price = drink.current_price
@@ -97,4 +59,30 @@ class WelcomeController < ApplicationController
     Sale.where(created_at: time_table).each {|sale| array << sale.quantity}
     array.inject(0){|sum,x| sum + x }
   end
+  def new_day_data
+    if @drinks_prices_today["Tequila"].nil?
+      Drink.all.each do |drink|
+        drink.prices.create(amount: drink.price)
+      end
+    end
+  end
+  def get_todays_drink_prices
+    @drinks_prices_today = Hash.new
+    Drink.pluck(:table_name).uniq.each {|name|
+      @drinks_prices_today[name] = prices_for_drink_today(name)
+    }
+  end
+  def get_best_drink_prices
+    @best_deal_shot = best_deal("shot")
+    @best_deal_beer = best_deal("beer")
+    @best_deal_cocktail = best_deal("cocktail")
+    @best_deal = Drink.all.includes(:prices).where(prices: { created_at: @interval }).sort{ |a,b|
+       (a.current_price - a.price) <=> (b.current_price - b.price)
+     }.first(5)
+  end
+  def sales_info
+    @total_sales_for_today = add_up_sales(@interval)
+    @total_sales_for_last_timer = add_up_sales(Bar.take.timer.seconds.ago..Time.now)
+  end
+
 end
