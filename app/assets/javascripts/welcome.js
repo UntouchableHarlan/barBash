@@ -95,6 +95,9 @@ function ready() {
 			var min = parseInt(seconds/60);
 			var sec = (seconds % 60);
 			seconds -= 1;
+			if (seconds <= 0){
+			seconds = 0
+			}
 			$("#hour").html(format(min, sec));
 			if (seconds === 7){
 				$.ajax({
@@ -141,9 +144,10 @@ function ready() {
 	function format(min, sec) {
 		if (sec === 0){
 			return min + ":" + "00"
-
+		}	else if(min === 0 && sec < 10){
+					return((min + ":0" + sec).fontcolor("red"))
 		} else if(sec < 10){
-			return (min + ":0" + sec).fontcolor("red")
+			return (min + ":0" + sec)
 		}
 		else {
 			return min + ":" + sec
