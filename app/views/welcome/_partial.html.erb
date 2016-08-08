@@ -15,7 +15,7 @@
 
     <% drinks.each_with_index do |drink,i| %>
     <tr>
-      <td class="drink_name"><%= drink.name %></td>
+      <td class="drink_name"><%= link_to "#{drink.name}", '#', data: {toggle: "modal", target: "#graph", data: drink.price_graph_data, name: drink.name} %></td>
       <!-- <td class="drinks" style="text-align: center"><%#= drink.bio %></td> -->
       <td class="drinkss"><span class="drinkss"><%= number_to_currency(drink.current_price) %></span></td>
 
