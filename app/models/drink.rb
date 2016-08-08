@@ -19,7 +19,6 @@ class Drink < ApplicationRecord
     else
       "#{new_hour}:#{new_min}am"
     end
-
     }
     new_data = {}
     data.each { |time, price|
