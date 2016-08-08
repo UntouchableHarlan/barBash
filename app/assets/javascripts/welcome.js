@@ -161,7 +161,12 @@ function ready() {
 				$('.tables_container').fadeOut(500);
 				$('.tables_container').load('/ .tables_container', function(){
 					$('.tables_container').fadeIn(500);
-					$('.market_crash').append('<h1>The Market Just Crahsed All Drink Are Rock Bottom!</h1>');
+					$('.market_crash').append('<h1 style="color: red;">The Market Just Crahsed All Drink Are Rock Bottom!</h1>')
+
+					for(i=0;i<1000;i++) {
+
+    				$('.market_crash').fadeTo('slow', 0.5).fadeTo('slow', 1.0);
+  					}
 				});
 			}
 		});
