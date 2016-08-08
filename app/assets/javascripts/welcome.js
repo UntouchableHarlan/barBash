@@ -82,6 +82,7 @@ function ready() {
 	$('#arrow').addClass('animated bounce');
 	$('.starttimer').on('click', function(event) {
 		event.preventDefault();
+
 		var seconds = $('.grab_time').val();
 		$.ajax({
 			url: '/addtimer',
@@ -161,6 +162,7 @@ function ready() {
 			}
 		});
 	});
+
 }
 
 $(document).on('ready turbolinks:load', ready);

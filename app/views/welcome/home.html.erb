@@ -52,9 +52,9 @@
 
       <% if session[:owner_id] %>
       <div class = "onwers_info">
-        <div class ="admin_timers">
+        <div class ="admin_timers" style="padding-top: 75px;">
           <form class="form-inline">
-            <div class="form-group">
+            <div class="form-group" >
               <label>Timer:</label>
               <input type="number" class="grab_time" placeholder="In Seconds">
             </div>
@@ -69,8 +69,7 @@
     <% end %>
       <!-- Timer -->
 
-
-
+      <div id="hour" style="text-align:center; margin-bottom:-50px; padding-top: 100px;">0:00</div>
       <h1 style="text-align:center; padding-top: 10%;">🍺🍹🍸🍾🍷</h1>
       <!-- <div class="tables_container"> -->
     <div class="slide" data-anchor="slide1">
@@ -78,22 +77,22 @@
         <div class="row top_tables">
           <div class="col-md-6" id ="tequila">
 
-            <h2><i class="fa fa-glass" aria-hidden="true"></i>Tequila Shots</h2>
-            <%= render 'partial', drinks: @tequila %>
+            <h2></i>Tequila Shots</h2>
+            <%= render 'partial', drinks: @drinks_prices_today['Tequila'] %>
           </div>
           <div class="col-md-6" id ="rum">
-            <h2><i class="fa fa-glass" aria-hidden="true"></i>Rum Shots</h2>
-            <%= render 'partial', drinks: @rum %>
+            <h2></i>Rum Shots</h2>
+            <%= render 'partial', drinks: @drinks_prices_today['Rum'] %>
           </div>
         </div>
         <div class="row bottom_tables">
           <div class="col-md-6" id="whiskey">
-            <h2><i class="fa fa-glass" aria-hidden="true"></i>Whiskey Shots</h2>
-            <%= render 'partial', drinks: @whiskey%>
+            <h2></i>Whiskey Shots</h2>
+            <%= render 'partial', drinks: @drinks_prices_today['Whiskey']%>
           </div>
           <div class="col-md-6" id="vodka">
-            <h2><i class="fa fa-glass" aria-hidden="true"></i>Vodka Shots</h2>
-            <%= render 'partial', drinks: @vodka%>
+            <h2></i>Vodka Shots</h2>
+            <%= render 'partial', drinks: @drinks_prices_today['Vodka']%>
           </div>
         </div>
       </div>
@@ -104,27 +103,27 @@
         <div class="row top_tables">
           <div class="col-md-3" id ="domestic">
             <h2><i class="fa fa-beer" aria-hidden="true"></i>Domestic Beers</h2>
-              <%= render 'partial', drinks: @domestic %>
+            <%= render 'partial', drinks: @drinks_prices_today['Domestic'] %>
           </div>
           <div class="col-md-3" id ="imported" style="margin-left: -30px;">
-            <h2>Imported Beers</h2>
-              <%= render 'partial', drinks: @imported %>
+            <h2><i class="fa fa-beer" aria-hidden="true"></i>Imported Beers</h2>
+              <%= render 'partial', drinks: @drinks_prices_today['Imported'] %>
           </div>
         </div>
         <div class="row bottom_tables">
           <div class="col-md-3", id="brewery" style="margin-right: -12px;">
-            <h2>Brewery Beers</h2>
-              <%= render 'partial', drinks: @brewery %>
+            <h2><i class="fa fa-beer" aria-hidden="true"></i>Brewery Beers</h2>
+              <%= render 'partial', drinks: @drinks_prices_today['Wynwood Brewery'] %>
           </div>
           <div class ="col-md-3", id ="wine">
-            <h2>Wine Selection</h2>
-            <%= render 'partial', drinks: @wine %>
+            <h2><i class="fa fa-beer" aria-hidden="true"></i>Wine Selection</h2>
+            <%= render 'partial', drinks: @drinks_prices_today['Wine'] %>
           </div>
         </div>
-      </div>
-     </div>
 
-        <!-- <div class="section" id="section4"> -->
+          </div>
+
+        </div>
       <div class="slide" data-anchor="slide3">
         <div class= "best_deal_container">
           <div class="row top_tables">
@@ -149,15 +148,16 @@
           </div>
         </div>
       </div>
-
       <div class="slide" data-anchor="slide4">
-        <div class= "cocktail_container">
-          <div class ="col-md-6", id ="cocktail">
-            <h2><i class="fa fa-glass" aria-hidden="true"></i>Cocktails</h2>
-            <%= render 'partial', drinks: @cocktail %>
+        <!-- <div class="cocktail_container"> -->
+          <div class="col-md-6" style="margin: 0px auto;" id="cocktail">
+            <h2 style="text-align:center;"><i class="fa fa-glass" aria-hidden="true"></i>Cocktails</h2>
+            <%= render 'partial', drinks: @drinks_prices_today['Cocktail'] %>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
+      </div>
+    </div>
       <!-- </div> -->
     </div>
   </div>
