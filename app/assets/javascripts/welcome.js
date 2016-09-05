@@ -2,6 +2,7 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
+
 var type = "";
 function ready() {
 	// homepage
@@ -80,10 +81,9 @@ function ready() {
 		// e.preventDefault();
 	});
 	$('#arrow').addClass('animated bounce');
-	$('.starttimer').on('click', function(event) {
-		event.preventDefault();
 
-		var seconds = $('.grab_time').val();
+
+		var seconds = 10;
 		$.ajax({
 			url: '/addtimer',
 			data: {timer: seconds},
@@ -95,8 +95,13 @@ function ready() {
 			var min = parseInt(seconds/60);
 			var sec = (seconds % 60);
 			seconds -= 1;
-			if (seconds <= 0){
-			seconds = 0
+			if (seconds === -1){
+				$('.tables_container').fadeOut(1000);
+				$('.tables_container').load("/ .tables_container", function(){
+				$('.tables_container').fadeIn(1000, function(){
+						seconds = 10;
+				});
+					});
 			}
 			$("#hour").html(format(min, sec));
 			if (seconds === 7){
@@ -113,14 +118,8 @@ function ready() {
 					url: '/updateprices',
 					success: function(){
 						console.log('success!');
-						$('.tables_container').fadeOut(4000);
-						$('.tables_container').load("/ .tables_container")
-						$('.tables_container').fadeIn(1000, function(){
-							$('.sales_info').load("/ .sales_info", function(){
-								console.log("sales info update")
-							})
-								seconds = $('.grab_time').val();
-						});
+
+
 						// setInterval(interval)
 					}
 				});
@@ -132,7 +131,6 @@ function ready() {
 				$("#hour").html('0:00')
 			});
 		}, 1000);
-	});
 
 	$('#graph').on('show.bs.modal', function (event) {
 	  var button = $(event.relatedTarget);
