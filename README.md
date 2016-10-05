@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App that let's a bar owner set up dynamic pricing for drinks at a bar
 
-Things you may want to cover:
+Special Features:
 
-* Ruby version
+* Market Crash for bar owners to drop prices to lowest available price
 
-* System dependencies
+* 5:00 minute timer that lets customers know when price will change
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
